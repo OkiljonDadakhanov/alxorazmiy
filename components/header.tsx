@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-gray-800 p-6">
       <nav>
-        <ul className="flex justify-between items-center">
+        <ul className="flex justify-between items-center  min-h-[90px]">
           <Link href="/">
             <Image
               className="rounded-full"
