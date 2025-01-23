@@ -1,7 +1,7 @@
 "use client";
 
 import { FC } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import developer from "@/public/images/developer.jpg";
 
@@ -40,7 +40,7 @@ const cards = [
 
 // Props interface for Card component
 interface CardProps {
-  image: string;
+  image: string | StaticImageData;
   title: string;
   text: string;
 }
