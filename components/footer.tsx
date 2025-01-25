@@ -11,7 +11,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative min-h-[400px] w-full bg-[#0a192f] overflow-hidden">
+    <footer
+      className="relative min-h-[400px] w-full bg-[#0a192f] overflow-hidden"
+      id="contact"
+    >
       {/* Geometric Background Shapes */}
       <div className="absolute inset-0 opacity-20">
         {/* Circles */}
