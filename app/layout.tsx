@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alxorazmiy",
-  description: "Alxorazmiy olmpiadasi",
+  title: "Al-Khwarazmi International Mathematical and Informatical Olympiad",
+  description:
+    "Al-Khwarazmi International Mathematical and Informatical Olympiad",
 };
 
 export default function RootLayout({
