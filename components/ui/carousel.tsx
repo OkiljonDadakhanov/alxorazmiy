@@ -1,16 +1,19 @@
 "use client";
-import { useEffect } from "react";
-import { EmblaOptionsType } from "embla-carousel";
+
+import React, { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Image from "next/image";
 
-type PropType = {
-  slides: number[];
-  options?: EmblaOptionsType;
-};
+const images = [
+  "/images/buhoro.jpg",
+  "/images/samarqand.jpg",
+  "/images/tog.jpg",
+  "/images/toshkent.jpeg",
+  "/images/xiva.jpeg",
+];
 
-const Carousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel({ ...options, loop: true });
+const HeroCarousel: React.FC = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -23,24 +26,33 @@ const Carousel: React.FC<PropType> = (props) => {
       }
     };
 
-    const intervalId = setInterval(autoplay, 3000); // 3-second autoplay interval
+    const intervalId = setInterval(autoplay, 4000); // Autoplay every 4 seconds
 
-    return () => clearInterval(intervalId); // Cleanup the interval on unmount
+    return () => clearInterval(intervalId); // Cleanup interval on unmount
   }, [emblaApi]);
 
   return (
-    <section className="embla h-screen">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
+    <div className="relative w-full h-screen overflow-hidden">
+      <div className="w-full h-full" ref={emblaRef}>
+        <div className="flex h-full">
+          {images.map((src, index) => (
+            <div
+              className="relative flex-[0_0_100%] w-full h-full overflow-hidden"
+              key={index}
+            >
+              <Image
+                src={src}
+                alt={`Slide ${index + 1}`}
+                fill
+                className="object-cover"
+                priority
+            />
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Carousel;
+export default HeroCarousel;

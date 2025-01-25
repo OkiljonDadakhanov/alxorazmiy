@@ -55,7 +55,7 @@ export default function Programme() {
       <div>
         <Accordion type="single" collapsible className="w-[70%] mx-auto">
           <AccordionItem value="item-1">
-            <AccordionTrigger>Day 1 - Tuesday (June 25)</AccordionTrigger>
+            <AccordionTrigger>Day 1 - Monday (June 25)</AccordionTrigger>
             <AccordionContent>
               <Table>
                 <TableHeader>
@@ -85,17 +85,62 @@ export default function Programme() {
           </AccordionItem>
 
           <AccordionItem value="item-2">
-            <AccordionTrigger>Is it styled?</AccordionTrigger>
+            <AccordionTrigger>Day 2 - Tuesday (June 26)</AccordionTrigger>
             <AccordionContent>
-              Yes. It comes with default styles that matches the other
-              components&apos; aesthetic.
+              <Table>
+                <TableHeader>
+                  <TableRow className="">
+                    <TableHead className="">Time </TableHead>
+                    <TableHead className="">Contestants</TableHead>
+                    <TableHead>Deputy Leaders</TableHead>
+                    <TableHead className="">Leaders</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {programms.map((program) => (
+                    <TableRow key={program.time}>
+                      <TableCell className="font-medium">
+                        {program.time}
+                      </TableCell>
+                      <TableCell>{program.contestants}</TableCell>
+                      <TableCell>{program.leaders}</TableCell>
+                      <TableCell className="">
+                        {program.deputyLeaders}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
             </AccordionContent>
           </AccordionItem>
+
           <AccordionItem value="item-3">
-            <AccordionTrigger>Is it animated?</AccordionTrigger>
+            <AccordionTrigger>Day 3 - Wednesday (June 27)</AccordionTrigger>
             <AccordionContent>
-              Yes. It`s animated by default, but you can disable it if you
-              prefer.
+              <Table>
+                <TableHeader>
+                  <TableRow className="">
+                    <TableHead className="">Time </TableHead>
+                    <TableHead className="">Contestants</TableHead>
+                    <TableHead>Deputy Leaders</TableHead>
+                    <TableHead className="">Leaders</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {programms.map((program) => (
+                    <TableRow key={program.time}>
+                      <TableCell className="font-medium">
+                        {program.time}
+                      </TableCell>
+                      <TableCell>{program.contestants}</TableCell>
+                      <TableCell>{program.leaders}</TableCell>
+                      <TableCell className="">
+                        {program.deputyLeaders}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
             </AccordionContent>
           </AccordionItem>
         </Accordion>

@@ -13,88 +13,123 @@ const ParticipantsPage: React.FC = () => {
 
       <div>
         <Tabs
-          defaultValue="account"
-          className="w-[400px] mx-auto  p-4 rounded-lg "
+          defaultValue="uzb"
+          className="w-full max-w-screen-lg mx-auto p-4 rounded-lg"
         >
-          <TabsList>
-            <TabsTrigger value="uzb">Uzbekistan</TabsTrigger>
-            <TabsTrigger value="usa">USA</TabsTrigger>
-            <TabsTrigger value="rus">Russia</TabsTrigger>
-            <TabsTrigger value="eng">England</TabsTrigger>
+          <TabsList className="flex justify-center mb-8 space-x-8">
+            <TabsTrigger
+              value="uzb"
+              className="px-6 py-2 rounded-md text-lg font-medium bg-teal-500 text-white hover:bg-teal-600 transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              Uzbekistan
+            </TabsTrigger>
+            <TabsTrigger
+              value="usa"
+              className="px-6 py-2 rounded-md text-lg font-medium bg-teal-500 text-white hover:bg-teal-600 transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              USA
+            </TabsTrigger>
+            <TabsTrigger
+              value="rus"
+              className="px-6 py-2 rounded-md text-lg font-medium bg-teal-500 text-white hover:bg-teal-600 transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              Russia
+            </TabsTrigger>
+            <TabsTrigger
+              value="eng"
+              className="px-6 py-2 rounded-md text-lg font-medium bg-teal-500 text-white hover:bg-teal-600 transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              England
+            </TabsTrigger>
           </TabsList>
-          <TabsContent
-            value="uzb"
-            className="flex justify-around gap-4 items-center"
-          >
-            <div className="flex flex-col items-center min-w-[200px]">
+
+          {/* Uzbekistan Tab Content */}
+          <TabsContent value="uzb" className="grid grid-cols-3 gap-8 p-4">
+            <div className="flex flex-col items-center space-y-4">
               <Image
                 className="rounded-full"
-                alt="developer"
+                alt="Botirov Aziz"
                 width={150}
                 height={150}
                 src={developer2}
               />
-              <h1>Botirov Aziz</h1>
-              <p>Tutor</p>
+              <h2 className="text-xl font-semibold">Botirov Aziz</h2>
             </div>
-
-            <div className="flex flex-col items-center min-w-[200px]">
+            <div className="flex flex-col items-center space-y-4">
               <Image
                 className="rounded-full"
-                alt="developer"
+                alt="Qodirov Asror"
                 width={150}
                 height={150}
                 src={developer}
               />
-              <h1>Qodirov Asror</h1>
-              <p>Contestant</p>
+              <h2 className="text-xl font-semibold">Qodirov Asror</h2>
             </div>
-
-            <div className="flex flex-col items-center min-w-[200px]">
+            <div className="flex flex-col items-center space-y-4">
               <Image
                 className="rounded-full"
-                alt="mathsmatician"
+                alt="Mansurov Akbar"
                 width={150}
                 height={150}
                 src={mathsmatician}
               />
-              <h1>Mansurov Akbar</h1>
-              <p>Student</p>
+              <h2 className="text-xl font-semibold">Mansurov Akbar</h2>
+            </div>
+          </TabsContent>
+
+          {/* USA Tab Content */}
+          <TabsContent value="usa" className="grid grid-cols-3 gap-8 p-4">
+            <div className="flex flex-col items-center space-y-4">
+              <Image
+                className="rounded-full"
+                alt="Mansurov Akbar"
+                width={150}
+                height={150}
+                src={mathsmatician}
+              />
+              <h2 className="text-xl font-semibold">Mansurov Akbar</h2>
             </div>
 
+            <div className="flex flex-col items-center space-y-4">
+              <Image
+                className="rounded-full"
+                alt="John Doe"
+                width={150}
+                height={150}
+                src={developer}
+              />
+              <h2 className="text-xl font-semibold">John Doe</h2>
+            </div>
           </TabsContent>
-          <TabsContent value="usa" className="flex flex-col items-center">
+
+          {/* Russia Tab Content */}
+          <TabsContent
+            value="rus"
+            className="flex flex-col items-center space-y-4"
+          >
             <Image
-              className="rounded"
-              alt="developer"
+              className="rounded-full"
+              alt="Ivan Ivanov"
               width={150}
               height={150}
               src={developer}
             />
-            <h1>John Doe</h1>
-            <p>Olympiad 2</p>
+            <h2 className="text-xl font-semibold">Ivan Ivanov</h2>
           </TabsContent>
-          <TabsContent value="rus" className="flex flex-col items-center">
+
+          {/* England Tab Content */}
+          <TabsContent
+            value="eng"
+            className="flex flex-col items-center space-y-4"
+          >
             <Image
-              className="rounded"
-              alt="developer"
+              className="rounded-full"
+              alt="John Smith"
               width={150}
               height={150}
               src={developer}
             />
-            <h1>Ivan Ivanov</h1>
-            <p>Olympiad 3</p>
-          </TabsContent>
-          <TabsContent value="eng" className="flex flex-col items-center">
-            <Image
-              className="rounded"
-              alt="developer"
-              width={150}
-              height={150}
-              src={developer}
-            />
-            <h1>John Smith</h1>
-            <p>Olympiad 4</p>
+            <h2 className="text-xl font-semibold">John Smith</h2>
           </TabsContent>
         </Tabs>
       </div>

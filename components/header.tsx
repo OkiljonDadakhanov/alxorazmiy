@@ -14,11 +14,11 @@ const Header: React.FC = () => {
         <ul className="flex justify-between items-center  min-h-[90px]">
           <Link href="/">
             <Image
-              className="rounded-full"
+              className="rounded"
               alt="Alxorazmiy logo"
               src={"/logo/logo.png"}
-              width={100}
-              height={100}
+              width={120}
+              height={120}
             />
           </Link>
           <li

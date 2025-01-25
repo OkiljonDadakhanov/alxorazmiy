@@ -1,5 +1,13 @@
-import { Circle, Square, Triangle } from "lucide-react";
-// import Image from "next/image";
+import {
+  Circle,
+  Square,
+  Triangle,
+  Github,
+  Twitter,
+  Linkedin,
+  Facebook,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -21,9 +29,7 @@ export default function Footer() {
       </div>
 
       {/* Content Container */}
-      <div className="relative flex flex-col items-center justify-center py-16 px-4 text-center">
-        {/* Logo */}
-
+      <div className="relative flex flex-col justify-center items-center min-h-full py-16 px-4 text-center">
         {/* Welcome Text */}
         <div className="space-y-4 max-w-3xl mx-auto text-gray-300">
           <p className="text-lg sm:text-xl">
@@ -37,8 +43,40 @@ export default function Footer() {
           </p>
         </div>
 
+        {/* Contact & Social Media Links */}
+        <div className="mt-8 text-gray-300 space-y-4">
+          <div className="flex space-x-8 justify-center">
+            {/* Social Media Icons */}
+            <Link href="https://github.com" target="_blank">
+              <Github className="h-6 w-6 text-teal-500 hover:text-teal-400" />
+            </Link>
+            <Link href="https://twitter.com" target="_blank">
+              <Twitter className="h-6 w-6 text-teal-500 hover:text-teal-400" />
+            </Link>
+            <Link href="https://linkedin.com" target="_blank">
+              <Linkedin className="h-6 w-6 text-teal-500 hover:text-teal-400" />
+            </Link>
+            <Link href="https://facebook.com" target="_blank">
+              <Facebook className="h-6 w-6 text-teal-500 hover:text-teal-400" />
+            </Link>
+          </div>
+
+          {/* Contact Information */}
+          <div className="mt-6">
+            <p className="text-sm">
+              <span className="font-semibold">Contact Us: </span>
+              <Link
+                href="mailto:contact@alxorazmiy.com"
+                className="text-teal-500 hover:text-teal-400"
+              >
+                contact@alxorazmiy.com
+              </Link>
+            </p>
+          </div>
+        </div>
+
         {/* Copyright */}
-        <div className="absolute bottom-8 text-gray-400 text-sm">
+        <div className="absolute bottom-8 text-gray-400 text-sm w-full text-center">
           <p>
             Copyright © {new Date().getFullYear()}{" "}
             <span className="font-medium">

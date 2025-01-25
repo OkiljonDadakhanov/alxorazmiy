@@ -3,38 +3,98 @@
 import { FC } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import developer from "@/public/images/developer.jpg";
+import sardor from "@/public/images/team/sardor.jpg";
+import shavkat from "@/public/images/team/shavkat.jpg";
+import utkir from "@/public/images/team/utkir.jpg";
+import farhod from "@/public/images/team/farhod.jpg";
+import azimboy from "@/public/images/team/azimboy.png";
+import jasur from "@/public/images/team/jasur.jpg";
+import jasur2 from "@/public/images/team/jasur2.jpg";
+import elkakim from "@/public/images/team/eljakim.jpg";
+import farkhod from "@/public/images/team/farkhod.jpg";
+import ahmed from "@/public/images/team/ahmed.jpg";
+import sunatullo from "@/public/images/team/sunatullo.jpeg";
+import temurbek from "@/public/images/team/temurbek.jpg";
+import kim from "@/public/images/team/kim.jpg";
+import dilshod from "@/public/images/team/dilshod.webp";
 
 const cards = [
   {
-    image: developer,
-    title: "Prof. Dr. Hasan MANDAL",
-    text: "Director of TÜBİTAK Department of Science Fellowships and Grant Programs (BİDEB)",
+    image: shavkat,
+    title: "Shavkat Ayupov",
+    text: "Uzbekistan",
   },
   {
-    image: developer,
-    title: "Dr. Hatice DAĞLIOĞLU",
-    text: "TÜBİTALorem ipsum dolor sit amet, consectetur adipiscing Kssssssssssssssssssssss",
+    image: utkir,
+    title: "Utkir Boltayev",
+    text: "Uzbekistan",
   },
   {
-    image: developer,
-    title: "Austria",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: azimboy,
+    title: "Azimboy Sadullayev",
+    text: "Uzbekistan",
   },
   {
-    image: developer,
-    title: "Czechia",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: farhod,
+    title: "Farhod Haydarov",
+    text: "Uzbekistan",
   },
   {
-    image: developer,
-    title: "Finland",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: jasur,
+    title: "Jasur Bahromov",
+    text: "Uzbekistan",
   },
   {
-    image: developer,
-    title: "Norway",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: jasur2,
+    title: "Jasur Imomov",
+    text: "Uzbekistan",
+  },
+  {
+    image: sardor,
+    title: "Sardor Bazarbaev",
+    text: "Uzbekistan",
+  },
+];
+
+const cards2 = [
+  {
+    image: elkakim,
+    title: "Eljakim Elkakim",
+    text: "Netherlands",
+  },
+  {
+    image: farkhod,
+    title: "Farkhod Khakimiyon",
+    text: "Tajikistan",
+  },
+
+  {
+    image: ahmed,
+    title: "Ahmed Khaled",
+    text: "Egypt",
+  },
+
+  {
+    image: sunatullo,
+    title: "Sunatullo Xojiyev",
+    text: "Uzbekistan",
+  },
+
+  {
+    image: temurbek,
+    title: "Temurbek Xo'jayev",
+    text: "Uzbekistan",
+  },
+
+  {
+    image: dilshod,
+    title: "Dilshodbek Xo'jayev",
+    text: "Uzbekistan",
+  },
+  {
+    image: kim,
+    title: "Svyatoslav Kim",
+    text: "Uzbekistan",
   },
 ];
 
@@ -68,19 +128,70 @@ const Card: FC<CardProps> = ({ image, title, text }) => {
   );
 };
 
-// Main component to render the list of cards
+// Main component to render the custom staggered layout
 const CardList: FC = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-      {cards.map((card, index) => (
-        <Card
-          key={index}
-          image={card.image}
-          title={card.title}
-          text={card.text}
-        />
-      ))}
-    </div>
+    <main>
+      <div className="flex flex-col items-center space-y-6">
+        {" "}
+        {/* Space between rows */}
+        {/* First row */}
+        <div className="flex space-x-6">
+          {" "}
+          {/* Space between cards */}
+          <Card {...cards[0]} />
+        </div>
+        {/* Second row */}
+        <div className="flex space-x-9">
+          {" "}
+          {/* Space between cards */}
+          <Card {...cards[1]} />
+          <Card {...cards[2]} />
+          <Card {...cards[3]} />
+        </div>
+        {/* Third row */}
+        <div className="flex space-x-9">
+          {" "}
+          {/* Space between cards */}
+          <Card {...cards[3]} />
+          <Card {...cards[4]} />
+          <Card {...cards[5]} />
+        </div>
+        {/* Fourth row */}
+      </div>
+
+      <div className="organizing__team text-center  mb-8 mt-8">
+        <h2 className="text-5xl">Scientific Committee (Informatics)</h2>
+      </div>
+
+      <div className="flex flex-col items-center space-y-6">
+        {" "}
+        {/* Space between rows */}
+        {/* First row */}
+        <div className="flex space-x-6">
+          {" "}
+          {/* Space between cards */}
+          <Card {...cards2[0]} />
+        </div>
+        {/* Second row */}
+        <div className="flex space-x-9">
+          {" "}
+          {/* Space between cards */}
+          <Card {...cards2[1]} />
+          <Card {...cards2[2]} />
+          <Card {...cards2[3]} />
+        </div>
+        {/* Third row */}
+        <div className="flex space-x-9">
+          {" "}
+          {/* Space between cards */}
+          <Card {...cards2[4]} />
+          <Card {...cards2[5]} />
+          <Card {...cards2[6]} />
+        </div>
+        {/* Fourth row */}
+      </div>
+    </main>
   );
 };
 
