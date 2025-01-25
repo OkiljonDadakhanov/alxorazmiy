@@ -27,7 +27,8 @@ const WelcomeMessage: React.FC = () => {
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center mt-4 md:mt-6 lg:mt-8 px-4">
         Welcome to
         <br />
-        Al-Khwarazmi International Mathematical and Informatical Olympiad.
+        Al-Khwarazmi International Mathematical <br />
+        and Informatical Olympiad.
       </h1>
 
       {/* Paragraph */}

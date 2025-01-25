@@ -38,7 +38,7 @@ export default function Footer() {
           <p className="text-lg sm:text-xl">
             It is our great pleasure to welcome you to the{" "}
             <span className="font-semibold">
-              Alxorazmiy Mathematical Olympiad
+              Al-Khwarazmi International Mathematical and Informatical Olympiad
             </span>
           </p>
           <p className="text-lg sm:text-xl">
