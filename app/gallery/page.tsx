@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
 import Image from "next/image";
 
 const photos = [
@@ -38,6 +41,9 @@ const photos4 = [
 ];
 
 export default function Gallery() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section>
       <div className="bg-[#0a192f] text-white p-9 mb-8">
@@ -49,7 +55,10 @@ export default function Gallery() {
           Scenes from Al-Khwarizmi Olympiad 2024
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          data-aos="fade-right"
+        >
           {photos.map((photo, index) => (
             <div
               key={index}
@@ -69,7 +78,10 @@ export default function Gallery() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          data-aos="fade-left"
+        >
           {photos2.map((photo, index) => (
             <div
               key={index}
@@ -95,7 +107,10 @@ export default function Gallery() {
           Scenes from Muhammad al-Bukhari Olympiad 2024
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          data-aos="fade-up-right"
+        >
           {photos4.map((photo, index) => (
             <div
               key={index}
@@ -117,7 +132,10 @@ export default function Gallery() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8"
+          data-aos="fade-up-left"
+        >
           {photos3.map((photo, index) => (
             <div
               key={index}

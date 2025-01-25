@@ -1,7 +1,18 @@
+"use client";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
+
 import Image from "next/image";
 const WelcomeMessage: React.FC = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-blue-50 text-gray-800 font-sans">
+    <div
+      className="flex flex-col items-center justify-center h-screen bg-blue-50 text-gray-800 font-sans"
+      data-aos="fade-up"
+    >
       <Image
         src="/logo/logo.png"
         alt="Alxorazmiy logo"

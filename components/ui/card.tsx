@@ -108,7 +108,11 @@ interface CardProps {
 // Card component
 const Card: FC<CardProps> = ({ image, title, text }) => {
   return (
-    <div className="flex flex-col bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105 p-4 h-72 max-w-xs mx-auto">
+    <div
+      className="flex flex-col bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105 p-4 h-72 max-w-xs mx-auto"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    >
       <Link href="#" className="flex flex-col h-full">
         <div className="relative mb-4">
           <Image
