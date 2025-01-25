@@ -1,8 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
-import developer from "@/public/images/developer.jpg";
-import developer2 from "@/public/images/developer2.jpg";
-import mathsmatician from "@/public/images/mathsmatician.webp";
+
+import profile from "@/public/images/profile.png";
 
 const ParticipantsPage: React.FC = () => {
   return (
@@ -51,9 +50,9 @@ const ParticipantsPage: React.FC = () => {
                 alt="Botirov Aziz"
                 width={150}
                 height={150}
-                src={developer2}
+                src={profile}
               />
-              <h2 className="text-xl font-semibold">Botirov Aziz</h2>
+              <h2 className="text-xl font-semibold">Participant 1</h2>
             </div>
             <div className="flex flex-col items-center space-y-4">
               <Image
@@ -61,9 +60,9 @@ const ParticipantsPage: React.FC = () => {
                 alt="Qodirov Asror"
                 width={150}
                 height={150}
-                src={developer}
+                src={profile}
               />
-              <h2 className="text-xl font-semibold">Qodirov Asror</h2>
+              <h2 className="text-xl font-semibold">Participant 2</h2>
             </div>
             <div className="flex flex-col items-center space-y-4">
               <Image
@@ -71,9 +70,9 @@ const ParticipantsPage: React.FC = () => {
                 alt="Mansurov Akbar"
                 width={150}
                 height={150}
-                src={mathsmatician}
+                src={profile}
               />
-              <h2 className="text-xl font-semibold">Mansurov Akbar</h2>
+              <h2 className="text-xl font-semibold">Participant 3</h2>
             </div>
           </TabsContent>
 
@@ -85,9 +84,9 @@ const ParticipantsPage: React.FC = () => {
                 alt="Mansurov Akbar"
                 width={150}
                 height={150}
-                src={mathsmatician}
+                src={profile}
               />
-              <h2 className="text-xl font-semibold">Mansurov Akbar</h2>
+              <h2 className="text-xl font-semibold">Participant 1</h2>
             </div>
 
             <div className="flex flex-col items-center space-y-4">
@@ -96,9 +95,9 @@ const ParticipantsPage: React.FC = () => {
                 alt="John Doe"
                 width={150}
                 height={150}
-                src={developer}
+                src={profile}
               />
-              <h2 className="text-xl font-semibold">John Doe</h2>
+              <h2 className="text-xl font-semibold">Participant 2</h2>
             </div>
           </TabsContent>
 
@@ -112,9 +111,9 @@ const ParticipantsPage: React.FC = () => {
               alt="Ivan Ivanov"
               width={150}
               height={150}
-              src={developer}
+              src={profile}
             />
-            <h2 className="text-xl font-semibold">Ivan Ivanov</h2>
+            <h2 className="text-xl font-semibold">Participant 1</h2>
           </TabsContent>
 
           {/* England Tab Content */}
@@ -127,9 +126,9 @@ const ParticipantsPage: React.FC = () => {
               alt="John Smith"
               width={150}
               height={150}
-              src={developer}
+              src={profile}
             />
-            <h2 className="text-xl font-semibold">John Smith</h2>
+            <h2 className="text-xl font-semibold">Participant 1</h2>
           </TabsContent>
         </Tabs>
       </div>

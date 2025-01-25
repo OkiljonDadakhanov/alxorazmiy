@@ -14,14 +14,16 @@ const WelcomeMessage: React.FC = () => {
       data-aos="fade-up"
     >
       <Image
-        src="/logo/logo.png"
+        src="/logo/logoblue.png"
         alt="Alxorazmiy logo"
         width={400}
         height={400}
       />
 
-      <h1 className="text-4xl font-semibold text-center mb-6 mt-4 px-4">
-        Welcome to Alxorazmiy!
+      <h1 className="text-4xl font-semibold text-center mb-6 mt-4 px-4 mt-5">
+        Welcome to
+        <br />
+        Al-Khwarazmi International Mathematical and Informatical Olympiad.
       </h1>
 
       <p className="text-lg text-center text-gray-500 mb-4 px-4 leading-relaxed max-w-3xl mx-auto">

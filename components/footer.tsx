@@ -2,12 +2,12 @@ import {
   Circle,
   Square,
   Triangle,
-  Github,
-  Twitter,
-  Linkedin,
+  Instagram,
   Facebook,
+  Youtube,
 } from "lucide-react";
 import Link from "next/link";
+import { FaTelegram } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -50,16 +50,22 @@ export default function Footer() {
         <div className="mt-8 text-gray-300 space-y-4">
           <div className="flex space-x-8 justify-center">
             {/* Social Media Icons */}
-            <Link href="https://github.com" target="_blank">
-              <Github className="h-6 w-6 text-teal-500 hover:text-teal-400" />
+            <Link
+              href="https://www.instagram.com/fan_olimpiadalari_markazi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+            >
+              <Instagram className="h-6 w-6 text-teal-500 hover:text-teal-400" />
             </Link>
-            <Link href="https://twitter.com" target="_blank">
-              <Twitter className="h-6 w-6 text-teal-500 hover:text-teal-400" />
+            <Link href="http://bit.ly/olimpdep" target="_blank">
+              <Youtube className="h-6 w-6 text-teal-500 hover:text-teal-400" />
             </Link>
-            <Link href="https://linkedin.com" target="_blank">
-              <Linkedin className="h-6 w-6 text-teal-500 hover:text-teal-400" />
+            <Link href="https://t.me/Fan_olimpiadalari_M" target="_blank">
+              <FaTelegram className="h-6 w-6 text-teal-500 hover:text-teal-400" />
             </Link>
-            <Link href="https://facebook.com" target="_blank">
+            <Link
+              href="https://www.facebook.com/share/14NAmhu2D5/?mibextid=wwXIfr"
+              target="_blank"
+            >
               <Facebook className="h-6 w-6 text-teal-500 hover:text-teal-400" />
             </Link>
           </div>
@@ -69,10 +75,10 @@ export default function Footer() {
             <p className="text-sm">
               <span className="font-semibold">Contact Us: </span>
               <Link
-                href="mailto:contact@alxorazmiy.com"
+                href="mailto:info@olympcenter.uz"
                 className="text-teal-500 hover:text-teal-400"
               >
-                contact@alxorazmiy.com
+                info@olympcenter.uz
               </Link>
             </p>
           </div>
@@ -83,9 +89,8 @@ export default function Footer() {
           <p>
             Copyright © {new Date().getFullYear()}{" "}
             <span className="font-medium">
-              Alxorazmiy Mathematical Olympiad
-            </span>{" "}
-            - All rights reserved
+              Al-Khwarazmi International Mathematical and Informatical Olympiad.
+            </span>
           </p>
         </div>
       </div>

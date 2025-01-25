@@ -20,13 +20,13 @@ const Header: React.FC = () => {
               <Image
                 className="rounded"
                 alt="Alxorazmiy logo"
-                src={"/logo/logo.png"}
-                width={120}
-                height={120}
+                src={"/logo/logowhite.png"}
+                width={150}
+                height={150}
               />
             </Link>
             {/* Navigation Links (for large screens) */}
-            <ul className="hidden lg:flex items-center space-x-9">
+            <ul className="hidden lg:flex items-center space-x-9 text-[20px]">
               <li
                 className={`${
                   currentRoute == "/" ? "text-yellow-500" : "text-white"
