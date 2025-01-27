@@ -18,7 +18,8 @@ export default function Organizers() {
       </div>
       <div
         className="flex flex-wrap justify-center items-center gap-6 py-6 md:gap-8 md:py-8"
-        data-aos="fade-right"
+        data-aos="fade-up"
+        data-aos-duration="800"
       >
         {/* Card 1 */}
         <div className="card bg-white rounded-lg shadow-lg w-56 h-72 md:w-64 md:h-80 flex flex-col items-center p-4 md:p-6 transform transition-transform hover:scale-105 hover:bg-gray-100 cursor-pointer">
