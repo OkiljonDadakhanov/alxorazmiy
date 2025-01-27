@@ -92,7 +92,7 @@ const Header: React.FC = () => {
                 <Link href="/gallery">Gallery</Link>
               </li>
               <li className="text-white hover:text-gray-400 hover:bg-yellow-500 transition duration-300 ease-in-out bg-yellow-300 px-4 py-2 rounded-[3px]">
-                <Link href="#contact">Contact</Link>
+                <Link href="/register">Apply Now</Link>
               </li>
             </ul>
           </div>

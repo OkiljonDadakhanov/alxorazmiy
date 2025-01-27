@@ -8,6 +8,7 @@ import {
   Binary,
   Database,
 } from "lucide-react";
+import Link from "next/link";
 
 const Hero: React.FC = () => {
   return (
@@ -62,19 +63,14 @@ const Hero: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-wrap justify-center gap-4">
-          <Button
-            size="lg"
-            className="bg-blue-500 text-white hover:bg-blue-600"
-          >
-            Apply Now
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white"
-          >
-            Learn More
-          </Button>
+          <Link href="/register">
+            <Button
+              size="lg"
+              className="bg-blue-500 text-white hover:bg-blue-600 p-6"
+            >
+              Apply Now
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
