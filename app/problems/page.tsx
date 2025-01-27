@@ -22,7 +22,7 @@ export default function Problems() {
           {/* Problem Rows */}
           <div className="grid grid-cols-[1fr_auto] items-center gap-4 p-4 bg-gray-100 rounded-lg">
             <h1 className="text-lg sm:text-xl">
-              Alxorazmiy 2024 yil olimpiadada tushgan masalalar to`plami
+              The collection of problems from the Al-Khwarizmi 2024 Olympiad
             </h1>
             <Button
               variant="secondary"
@@ -34,7 +34,7 @@ export default function Problems() {
 
           <div className="grid grid-cols-[1fr_auto] items-center gap-4 p-4 mt-4 bg-gray-100 rounded-lg">
             <h1 className="text-lg sm:text-xl">
-              Alxorazmiy 2023 yil olimpiadada tushgan masalalar to`plami
+              The collection of problems from the Al-Khwarizmi 2023 Olympiad
             </h1>
             <Button
               variant="secondary"
