@@ -87,7 +87,7 @@ export default function About() {
                 <li>
                   <strong>Cultural Program:</strong> Between competition events,
                   participants engage in cultural activities to experience
-                  Uzbekistan's rich heritage.
+                  Uzbekistan`s rich heritage.
                 </li>
                 <li>
                   <strong>Awards Ceremony:</strong> The Olympiad concludes with
@@ -121,11 +121,11 @@ export default function About() {
                     home to UNESCO World Heritage sites such as Samarkand,
                     Bukhara, and Khiva. These cities, with their magnificent
                     madrasas, minarets, and mausoleums, stand as testaments to
-                    the country's intellectual and artistic achievements
+                    the country`s intellectual and artistic achievements
                     throughout history.
                   </p>
                   <p className="text-gray-300 mb-4">
-                    Uzbekistan's contribution to mathematics and science is
+                    Uzbekistan`s contribution to mathematics and science is
                     significant. The country gave birth to many renowned
                     scholars, including Al-Khwarizmi himself, whose works on
                     algebra and algorithms laid the foundation for much of
@@ -134,7 +134,7 @@ export default function About() {
                   <p className="text-gray-300">
                     Today, Uzbekistan is a rapidly modernizing nation, balancing
                     its rich traditions with contemporary advancements in
-                    education, technology, and infrastructure. The country's
+                    education, technology, and infrastructure. The country`s
                     warm hospitality, diverse landscapes - from the Tian Shan
                     mountains to the Kyzylkum desert - and delicious cuisine
                     make it an unforgettable destination for Olympiad
@@ -151,7 +151,7 @@ export default function About() {
                   />
                   <Image
                     src={buhoro}
-                    alt="Bukhara Old City"
+                    alt="Bukhara Old"
                     width={400}
                     height={200}
                     className="rounded-lg"
