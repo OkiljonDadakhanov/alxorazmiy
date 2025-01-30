@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import registon from "@/public/gallery/registon.jpg";
-import group from "@/public/gallery/group.jpg";
 import buhoro from "@/public/gallery/buhoro.jpg";
 
 export default function About() {
