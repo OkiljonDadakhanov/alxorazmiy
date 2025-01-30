@@ -161,33 +161,6 @@ export default function About() {
             </CardContent>
           </Card>
         </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6">Past Olympiads</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[2022, 2021, 2020].map((year) => (
-              <Card key={year} className="bg-[#1f2937] shadow-xl">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">
-                    {year} Olympiad
-                  </h3>
-                  <Image
-                    src={group}
-                    alt={`${year} Olympiad`}
-                    width={300}
-                    height={200}
-                    className="rounded-lg mb-4"
-                  />
-                  <p className="text-gray-300">
-                    The {year} Al-Khwarizmi Olympiad brought together brilliant
-                    minds from around the world, showcasing exceptional talent
-                    in mathematics and informatics.
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
       </div>
     </main>
   );

@@ -4,12 +4,14 @@ const regulations = [
     title: "Organizer",
     content:
       "The organization and conduct of the International Olympiad are coordinated by the Ministry of Preschool and School Education of the Republic of Uzbekistan.",
+    icon: "📌", // Add an icon (example: emoji or SVG component)
   },
   {
     id: "participants",
     title: "Participants",
     content:
       "The International Olympiad is held for students under the age of 15 (born on or after January 1, 2010) studying in general education schools.",
+    icon: "👨‍🎓",
   },
   {
     id: "registration",
@@ -19,6 +21,7 @@ const regulations = [
       "The Organizing Committee collects the necessary information about the participants.",
       "Registration closes 30 days before the start of the International Olympiad.",
     ],
+    icon: "📝",
   },
   {
     id: "math-olympiad",
@@ -29,6 +32,7 @@ const regulations = [
       "4 hours (240 minutes) per round",
       "Maximum total score: 56 points",
     ],
+    icon: "🔢",
   },
   {
     id: "informatics-olympiad",
@@ -39,12 +43,14 @@ const regulations = [
       "4 hours allotted each day",
       "Programs must be written in C++",
     ],
+    icon: "💻",
   },
   {
     id: "team-composition",
     title: "Team Composition",
     content:
       "Teams from foreign countries consist of 4 participants in Mathematics, 2 participants in Informatics, and 2 team leaders.",
+    icon: "👥",
   },
   {
     id: "awards",
@@ -55,12 +61,14 @@ const regulations = [
       "Medals distributed in a 1:2:3 ratio",
       "Winners receive corresponding diplomas",
     ],
+    icon: "🏅",
   },
   {
     id: "coordination",
     title: "Coordination",
     content:
       "Team leaders are responsible for defending the work of participants, and the work is evaluated by the jury panel.",
+    icon: "🤝",
   },
   {
     id: "prohibited-actions",
@@ -71,6 +79,7 @@ const regulations = [
       "Violators will be disqualified",
       "A formal report will be prepared for any violations",
     ],
+    icon: "🚫",
   },
 ];
 
