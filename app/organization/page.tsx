@@ -8,6 +8,16 @@ import shavkat from "@/public/images/team/shavkat.jpg";
 import azimboy from "@/public/images/team/azimboy.png";
 import farhod from "@/public/images/team/farhod.jpg";
 import otkir from "@/public/images/team/utkir.jpg";
+import jasur from "@/public/images/team/jasur.jpg";
+import jasurbe from "@/public/images/team/jasur2.jpg";
+import sardor from "@/public/images/team/sardor.jpg";
+import eljakim from "@/public/images/team/eljakim.jpg";
+import farkhod from "@/public/images/team/farkhod.jpg";
+import ahmed from "@/public/images/team/ahmed.jpg";
+import sunatullo from "@/public/images/team/sunatullo.jpeg";
+import temur from "@/public/images/team/temurbek.jpg";
+import dilshod from "@/public/images/team/dilshod.webp";
+import kim from "@/public/images/team/kim.jpg";
 
 interface OrganizationMember {
   id: string;
@@ -20,46 +30,92 @@ interface OrganizationMember {
 const members: OrganizationMember[] = [
   {
     id: "1",
-    name: "Leader Name",
+    name: "Shavkat Ayupov",
     location: "Uzbekistan",
     imageUrl: shavkat,
     isLeader: true,
   },
   {
     id: "2",
-    name: "Member One",
+    name: "Azimboy Sadullayev",
     location: "Uzbekistan",
     imageUrl: azimboy,
   },
   {
     id: "3",
-    name: "Member Two",
+    name: "Haydarov Farxod",
     location: "Uzbekistan",
     imageUrl: farhod,
   },
   {
     id: "4",
-    name: "Member Three",
+    name: "Boltayev O`tkir",
     location: "Uzbekistan",
     imageUrl: otkir,
   },
   {
     id: "5",
-    name: "Member Three",
+    name: "Baxromov Jasur",
     location: "Uzbekistan",
-    imageUrl: otkir,
+    imageUrl: jasur,
   },
   {
     id: "6",
-    name: "Member Three",
+    name: "Imomov Jasurbek",
     location: "Uzbekistan",
-    imageUrl: otkir,
+    imageUrl: jasurbe,
   },
   {
     id: "7",
-    name: "Member Three",
+    name: "Bazarbayev Sardor",
     location: "Uzbekistan",
-    imageUrl: otkir,
+    imageUrl: sardor,
+  },
+];
+
+const members2: OrganizationMember[] = [
+  {
+    id: "1",
+    name: "Eljakim Schrijvers",
+    location: "Netherlands",
+    imageUrl: eljakim,
+    isLeader: true,
+  },
+  {
+    id: "2",
+    name: "Khakimiyon Farkhod",
+    location: "Tajikistan",
+    imageUrl: farkhod,
+  },
+  {
+    id: "3",
+    name: "Ahmed Khaled",
+    location: "Egypt",
+    imageUrl: ahmed,
+  },
+  {
+    id: "4",
+    name: "Sunatullo Xojiyev",
+    location: "Uzbekistan",
+    imageUrl: sunatullo,
+  },
+  {
+    id: "5",
+    name: "Temurbek Xo'jayev",
+    location: "Uzbekistan",
+    imageUrl: temur,
+  },
+  {
+    id: "6",
+    name: "Dilshodbek Xo'jayev",
+    location: "Uzbekistan",
+    imageUrl: dilshod,
+  },
+  {
+    id: "7",
+    name: "Svyatoslov Kim",
+    location: "Uzbekistan",
+    imageUrl: kim,
   },
 ];
 
@@ -107,6 +163,9 @@ export default function OrganizationPage() {
   const leader = members.find((member) => member.isLeader);
   const otherMembers = members.filter((member) => !member.isLeader);
 
+  const informaticsLeader = members2.find((member) => member.isLeader);
+  const informaticsOtherMembers = members2.filter((member) => !member.isLeader);
+
   return (
     <section>
       <div className="bg-[#0a192f] text-white p-9 mb-8">
@@ -133,17 +192,21 @@ export default function OrganizationPage() {
       </div>
 
       <div className="organizing__team text-center mb-8">
-        <h2 className="text-5xl">Scientific Committee (Mathematics)</h2>
+        <h2 className="text-5xl">Scientific Committee (Informatics)</h2>
       </div>
 
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {leader && (
-            <div key={leader.id} data-aos="fade-up" className="md:col-span-3">
-              <OrganizationCard member={leader} />
+          {informaticsLeader && (
+            <div
+              key={informaticsLeader.id}
+              data-aos="fade-up"
+              className="md:col-span-3"
+            >
+              <OrganizationCard member={informaticsLeader} />
             </div>
           )}
-          {otherMembers.map((member) => (
+          {informaticsOtherMembers.map((member) => (
             <div key={member.id} data-aos="fade-up">
               <OrganizationCard member={member} />
             </div>
