@@ -71,6 +71,15 @@ const Hero: React.FC = () => {
               Apply Now
             </Button>
           </Link>
+
+          <Link href="/about">
+            <Button
+              size="lg"
+              className="bg-blue-500 text-white hover:bg-blue-600 p-6"
+            >
+              Learn more
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

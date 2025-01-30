@@ -33,8 +33,8 @@ const WelcomeMessage: React.FC = () => {
             data-aos-duration="800"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-center mb-6"
           >
-            Welcome to the Al-Khwarazmi International Mathematical and
-            Informatical Olympiad
+            Welcome to the Al-Khwarizmi International Mathematical and
+            Informatical Olympiad!
           </h1>
 
           <p
@@ -43,12 +43,14 @@ const WelcomeMessage: React.FC = () => {
             data-aos-duration="800"
             className="text-lg md:text-xl text-gray-700 text-center max-w-4xl leading-relaxed mb-12"
           >
-            We are delighted to welcome you to the 28th Junior Balkan
-            Mathematical Olympiad in Antalya. This prestigious event brings
-            together young mathematical talents from various countries,
-            fostering a spirit of friendly competition and collaboration. We are
-            honored to host not only these gifted students but also
-            distinguished academic leaders from around the world.
+            The Al-Khwarizmi International Mathematical and Informatical
+            Olympiad is a unique opportunity where knowledge and intellectual
+            power come together! This competition offers you the opportunity to
+            test your skills, showcase innovative ideas, and explore the harmony
+            of modern technology and timeless traditions. We believe that every
+            participant will unlock their potential and leave a lasting mark, We
+            wish you the best of luck in your pursuit of knowledge! just as
+            Al-Khwarizmi did in the world of science and discovery.
           </p>
 
           <div
@@ -62,9 +64,17 @@ const WelcomeMessage: React.FC = () => {
                 Our Mission
               </h2>
               <p className="text-gray-700">
-                To inspire and challenge young minds in the fields of
-                mathematics and informatics, promoting critical thinking and
-                problem-solving skills on a global stage.
+                To inspire and empower young minds by creating an inclusive
+                platform for innovation, exploration, and intellectual growth.
+                The Al-Khwarizmi International Mathematical and Informatical
+                Olympiad seeks to nurture the next generation of thinkers,
+                problem-solvers, and trailblazers, fostering a passion for
+                science, technology, and critical thinking.
+              </p>
+              <p className="text-gray-700 mt-2">
+                Through this initiative, we aim to honor the legacy of
+                Al-Khwarizmi by encouraging excellence, collaboration, and
+                creativity among youth from all corners of the world.
               </p>
             </div>
             <div>
@@ -72,9 +82,35 @@ const WelcomeMessage: React.FC = () => {
                 What to Expect
               </h2>
               <p className="text-gray-700">
-                An exciting competition that tests ingenuity, fosters new
-                friendships, and creates lasting memories. We hope your stay
-                will be both pleasurable and intellectually stimulating.
+                At the Al-Khwarizmi Olympiad, you can expect a dynamic and
+                inspiring environment where innovation meets intellectual
+                curiosity. Here’s what awaits you:
+              </p>
+
+              <ul className="text-gray-700">
+                <li>
+                  {" "}
+                  • Challenging Problems: Engage in thought-provoking tasks high
+                  intellectual standarts for junior level
+                </li>
+                <li>
+                  {" "}
+                  • Collaboration: Connect with like-minded individuals from
+                  diverse backgrounds and exchange knowledge.
+                </li>
+                <li>
+                  • Recognition: Showcase your talents and be celebrated for
+                  your achievements.{" "}
+                </li>
+                <li>
+                  • Legacy of Excellence: Be part of an event that honors the
+                  timeless contributions of Al-Khwarizmi to science and
+                  mathematics.
+                </li>
+              </ul>
+              <p className="text-gray-700 mt-2">
+                Prepare to be inspired, challenged, and empowered as you embark
+                on this extraordinary journey!
               </p>
             </div>
           </div>

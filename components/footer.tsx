@@ -75,10 +75,10 @@ export default function Footer() {
             <p className="text-sm">
               <span className="font-semibold">Contact Us: </span>
               <Link
-                href="mailto:info@olympcenter.uz"
+                href="mailto:khwarizmi@olympcenter.uz"
                 className="text-teal-500 hover:text-teal-400"
               >
-                info@olympcenter.uz
+                khwarizmi@olympcenter.uz
               </Link>
             </p>
           </div>

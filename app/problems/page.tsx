@@ -4,6 +4,7 @@ import AOS from "aos";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { FaDownload } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Problems() {
   useEffect(() => {
@@ -24,24 +25,29 @@ export default function Problems() {
             <h1 className="text-lg sm:text-xl">
               The collection of problems from the Al-Khwarizmi 2024 Olympiad
             </h1>
-            <Button
-              variant="secondary"
-              className="flex items-center bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 hover:scale-105 transition-all duration-300"
-            >
-              Download <FaDownload className="ml-2" />
-            </Button>
+
+            <Link href="/problems/2024.pdf">
+              <Button
+                variant="secondary"
+                className="flex items-center bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 hover:scale-105 transition-all duration-300"
+              >
+                Download <FaDownload className="ml-2" />
+              </Button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-[1fr_auto] items-center gap-4 p-4 mt-4 bg-gray-100 rounded-lg">
             <h1 className="text-lg sm:text-xl">
               The collection of problems from the Al-Khwarizmi 2023 Olympiad
             </h1>
-            <Button
-              variant="secondary"
-              className="flex items-center bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 hover:scale-105 transition-all duration-300"
-            >
-              Download <FaDownload className="ml-2" />
-            </Button>
+            <Link href="/problems/2023.pdf">
+              <Button
+                variant="secondary"
+                className="flex items-center bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 hover:scale-105 transition-all duration-300"
+              >
+                Download <FaDownload className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
 
