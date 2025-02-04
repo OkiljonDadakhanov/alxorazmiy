@@ -1,12 +1,12 @@
 
-import Hero from "@/components/hero";
+import HeroPage from "@/components/hero";
 
 
 export default function Home() {
 
   return (
     <main>
-      <Hero />
+      <HeroPage />
     </main>
   );
 }

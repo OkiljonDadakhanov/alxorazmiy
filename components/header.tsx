@@ -4,10 +4,20 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import ContactModal from "./contact-modal";
 
 const Header: React.FC = () => {
   const currentRoute = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <header className="bg-gray-800 p-4">
@@ -23,6 +33,7 @@ const Header: React.FC = () => {
                 src={"/logo/logowhite.png"}
                 width={150}
                 height={150}
+                priority
               />
             </Link>
             {/* Navigation Links (for large screens) */}
@@ -91,8 +102,11 @@ const Header: React.FC = () => {
               >
                 <Link href="/gallery">Gallery</Link>
               </li>
-              <li className="text-white hover:text-gray-400 hover:bg-yellow-500 transition duration-300 ease-in-out bg-yellow-300 px-4 py-2 rounded-[3px]">
-                <Link href="/register">Apply Now</Link>
+              <li 
+               
+                onClick={openModal}
+              >
+                <ContactModal isOpen={isModalOpen} onClose={closeModal} />
               </li>
             </ul>
           </div>
@@ -188,12 +202,16 @@ const Header: React.FC = () => {
             >
               <Link href="/gallery">Gallery</Link>
             </li>
-            <li className="text-white hover:text-gray-400 hover:bg-yellow-500 transition duration-300 ease-in-out bg-yellow-300 px-4 py-2 rounded-[3px]">
-              <Link href="/contact">Contact</Link>
+            <li 
+              className="text-white hover:text-gray-400 hover:bg-yellow-500 transition duration-300 ease-in-out bg-yellow-300 px-4 py-2 rounded-[3px] cursor-pointer"
+              onClick={openModal}
+            >
+              Contact Us
             </li>
           </ul>
         )}
       </nav>
+
     </header>
   );
 };

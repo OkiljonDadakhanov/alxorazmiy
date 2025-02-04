@@ -1,89 +1,94 @@
-"use client";
+"use client"
+import Image from "next/image"
+import Link from "next/link"
+import { motion } from "framer-motion"
 
-import type React from "react";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import {
-  CalculatorIcon as MathOperations,
-  Binary,
-  Database,
-} from "lucide-react";
-import Link from "next/link";
-
-const Hero: React.FC = () => {
+const HeroPage = () => {
   return (
-    <div className="relative min-h-screen w-full bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          {[...Array(100)].map((_, i) => (
-            <span
-              key={i}
-              className="absolute text-white text-opacity-20 select-none"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                fontSize: `${Math.random() * 20 + 10}px`,
-                transform: `rotate(${Math.random() * 360}deg)`,
-              }}
-            >
-              {Math.random() > 0.5 ? "01" : "∑∫∂"}
-            </span>
-          ))}
-        </div>
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a192f]">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div
+          className="absolute inset-0 bg-repeat bg-center"
+          style={{
+            backgroundImage:
+              'url(\'data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\')',
+          }}
+        ></div>
       </div>
-      <div className="relative z-10 container mx-auto px-4 py-16 flex flex-col items-center justify-center min-h-screen text-white text-center">
+
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+        <motion.h1
+          className="text-4xl sm:text-6xl font-extrabold text-[#64ffda] mb-6"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Al-Khwarizmi Olympiad
+        </motion.h1>
+        <motion.p
+          className="text-xl sm:text-2xl text-[#8892b0] mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          International Mathematical and Informatical Challenge
+        </motion.p>
+        <motion.div
+          className="text-lg sm:text-xl text-[#a8b2d1] mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <p>May 7 - May 13, 2024</p>
+          <p>Tashkent, Uzbekistan</p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <Link
+            href="/register"
+            className="inline-block bg-[#64ffda] text-[#0a192f] font-bold py-3 px-8 rounded-md text-lg transition duration-300 ease-in-out hover:bg-[#64ffda]/80 hover:scale-105 transform"
+          >
+            Contact Us
+          </Link>
+        </motion.div>
+      </div>
+
+      {/* Decorative elements */}
+      <motion.div
+        className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 0.1, x: 0 }}
+        transition={{ duration: 1, delay: 0.8 }}
+      >
         <Image
-          src="/logo/logowhite.PNG"
-          alt="Al-Khwarazmi"
-          width={150}
-          height={150}
-          className="rounded-lg mb-8 p-4 border-4 border-white shadow-lg"
+          src="/placeholder.svg?height=400&width=400"
+          alt="Mathematical symbol"
+          width={400}
+          height={400}
+          className="opacity-20"
         />
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">
-          Al-Khwarazmi International
-          <br />
-          Mathematical and Informatical Olympiad
-        </h1>
-        <p className="text-xl sm:text-2xl mb-8 max-w-3xl">
-          Challenging young minds in mathematics and informatics on a global
-          stage
-        </p>
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <div className="flex items-center bg-blue-500 bg-opacity-20 rounded-lg p-3">
-            <MathOperations className="w-6 h-6 mr-2" />
-            <span>Advanced Mathematics</span>
-          </div>
-          <div className="flex items-center bg-blue-500 bg-opacity-20 rounded-lg p-3">
-            <Binary className="w-6 h-6 mr-2" />
-            <span>Computer Science</span>
-          </div>
-          <div className="flex items-center bg-blue-500 bg-opacity-20 rounded-lg p-3">
-            <Database className="w-6 h-6 mr-2" />
-            <span>Algorithms</span>
-          </div>
-        </div>
-        <div className="flex flex-wrap justify-center gap-4">
-          <Link href="/register">
-            <Button
-              size="lg"
-              className="bg-blue-500 text-white hover:bg-blue-600 p-6"
-            >
-              Apply Now
-            </Button>
-          </Link>
-
-          <Link href="/about">
-            <Button
-              size="lg"
-              className="bg-blue-500 text-white hover:bg-blue-600 p-6"
-            >
-              Learn more
-            </Button>
-          </Link>
-        </div>
-      </div>
+      </motion.div>
+      <motion.div
+        className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 0.1, x: 0 }}
+        transition={{ duration: 1, delay: 1 }}
+      >
+        <Image
+          src="/placeholder.svg?height=400&width=400"
+          alt="Informatics symbol"
+          width={400}
+          height={400}
+          className="opacity-20"
+        />
+      </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default HeroPage
+
