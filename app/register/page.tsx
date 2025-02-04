@@ -1,61 +1,148 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import * as z from "zod"
-import { motion } from "framer-motion"
-import toast, { Toaster } from "react-hot-toast"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { motion } from "framer-motion";
+import toast, { Toaster } from "react-hot-toast";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const formSchema = z.object({
-  fullName: z.string().min(2, {
-    message: "Full name must be at least 2 characters.",
-  }),
-  country: z.string({
-    required_error: "Please select a country.",
-  }),
-  role: z.enum(["team_leader", "participant", "other"], {
-    required_error: "Please select a role.",
-  }),
-  subject: z.enum(["mathematics", "informatics"], {
-    required_error: "Please select a subject.",
-  }),
-  pastParticipation: z.enum(["yes", "no"], {
-    required_error: "Please indicate past participation.",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  phoneNumber: z.string().min(10, {
-    message: "Please enter a valid phone number.",
-  }),
-})
+  full_name: z
+    .string()
+    .min(2, { message: "Full name must be at least 2 characters." }),
+  country: z.string().min(1, { message: "Please select a country." }),
+  role: z.string().min(1, { message: "Please select a role." }),
+  subject: z.string().min(1, { message: "Please select a subject." }),
+  past_participation: z.boolean(),
+  email: z.string().email({ message: "Please enter a valid email address." }),
+  contact_information: z
+    .string()
+    .min(1, { message: "Please enter contact information." }),
+});
 
 const RegistrationForm: React.FC = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      fullName: "",
-      country: "",
+      full_name: "",
+      country: undefined,
       role: undefined,
       subject: undefined,
-      pastParticipation: undefined,
+      past_participation: false,
       email: "",
-      phoneNumber: "",
+      contact_information: "",
     },
-  })
+  });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
-    // Here you would typically send the form data to your backend
-    toast.success("Registration submitted successfully!", {
-      duration: 5000,
-      position: "top-center",
-    })
+  const [countries, setCountries] = useState<{ id: number; name: string }[]>(
+    []
+  );
+  const [roles, setRoles] = useState<{ id: number; name: string }[]>([]);
+  const [subjects, setSubjects] = useState<{ id: number; name: string }[]>([]);
+
+  useEffect(() => {
+    async function fetchCountries() {
+      const res = await fetch("http://192.168.1.108:8080/api/countries/", {
+        method: "GET",
+        headers: {
+          Accept: "*/*",
+        },
+      });
+      const data = await res.json();
+      setCountries(data);
+    }
+    fetchCountries();
+  }, []);
+
+  useEffect(() => {
+    async function fetchRoles() {
+      try {
+        const res = await fetch("http://192.168.1.108:8080/api/roles/", {
+          method: "GET",
+          headers: {
+            Accept: "*/*",
+          },
+        });
+
+        if (!res.ok) {
+          throw new Error("Failed to fetch roles");
+        }
+
+        const data = await res.json();
+        setRoles(data);
+      } catch (error) {
+        console.error("Error fetching roles:", error);
+      }
+    }
+
+    fetchRoles();
+  }, []);
+
+  useEffect(() => {
+    async function fetchSubjects() {
+      try {
+        const res = await fetch("http://192.168.1.108:8080/api/subjects/", {
+          method: "GET",
+          headers: {
+            Accept: "*/*",
+          },
+        });
+
+        if (!res.ok) {
+          throw new Error("Failed to fetch subjects");
+        }
+
+        const data = await res.json();
+        setSubjects(data);
+      } catch (error) {
+        console.error("Error fetching subjects:", error);
+      }
+    }
+
+    fetchSubjects();
+  }, []);
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const res = await fetch(
+        "http://192.168.1.108:8080/api/participation-requests/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
+
+      if (res.ok) {
+        toast.success("Registration submitted successfully!");
+        form.reset();
+      } else {
+        toast.error("Failed to submit registration.");
+      }
+    } catch (error) {
+      toast.error("An error occurred while submitting.");
+      console.error(error);
+    }
   }
 
   return (
@@ -66,12 +153,14 @@ const RegistrationForm: React.FC = () => {
       className="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-8"
     >
       <Toaster />
-      <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Registration Form</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+        Registration Form
+      </h2>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
             control={form.control}
-            name="fullName"
+            name="full_name"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Full Name</FormLabel>
@@ -82,94 +171,123 @@ const RegistrationForm: React.FC = () => {
               </FormItem>
             )}
           />
+
           <FormField
             control={form.control}
             name="country"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Country</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Select your country" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="uzbekistan">Uzbekistan</SelectItem>
-                    <SelectItem value="kazakhstan">Kazakhstan</SelectItem>
-                    <SelectItem value="kyrgyzstan">Kyrgyzstan</SelectItem>
-                    <SelectItem value="tajikistan">Tajikistan</SelectItem>
-                    <SelectItem value="turkmenistan">Turkmenistan</SelectItem>
+                    {Array.isArray(countries) &&
+                      countries.map((country) => (
+                        <SelectItem
+                          key={country.id}
+                          value={country?.id?.toString()}
+                        >
+                          {country.name}
+                        </SelectItem>
+                      ))}
                   </SelectContent>
                 </Select>
                 <FormMessage />
               </FormItem>
             )}
           />
+
           <FormField
             control={form.control}
             name="role"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Role</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Select your role" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="team_leader">Team Leader</SelectItem>
-                    <SelectItem value="participant">Participant</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
+                    {roles.map((role) => (
+                      <SelectItem key={role.id} value={role?.id?.toString()}>
+                        {role.name}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
                 <FormMessage />
               </FormItem>
             )}
           />
+
           <FormField
             control={form.control}
             name="subject"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Subject</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Select your subject" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="mathematics">Mathematics</SelectItem>
-                    <SelectItem value="informatics">Informatics</SelectItem>
+                    {subjects.map((subject) => (
+                      <SelectItem
+                        key={subject.id}
+                        value={subject?.id?.toString()}
+                      >
+                        {subject.name}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
                 <FormMessage />
               </FormItem>
             )}
           />
+
           <FormField
             control={form.control}
-            name="pastParticipation"
+            name="past_participation"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Past Participation</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select
+                  onValueChange={(value) => field.onChange(value === "true")}
+                  defaultValue={field.value ? "true" : "false"}
+                >
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Have you participated before?" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="yes">Yes</SelectItem>
-                    <SelectItem value="no">No</SelectItem>
+                    <SelectItem value="true">Yes</SelectItem>
+                    <SelectItem value="false">No</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />
               </FormItem>
             )}
           />
+
           <FormField
             control={form.control}
             name="email"
@@ -177,33 +295,41 @@ const RegistrationForm: React.FC = () => {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="john.doe@example.com" {...field} />
+                  <Input
+                    type="email"
+                    placeholder="john.doe@example.com"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
+
           <FormField
             control={form.control}
-            name="phoneNumber"
+            name="contact_information"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Phone Number</FormLabel>
+                <FormLabel>Contact Information</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder="+1234567890" {...field} />
+                  <Input placeholder="Your contact information" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-600 text-white">
+
+          <Button
+            type="submit"
+            className="w-full bg-blue-500 hover:bg-blue-600 text-white"
+          >
             Submit Registration
           </Button>
         </form>
       </Form>
     </motion.div>
-  )
-}
+  );
+};
 
-export default RegistrationForm
-
+export default RegistrationForm;

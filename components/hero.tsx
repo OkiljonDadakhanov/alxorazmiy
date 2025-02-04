@@ -6,6 +6,7 @@ export default function Hero() {
   return (
     <section>
       <HeroCarousel />
+
       <WelcomeMessage />
       <Organizers />
     </section>
