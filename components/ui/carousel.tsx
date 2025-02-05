@@ -4,6 +4,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 
 const HeroPage = () => {
+
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a192f]">
       {/* Background pattern */}
@@ -48,12 +49,7 @@ const HeroPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <Link
-            href="/register"
-            className="inline-block bg-[#64ffda] text-[#0a192f] font-bold py-3 px-8 rounded-md text-lg transition duration-300 ease-in-out hover:bg-[#64ffda]/80 hover:scale-105 transform"
-          >
-            Contact Us
-          </Link>
+     
         </motion.div>
       </div>
 
