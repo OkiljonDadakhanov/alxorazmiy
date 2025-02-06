@@ -191,9 +191,7 @@ const Header: React.FC = () => {
                 <Link href="/results">News/Media</Link>
               </li>
 
-              <li onClick={openModal}>
-                <ContactModal isOpen={isModalOpen} onClose={closeModal} />
-              </li>
+              <ContactModal isOpen={isModalOpen} onClose={closeModal} />
             </ul>
           </div>
 

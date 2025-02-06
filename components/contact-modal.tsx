@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -7,11 +7,17 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import Image from 'next/image';
-import { User, Mail, Briefcase, Phone } from 'lucide-react';
-import Murodbek from '@/public/images/murodbek.jpg';
+import Image from "next/image";
+import { User, Mail, Briefcase, Phone } from "lucide-react";
+import Murodbek from "@/public/images/murodbek.jpg";
 
-export function ContactDialog() {
+interface ContactModalProps {
+  isOpen: boolean;
+
+  onClose: () => void;
+}
+
+export function ContactDialog({ isOpen, onClose }: ContactModalProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
