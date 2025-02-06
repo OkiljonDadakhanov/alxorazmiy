@@ -1,10 +1,40 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
+import PageHeader from "@/components/ui/page-header";
 import { Download } from "lucide-react";
 import Link from "next/link";
 
-const results = {
-  2023: [
+// Types
+interface Result {
+  rank: number;
+  participant: string;
+  name: string;
+  score: number;
+}
+
+interface ResultsData {
+  [year: number]: Result[];
+}
+
+interface ResultTableProps {
+  year: number;
+  data: Result[];
+}
+
+interface DownloadButtonProps {
+  year: number;
+}
+
+// Constants
+const YEARS = {
+  CURRENT: 2024,
+  PREVIOUS: 2023,
+} as const;
+
+// Data
+const results: ResultsData = {
+  [YEARS.PREVIOUS]: [
     {
       rank: 1,
       participant: "team1",
@@ -14,7 +44,7 @@ const results = {
     { rank: 2, participant: "team2", name: "Jane Smith", score: 92 },
     { rank: 3, participant: "team3", name: "Bob Johnson", score: 88 },
   ],
-  2024: [
+  [YEARS.CURRENT]: [
     {
       rank: 1,
       participant: "Kazakhstan 2nd team",
@@ -36,33 +66,42 @@ const results = {
   ],
 };
 
-const ResultTable = ({ year, data }) => (
-  <div className="mb-8">
-    <h2 className="text-2xl font-bold text-blue-400 mb-4">{year} Results</h2>
-    <table className="w-full bg-white shadow-md rounded-lg overflow-hidden">
-      <thead className="bg-blue-500 text-white">
-        <tr>
-          <th className="py-3 px-4 text-left">Rank</th>
-          <th className="py-3 px-4 text-left">Participant team</th>
-          <th className="py-3 px-4 text-left">Name</th>
-          <th className="py-3 px-4 text-left">Score</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((result, index) => (
-          <tr key={index} className={index % 2 === 0 ? "bg-gray-100" : ""}>
-            <td className="py-3 px-4">{result.rank}</td>
-            <td className="py-3 px-4">{result.participant}</td>
-            <td className="py-3 px-4">{result.name}</td>
-            <td className="py-3 px-4">{result.score}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-);
+// Components
+const ResultTable: React.FC<ResultTableProps> = ({ year, data }) => {
+  const tableHeaders = ["Rank", "Participant team", "Name", "Score"];
 
-const DownloadButton = ({ year }) => {
+  return (
+    <div className="mb-8">
+      <h2 className="text-2xl font-bold text-blue-400 mb-4">{year} Results</h2>
+      <table className="w-full bg-white shadow-md rounded-lg overflow-hidden">
+        <thead className="bg-blue-500 text-white">
+          <tr>
+            {tableHeaders.map((header) => (
+              <th key={header} className="py-3 px-4 text-left">
+                {header}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((result, index) => (
+            <tr
+              key={`${result.participant}-${result.rank}`}
+              className={index % 2 === 0 ? "bg-gray-100" : ""}
+            >
+              <td className="py-3 px-4">{result.rank}</td>
+              <td className="py-3 px-4">{result.participant}</td>
+              <td className="py-3 px-4">{result.name}</td>
+              <td className="py-3 px-4">{result.score}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+const DownloadButton: React.FC<DownloadButtonProps> = ({ year }) => {
   return (
     <Link href={`/problems/results${year}.pdf`}>
       <Button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
@@ -73,40 +112,39 @@ const DownloadButton = ({ year }) => {
   );
 };
 
-export default function Results() {
+const ResultsHeader: React.FC = () => (
+  <PageHeader title="Olympiad Results" />
+);
+
+const ResultsContent: React.FC = () => (
+  <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
+    <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">
+      {YEARS.PREVIOUS} - {YEARS.CURRENT} Results
+    </h2>
+    <p className="text-lg text-center text-gray-600 mb-8">
+      Congratulations to all participants! Here are the top performers for the
+      past two years.
+    </p>
+
+    <div className="flex justify-center space-x-4 mb-8">
+      <DownloadButton year={YEARS.CURRENT} />
+      <DownloadButton year={YEARS.PREVIOUS} />
+    </div>
+
+    <ResultTable year={YEARS.CURRENT} data={results[YEARS.CURRENT]} />
+    <ResultTable year={YEARS.PREVIOUS} data={results[YEARS.PREVIOUS]} />
+  </div>
+);
+
+const Results: React.FC = () => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-between bg-gray-100 text-gray-800">
-      {/* Header */}
-      <div className="bg-[#0a192f] text-white p-6 sm:p-9 mb-6 sm:mb-8 w-full">
-        <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-semibold">
-          Olympiad Results
-        </h1>
-      </div>
-
-      {/* Main Content */}
+      <ResultsHeader />
       <main className="flex-grow w-full max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
-          <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">
-            2023 - 2024 Results
-          </h2>
-          <p className="text-lg text-center text-gray-600 mb-8">
-            Congratulations to all participants! Here are the top performers for
-            the past two years.
-          </p>
-
-          <div className="flex justify-center space-x-4 mb-8">
-            <DownloadButton year={2024} />
-            <DownloadButton year={2023} />
-          </div>
-          <ResultTable year={2024} data={results[2024]} />
-          <ResultTable year={2023} data={results[2023]} />
-        </div>
+        <ResultsContent />
       </main>
-
-      {/* Footer */}
-      <footer className="w-full bg-[#0a192f] text-white p-4 text-center">
-        <p>&copy; 2025 Olympiad Organization. All rights reserved.</p>
-      </footer>
     </section>
   );
-}
+};
+
+export default Results;

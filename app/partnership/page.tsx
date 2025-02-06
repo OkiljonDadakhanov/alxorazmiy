@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { partnershipsData } from "@/utils/partnershipsData";
+import { partnershipsData } from "@/data/partnershipsData";
 
 export default function Partnership() {
   return (
