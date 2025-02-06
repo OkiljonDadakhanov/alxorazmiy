@@ -100,7 +100,7 @@ const Header: React.FC = () => {
 
               <li
                 className={`${
-                  currentRoute == "/participants"
+                  currentRoute == "/partnership"
                     ? "text-yellow-500"
                     : "text-white"
                 } hover:text-gray-400`}
@@ -109,12 +109,12 @@ const Header: React.FC = () => {
               </li>
               <li
                 className={`${
-                  currentRoute == "/programme"
+                  currentRoute == "/uzbekistan"
                     ? "text-yellow-500"
                     : "text-white"
                 } hover:text-gray-400`}
               >
-                <Link href="/programme">Uzbekistan</Link>
+                <Link href="/uzbekistan">Uzbekistan</Link>
               </li>
               <NavigationMenu>
                 <NavigationMenuList>
