@@ -92,6 +92,16 @@ const Header: React.FC = () => {
                             </Link>
                           </NavigationMenuLink>
                         </li>
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/regulations"
+                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
+                            >
+                              Regulation
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
@@ -160,7 +170,7 @@ const Header: React.FC = () => {
                         <li>
                           <NavigationMenuLink asChild>
                             <Link
-                              href="/results/2023"
+                              href="/problems"
                               className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
                             >
                               I- Al-Khwarizmi IMIO 2023
@@ -170,7 +180,7 @@ const Header: React.FC = () => {
                         <li>
                           <NavigationMenuLink asChild>
                             <Link
-                              href="/results/2024"
+                              href="/results"
                               className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
                             >
                               II- Al-Khwarizmi IMIO 2024
@@ -185,7 +195,7 @@ const Header: React.FC = () => {
 
               <li
                 className={`${
-                  currentRoute == "/results" ? "text-yellow-500" : "text-white"
+                  currentRoute == "/news" ? "text-yellow-500" : "text-white"
                 } hover:text-gray-400`}
               >
                 <Link href="/results">News/Media</Link>

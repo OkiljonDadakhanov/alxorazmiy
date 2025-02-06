@@ -78,7 +78,7 @@ export default function Footer() {
                 href="mailto:khwarizmi@olympcenter.uz"
                 className="text-teal-500 hover:text-teal-400"
               >
-                khwarizmi@olympcenter.uz
+                info@olympcenter.uz
               </Link>
             </p>
           </div>

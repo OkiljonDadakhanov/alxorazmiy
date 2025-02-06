@@ -75,7 +75,7 @@ export function ContactDialog({ isOpen, onClose }: ContactModalProps) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                +998 90 123 4567
+                +998775503366
               </a>
             </div>
           </div>

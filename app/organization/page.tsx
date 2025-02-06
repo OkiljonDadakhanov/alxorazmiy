@@ -158,6 +158,8 @@ export default function OrganizationPage() {
       duration: 1000,
       once: true,
     });
+
+    AOS.refresh();
   }, []);
 
   const leader = members.find((member) => member.isLeader);
@@ -176,7 +178,7 @@ export default function OrganizationPage() {
         <h2 className="text-5xl">Scientific Committee (Mathematics)</h2>
       </div>
 
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 w-[80%]">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {leader && (
             <div key={leader.id} data-aos="fade-up" className="md:col-span-3">
@@ -195,7 +197,7 @@ export default function OrganizationPage() {
         <h2 className="text-5xl">Scientific Committee (Informatics)</h2>
       </div>
 
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 w-[80%]">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {informaticsLeader && (
             <div
