@@ -76,7 +76,7 @@ const WelcomeMessage: FC = () => {
               <p className="text-gray-700 mb-4">
                 At the Al-Khwarizmi Olympiad, you can expect a dynamic and
                 inspiring environment where innovation meets intellectual
-                curiosity. Here's what awaits you:
+                curiosity. Here`s what awaits you:
               </p>
 
               <ul className="text-gray-700 space-y-2 list-none">

@@ -1,10 +1,8 @@
-"use client"
-import Image from "next/image"
-import Link from "next/link"
-import { motion } from "framer-motion"
+"use client";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 const HeroPage = () => {
-
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a192f]">
       {/* Background pattern */}
@@ -48,9 +46,7 @@ const HeroPage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-        >
-     
-        </motion.div>
+        ></motion.div>
       </div>
 
       {/* Decorative elements */}
@@ -83,8 +79,7 @@ const HeroPage = () => {
         />
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroPage
-
+export default HeroPage;
