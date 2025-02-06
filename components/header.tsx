@@ -14,200 +14,106 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
+const menuItems = [
+  { label: "Home", href: "/" },
+  {
+    label: "III Al-Khwarizmi IMIO",
+    submenu: [
+      { label: "Organizing Committee", href: "/organization" },
+      { label: "Scientific Committee", href: "/organization" },
+      { label: "Program", href: "/programme" },
+      { label: "Regulation", href: "/regulations" },
+    ],
+  },
+  { label: "Partnership", href: "/partnership" },
+  { label: "Uzbekistan", href: "/uzbekistan" },
+  {
+    label: "About/History Al-Khwarizmi IMIO",
+    submenu: [
+      { label: "I- Al-Khwarizmi IMIO 2023", href: "/history/2023" },
+      { label: "II- Al-Khwarizmi IMIO 2024", href: "/history/2024" },
+    ],
+  },
+  {
+    label: "Results/Problems",
+    submenu: [
+      { label: "I- Al-Khwarizmi IMIO 2023", href: "/problems" },
+      { label: "II- Al-Khwarizmi IMIO 2024", href: "/results" },
+    ],
+  },
+  { label: "News/Media", href: "/results" },
+];
+
 const Header: React.FC = () => {
   const currentRoute = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
   return (
-    <header className="bg-gray-800 p-4">
+    <header className="bg-gray-800 p-6">
       <nav>
-        {/* Logo and Navigation Container */}
-        <div className="flex justify-around items-center">
-          {/* Logo */}
-          <div className="flex items-center space-x-6">
-            <Link href="/">
-              <Image
-                className="rounded"
-                alt="Alxorazmiy logo"
-                src={"/logo/logowhite.png"}
-                width={150}
-                height={150}
-                priority
-              />
-            </Link>
-            {/* Navigation Links (for large screens) */}
-            <ul className="hidden lg:flex items-center space-x-9 text-[20px]">
-              <li
-                className={`${
-                  currentRoute == "/" ? "text-yellow-500" : "text-white"
-                } hover:text-gray-400`}
-              >
-                <Link href="/">Home</Link>
-              </li>
+        <div className="flex justify-between items-center">
+          <Link href="/">
+            <Image
+              className="rounded"
+              alt="Alxorazmiy logo"
+              src="/logo/logowhite.png"
+              width={180}
+              height={180}
+              priority
+            />
+          </Link>
+          {/* Desktop Navigation */}
+          <ul className="hidden lg:flex items-center space-x-6 text-[18px] text-white">
+            {menuItems.map((item, index) =>
+              item.submenu ? (
+                <NavigationMenu key={index}>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger className="bg-gray-800 text-white px-4 text-1xl py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                        {item.label}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent className="w-64">
+                        {item.submenu.map((sub, subIndex) => (
+                          <NavigationMenuLink
+                            asChild
+                            key={subIndex}
+                            className="w-full"
+                          >
+                            <Link
+                              href={sub.href}
+                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
+                            >
+                              {sub.label}
+                            </Link>
+                          </NavigationMenuLink>
+                        ))}
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+              ) : (
+                <li
+                  key={index}
+                  className={`${
+                    currentRoute === item.href
+                      ? "text-yellow-500"
+                      : "hover:text-gray-400"
+                  }`}
+                >
+                  <Link href={item.href}>{item.label}</Link>
+                </li>
+              )
+            )}
+            <ContactModal
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+            />
+          </ul>
 
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-gray-800 text-white px-4 text-1xl py-2 rounded-lg hover:bg-gray-700 transition-colors">
-                      III Al-Khwarizmi IMIO
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent className="w-64">
-                      <ul className="shadow-md rounded-lg p-2 space-y-2 w-full">
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/organization"
-                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
-                            >
-                              Organizing Committee
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/organization"
-                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
-                            >
-                              Scientific Committee
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/programme"
-                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
-                            >
-                              Program
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/regulations"
-                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
-                            >
-                              Regulation
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-
-              <li
-                className={`${
-                  currentRoute == "/partnership"
-                    ? "text-yellow-500"
-                    : "text-white"
-                } hover:text-gray-400`}
-              >
-                <Link href="/partnership">Partnership</Link>
-              </li>
-              <li
-                className={`${
-                  currentRoute == "/uzbekistan"
-                    ? "text-yellow-500"
-                    : "text-white"
-                } hover:text-gray-400`}
-              >
-                <Link href="/uzbekistan">Uzbekistan</Link>
-              </li>
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-gray-800 text-white px-4 text-1xl py-2 rounded-lg hover:bg-gray-700 transition-colors">
-                      About/history Al-Khwarizmi IMIO
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent className="w-72">
-                      <ul className="shadow-md rounded-lg p-2 space-y-2 w-full">
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/history/2023"
-                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
-                            >
-                              I- Al-Khwarizmi IMIO 2023
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/history/2024"
-                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
-                            >
-                              II- Al-Khwarizmi IMIO 2024
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-gray-800 text-white px-4 text-1xl py-2 rounded-lg hover:bg-gray-700 transition-colors">
-                      Results/Problems
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent className="w-64">
-                      <ul className="shadow-md rounded-lg p-2 space-y-2 w-full">
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/problems"
-                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
-                            >
-                              I- Al-Khwarizmi IMIO 2023
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/results"
-                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
-                            >
-                              II- Al-Khwarizmi IMIO 2024
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-
-              <li
-                className={`${
-                  currentRoute == "/news" ? "text-yellow-500" : "text-white"
-                } hover:text-gray-400`}
-              >
-                <Link href="/results">News/Media</Link>
-              </li>
-
-              <ContactModal isOpen={isModalOpen} onClose={closeModal} />
-            </ul>
-          </div>
-
-          {/* Hamburger Menu Button */}
+          {/* Mobile Menu Button */}
           <button
-            className="text-white lg:hidden focus:outline-none"
+            className="text-white lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg
@@ -215,7 +121,6 @@ const Header: React.FC = () => {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 strokeLinecap="round"
@@ -231,10 +136,43 @@ const Header: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation Links */}
+        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <ul className="flex flex-col items-center space-y-4 mt-4 lg:hidden">
-            {/* Mobile menu items remain the same */}
+          <ul className="flex flex-col items-center space-y-4 mt-4 lg:hidden text-white">
+            {menuItems.map((item, index) => (
+              <li key={index}>
+                {item.submenu ? (
+                  <details className="text-center">
+                    <summary className="cursor-pointer py-2">
+                      {item.label}
+                    </summary>
+                    <ul className="flex flex-col space-y-2">
+                      {item.submenu.map((sub, subIndex) => (
+                        <li key={subIndex}>
+                          <Link
+                            href={sub.href}
+                            className="block px-4 py-2 hover:bg-gray-700 rounded-md"
+                          >
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`block px-4 py-2 ${
+                      currentRoute === item.href
+                        ? "text-yellow-500"
+                        : "hover:text-gray-400"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </li>
+            ))}
           </ul>
         )}
       </nav>
