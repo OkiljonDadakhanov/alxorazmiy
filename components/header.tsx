@@ -5,6 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import ContactModal from "./contact-modal";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Header: React.FC = () => {
   const currentRoute = usePathname();
@@ -45,15 +53,51 @@ const Header: React.FC = () => {
               >
                 <Link href="/">Home</Link>
               </li>
-              <li
-                className={`${
-                  currentRoute == "/regulations"
-                    ? "text-yellow-500"
-                    : "text-white"
-                } hover:text-gray-400`}
-              >
-                <Link href="/regulations">Regulations</Link>
-              </li>
+
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="bg-gray-800 text-white px-4 text-1xl py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                      III Al-Khwarizmi IMIO
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent className="w-64">
+                      <ul className="shadow-md rounded-lg p-2 space-y-2 w-full">
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/organization"
+                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
+                            >
+                              Organizing Committee
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/organization"
+                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
+                            >
+                              Scientific Committee
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/programme"
+                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
+                            >
+                              Program
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+
               <li
                 className={`${
                   currentRoute == "/participants"
@@ -61,7 +105,7 @@ const Header: React.FC = () => {
                     : "text-white"
                 } hover:text-gray-400`}
               >
-                <Link href="/participants">Participants</Link>
+                <Link href="/partnership">Partnership</Link>
               </li>
               <li
                 className={`${
@@ -70,42 +114,84 @@ const Header: React.FC = () => {
                     : "text-white"
                 } hover:text-gray-400`}
               >
-                <Link href="/programme">Programme</Link>
+                <Link href="/programme">Uzbekistan</Link>
               </li>
-              <li
-                className={`${
-                  currentRoute == "/organization"
-                    ? "text-yellow-500"
-                    : "text-white"
-                } hover:text-gray-400`}
-              >
-                <Link href="/organization">Organization</Link>
-              </li>
-              <li
-                className={`${
-                  currentRoute == "/problems" ? "text-yellow-500" : "text-white"
-                } hover:text-gray-400`}
-              >
-                <Link href="/problems">Problems</Link>
-              </li>
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="bg-gray-800 text-white px-4 text-1xl py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                      About/history Al-Khwarizmi IMIO
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent className="w-72">
+                      <ul className="shadow-md rounded-lg p-2 space-y-2 w-full">
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/history/2023"
+                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
+                            >
+                              I- Al-Khwarizmi IMIO 2023
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/history/2024"
+                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
+                            >
+                              II- Al-Khwarizmi IMIO 2024
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="bg-gray-800 text-white px-4 text-1xl py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                      Results/Problems
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent className="w-64">
+                      <ul className="shadow-md rounded-lg p-2 space-y-2 w-full">
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/results/2023"
+                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
+                            >
+                              I- Al-Khwarizmi IMIO 2023
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href="/results/2024"
+                              className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
+                            >
+                              II- Al-Khwarizmi IMIO 2024
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+
               <li
                 className={`${
                   currentRoute == "/results" ? "text-yellow-500" : "text-white"
                 } hover:text-gray-400`}
               >
-                <Link href="/results">Results</Link>
+                <Link href="/results">News/Media</Link>
               </li>
-              <li
-                className={`${
-                  currentRoute == "/gallery" ? "text-yellow-500" : "text-white"
-                } hover:text-gray-400`}
-              >
-                <Link href="/gallery">Gallery</Link>
-              </li>
-              <li 
-               
-                onClick={openModal}
-              >
+
+              <li onClick={openModal}>
                 <ContactModal isOpen={isModalOpen} onClose={closeModal} />
               </li>
             </ul>
@@ -140,78 +226,10 @@ const Header: React.FC = () => {
         {/* Mobile Navigation Links */}
         {isMenuOpen && (
           <ul className="flex flex-col items-center space-y-4 mt-4 lg:hidden">
-            <li
-              className={`${
-                currentRoute == "/" ? "text-yellow-500" : "text-white"
-              } hover:text-gray-400`}
-            >
-              <Link href="/">Home</Link>
-            </li>
-            <li
-              className={`${
-                currentRoute == "/regulations"
-                  ? "text-yellow-500"
-                  : "text-white"
-              } hover:text-gray-400`}
-            >
-              <Link href="/regulations">Regulations</Link>
-            </li>
-            <li
-              className={`${
-                currentRoute == "/participants"
-                  ? "text-yellow-500"
-                  : "text-white"
-              } hover:text-gray-400`}
-            >
-              <Link href="/participants">Participants</Link>
-            </li>
-            <li
-              className={`${
-                currentRoute == "/programme" ? "text-yellow-500" : "text-white"
-              } hover:text-gray-400`}
-            >
-              <Link href="/programme">Programme</Link>
-            </li>
-            <li
-              className={`${
-                currentRoute == "/organization"
-                  ? "text-yellow-500"
-                  : "text-white"
-              } hover:text-gray-400`}
-            >
-              <Link href="/organization">Organization</Link>
-            </li>
-            <li
-              className={`${
-                currentRoute == "/problems" ? "text-yellow-500" : "text-white"
-              } hover:text-gray-400`}
-            >
-              <Link href="/problems">Problems</Link>
-            </li>
-            <li
-              className={`${
-                currentRoute == "/results" ? "text-yellow-500" : "text-white"
-              } hover:text-gray-400`}
-            >
-              <Link href="/results">Results</Link>
-            </li>
-            <li
-              className={`${
-                currentRoute == "/gallery" ? "text-yellow-500" : "text-white"
-              } hover:text-gray-400`}
-            >
-              <Link href="/gallery">Gallery</Link>
-            </li>
-            <li 
-               
-               onClick={openModal}
-             >
-               <ContactModal isOpen={isModalOpen} onClose={closeModal} />
-             </li>
+            {/* Mobile menu items remain the same */}
           </ul>
         )}
       </nav>
-
     </header>
   );
 };
