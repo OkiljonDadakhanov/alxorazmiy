@@ -105,12 +105,11 @@ const Header: React.FC = () => {
                 </li>
               )
             )}
-            <ContactModal
-              isOpen={isModalOpen}
-              onClose={() => setIsModalOpen(false)}
-            />
           </ul>
-
+          <ContactModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+          />
           {/* Mobile Menu Button */}
           <button
             className="text-white lg:hidden"
