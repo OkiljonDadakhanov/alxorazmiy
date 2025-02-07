@@ -17,7 +17,7 @@ import {
 const menuItems = [
   { label: "Home", href: "/" },
   {
-    label: "III Al-Khwarizmi IMIO",
+    label: "3rd Al-Khwarizmi IMIO",
     submenu: [
       { label: "Organizing Committee", href: "/organization" },
       { label: "Scientific Committee", href: "/organization" },
@@ -28,20 +28,17 @@ const menuItems = [
   { label: "Partnership", href: "/partnership" },
   { label: "Uzbekistan", href: "/uzbekistan" },
   {
-    label: "About/History Al-Khwarizmi IMIO",
-    submenu: [
-      { label: "I- Al-Khwarizmi IMIO 2023", href: "/history/2023" },
-      { label: "II- Al-Khwarizmi IMIO 2024", href: "/history/2024" },
-    ],
+    label: "About IMIO",
+    href: "/about",
   },
   {
     label: "Results/Problems",
     submenu: [
-      { label: "I- Al-Khwarizmi IMIO 2023", href: "/problems" },
-      { label: "II- Al-Khwarizmi IMIO 2024", href: "/results" },
+      { label: "Al-Khwarizmi IMIO 2023/24 problems", href: "/problems" },
+      { label: "Al-Khwarizmi IMIO 2023/24 results", href: "/results" },
     ],
   },
-  { label: "News/Media", href: "/results" },
+  { label: "News/Media", href: "/news" },
 ];
 
 const Header: React.FC = () => {
@@ -55,7 +52,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center">
           <Link href="/">
             <Image
-              className="rounded"
+              className="rounded p-5"
               alt="Alxorazmiy logo"
               src="/logo/logowhite.png"
               width={180}

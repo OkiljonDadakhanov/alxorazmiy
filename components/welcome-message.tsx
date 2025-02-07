@@ -35,16 +35,16 @@ const WelcomeMessage: FC = () => {
           </div>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-center mb-6">
-            Welcome to the Al-Khwarizmi International Mathematical and
-            Informatical Olympiad!
+            Welcome to Al-Khwarizmi International Mathematics and Informatics
+            Olympiad!
           </h1>
 
           <p className="text-lg md:text-xl text-gray-700 text-center max-w-4xl leading-relaxed mb-12">
-            The Al-Khwarizmi International Mathematical and Informatical
-            Olympiad is a unique opportunity where knowledge and intellectual
-            power come together! This competition offers you the opportunity to
-            test your skills, showcase innovative ideas, and explore the harmony
-            of modern technology and timeless traditions. We believe that every
+            Al-Khwarizmi International Mathematics and Informatics Olympiad is a
+            unique opportunity where knowledge and intellectual power come
+            together! This competition offers you the opportunity to test your
+            skills, showcase innovative ideas, and explore the harmony of modern
+            technology and timeless traditions. We believe that every
             participant will unlock their potential and leave a lasting mark,
             just as Al-Khwarizmi did in the world of science and discovery. We
             wish you the best of luck in your pursuit of knowledge!
@@ -58,8 +58,8 @@ const WelcomeMessage: FC = () => {
               <p className="text-gray-700">
                 To inspire and empower young minds by creating an inclusive
                 platform for innovation, exploration, and intellectual growth.
-                The Al-Khwarizmi International Mathematical and Informatical
-                Olympiad seeks to nurture the next generation of thinkers,
+                Al-Khwarizmi International Mathematics and Informatics Olympiad
+                seeks to nurture the next generation of thinkers,
                 problem-solvers, and trailblazers, fostering a passion for
                 science, technology, and critical thinking.
               </p>

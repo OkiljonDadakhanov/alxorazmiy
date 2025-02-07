@@ -31,7 +31,7 @@ const HeroPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          International Mathematical and Informatical Challenge
+          International Mathematics and Informatics Challenge
         </motion.p>
         <motion.div
           className="text-lg sm:text-xl text-[#a8b2d1] mb-12"

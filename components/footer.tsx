@@ -38,7 +38,7 @@ export default function Footer() {
           <p className="text-lg sm:text-xl">
             It is our great pleasure to welcome you to the{" "}
             <span className="font-semibold">
-              Al-Khwarazmi International Mathematical and Informatical Olympiad
+              Al-Khwarizmi International Mathematics and Informatics Olympiad
             </span>
           </p>
           <p className="text-lg sm:text-xl">
@@ -78,7 +78,7 @@ export default function Footer() {
                 href="mailto:khwarizmi@olympcenter.uz"
                 className="text-teal-500 hover:text-teal-400"
               >
-                info@olympcenter.uz
+                khimio@olympcenter.uz
               </Link>
             </p>
           </div>
@@ -89,7 +89,7 @@ export default function Footer() {
           <p>
             Copyright © {new Date().getFullYear()}{" "}
             <span className="font-medium">
-              Al-Khwarazmi International Mathematical and Informatical Olympiad.
+              Al-Khwarizmi International Mathematics and Informatics Olympiad.
             </span>
           </p>
         </div>

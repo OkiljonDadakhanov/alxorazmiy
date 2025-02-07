@@ -37,12 +37,22 @@ const results: ResultsData = {
   [YEARS.PREVIOUS]: [
     {
       rank: 1,
-      participant: "team1",
-      name: "John Doe",
-      score: 95,
+      participant: "Uzbekistan Tashkent city",
+      name: "Axtamov Ozod",
+      score: 90.7,
     },
-    { rank: 2, participant: "team2", name: "Jane Smith", score: 92 },
-    { rank: 3, participant: "team3", name: "Bob Johnson", score: 88 },
+    {
+      rank: 2,
+      participant: "Kyrgyzstan",
+      name: "Korniiash Fedor",
+      score: 72.6,
+    },
+    {
+      rank: 3,
+      participant: "Kazakhstan",
+      name: "Yerkebulanuly Ali",
+      score: 65.7,
+    },
   ],
   [YEARS.CURRENT]: [
     {
@@ -112,9 +122,7 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ year }) => {
   );
 };
 
-const ResultsHeader: React.FC = () => (
-  <PageHeader title="Olympiad Results" />
-);
+const ResultsHeader: React.FC = () => <PageHeader title="Olympiad Results" />;
 
 const ResultsContent: React.FC = () => (
   <div className="bg-white shadow-lg rounded-lg p-6 mb-8">

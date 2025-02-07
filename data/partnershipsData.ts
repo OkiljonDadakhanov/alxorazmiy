@@ -5,72 +5,60 @@ import fom from "@/public/logo/olympic.png";
 export const partnershipsData = [
   {
     id: "1",
-    title: "Maktabgacha va Maktab Ta`limi vazirligi",
+    title:
+      "The Ministry of Preschool and School Education of the Republic of Uzbekistan",
     logo: maktabgacha,
-    description: `O‘zbekiston Respublikasi Maktabgacha va maktab ta’limi vazirligi
-                7 milliondan ortiq o‘quvchini qamrab olgan ta’lim tizimini
-                boshqaruvchi asosiy davlat organi hisoblanadi. So‘nggi yillarda
-                mamlakatda ta’lim sohasida keng ko‘lamli islohotlar amalga
-                oshirilmoqda bo‘lib, bu ta’lim sifati va samaradorligini
-                oshirish, zamonaviy bilim va ko‘nikmalarga ega yoshlarni
-                tayyorlashga qaratilgan. Ta’lim mamlakatda ustuvor yo‘nalish
-                sifatida qaralib, inson kapitaliga investitsiya qilish vositasi
-                va barqaror rivojlanish maqsadlariga erishishning muhim omili
-                hisoblanadi. Hozirgi islohotlar umumta’lim maktablarida o‘quv
-                jarayonini yangilash, o‘quvchilarning amaliy ko‘nikmalarini
-                rivojlantirish, ularni mehnat bozoriga tayyorlash, innovatsiya
-                va tadbirkorlik madaniyatini qo‘llab-quvvatlashga qaratilgan.
-                Shu maqsadda:`,
+    description: `The Ministry of Preschool and School Education of the Republic of Uzbekistan is the primary state body responsible for managing the education system, which encompasses more than 7 million students. In recent years, the country has undertaken large-scale reforms in the education sector aimed at improving the quality and efficiency of education, as well as preparing young people with modern knowledge and skills. Education is regarded as a priority direction in the country, serving as a means of investing in human capital and a key factor in achieving sustainable development goals.
+
+The ongoing reforms focus on updating the learning process in general education schools, developing students' practical skills, preparing them for the labor market, and fostering a culture of innovation and entrepreneurship. To achieve these objectives:`,
     points: [
-      "O'quv dasturlari takomillashtirildi va yangi fanlar joriy qilindi",
-      "Boshlang'ich sinflarda o'g'il bolalar ta'limiga ayol o'qituvchilar jalb qilinishi kengaytirildi",
-      "Ixtisoslashtirilgan maktablar soni oshirildi va STEAM ta'limi faol rivojlantirilmoqda",
-      "Maktabgacha ta'lim muassasalari soni ko'paytirilib, qamrov darajasi sezilarli darajada oshirildi",
+      "Curricula have been improved, and new subjects have been introduced.",
+      "The involvement of female teachers in boys' education in primary grades has been expanded.",
+      "The number of specialized schools has increased, and STEAM education is actively developing.",
+      "The number of preschool education institutions has increased, significantly improving enrollment rates.",
     ],
   },
   {
     id: "2",
-    title: "O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligi",
+    title: "The Ministry of Digital Technologies of the Republic of Uzbekistan",
     logo: tech,
-    description: `O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligi mamlakatda axborot texnologiyalari va raqamli transformatsiyani rivojlantirishga mas’ul bo‘lgan asosiy davlat organi hisoblanadi. So‘nggi yillarda O‘zbekiston raqamli texnologiyalar sohasida keng ko‘lamli islohotlarni amalga oshirib, iqtisodiyotning turli tarmoqlarida innovatsion yechimlarni joriy etishga qaratilgan strategiyalarni ishlab chiqmoqda.
-Raqamli texnologiyalar O‘zbekistonning barqaror rivojlanish maqsadlarida muhim o‘rin tutib, davlat xizmatlarini raqamlashtirish, axborot xavfsizligini ta’minlash, IT-mutaxassislarni tayyorlash va IT-sanoatni rivojlantirish kabi yo‘nalishlarda keng ko‘lamli ishlar olib borilmoqda. Jumladan:
-`,
+    description: `The Ministry of Digital Technologies of the Republic of Uzbekistan is the primary government body responsible for developing information technology and digital transformation in the country. In recent years, Uzbekistan has implemented large-scale reforms in the field of digital technologies, developing strategies aimed at introducing innovative solutions across various sectors of the economy. Digital technologies play a crucial role in Uzbekistan’s sustainable development goals, with extensive efforts being made in areas such as digitizing public services, ensuring information security, training IT specialists, and fostering the IT industry. Specifically:`,
     points: [
-      "Elektron hukumat tizimi kengaytirilmoqda, davlat xizmatlari raqamlashtirilmoqda",
-      "IT-parklar faoliyatini qo‘llab-quvvatlash orqali startap ekotizimi rivojlantirilmoqda",
-      "Kiberxavfsizlik va ma’lumotlarni himoya qilish tizimlari mustahkamlanmoqda",
-      "Sun’iy intellekt va bulut texnologiyalari bo‘yicha ilmiy tadqiqotlar qo‘llab-quvvatlanmoqda",
-      "IT-sohasidagi kadrlar tayyorlash bo‘yicha maxsus dasturlar amalga oshirilmoqda, zamonaviy texnologiyalarni o‘rgatish markazlari tashkil etilmoqda.",
+      "The e-government system is being expanded, and public services are being digitized.",
+      "The startup ecosystem is being developed by supporting IT parks.",
+      "Cybersecurity and data protection systems are being strengthened.",
+      "Scientific research in artificial intelligence and cloud technologies is being supported.",
+      "Special programs for IT personnel training are being implemented, and modern technology training centers are being established.",
     ],
   },
 
   {
     id: "3",
-    title: "Ixtisoslashtirilgan Ta’lim Muassasalari agentligi",
+    title: "The Agency for Specialized Educational Institutions",
     logo: pima,
-    description: `Ixtisoslashtirilgan ta’lim muassasalari agentligi mamlakatda iqtidorli o‘quvchilarni aniqlash, ularni qo‘llab-quvvatlash va rivojlantirishga yo‘naltirilgan ixtisoslashtirilgan ta’lim muassasalarini boshqaruvchi davlat organi hisoblanadi. Agentlikning asosiy vazifalari quyidagilardan iborat:`,
+    description: `The Agency for Specialized Educational Institutions is the government body responsible for managing specialized educational institutions aimed at identifying, supporting, and developing gifted students in the country. The agency's main tasks include:`,
     points: [
-      "STEAM fanlari bo‘yicha baholash tizimini joriy etish: Xalqaro dasturlar talablariga muvofiq o‘quvchilar va pedagog kadrlarning STEAM (fan, texnologiya, muhandislik, san’at va matematika) fanlari bo‘yicha bilim va ko‘nikmalarini baholash hamda ularga xalqaro darajadagi AS va A-LEVEL sertifikatlarini berish amaliyotini yo‘lga qo‘yish.",
-      "Ixtisoslashtirilgan maktablar tarmog‘ini kengaytirish: 2022-yil 14-aprelda qabul qilingan Prezident farmoniga muvofiq, agentlik tizimida 193 ta ixtisoslashtirilgan maktab va maktab-internatlar tashkil etildi. Shundan 168 tasi 2022-2023-o‘quv yilida o‘z faoliyatini boshladi.",
-      "Kiberxavfsizlik va ma’lumotlarni himoya qilish tizimlari mustahkamlanmoqda",
-      "Ta’lim sifatini oshirish: Agentlik tizimidagi maktablarda xalqaro standartlarga mos ta’lim dasturlarini joriy etish, o‘quvchilarning bilim va ko‘nikmalarini rivojlantirishga qaratilgan innovatsion yondashuvlarni tatbiq etish.",
-      "Prezident maktablari: Mamlakatning turli hududlarida joylashgan 14 ta Prezident maktabi iqtidorli o‘quvchilarni aniqlash va ularni qo‘llab-quvvatlashga yo‘naltirilgan.",
+      "Implementing a STEAM Assessment System: Establishing an evaluation system for students and educators in STEAM (Science, Technology, Engineering, Arts, and Mathematics) subjects in accordance with international program requirements. This includes issuing internationally recognized AS and A-LEVEL certificates.",
+      "Expanding the Network of Specialized Schools: Following the Presidential decree issued on April 14, 2022, the agency established 193 specialized schools and boarding schools, with 168 of them beginning operations in the 2022-2023 academic year.",
+      "Strengthening Cybersecurity and Data Protection Systems.",
+      "Improving Education Quality: Implementing curricula that align with international standards in specialized schools and adopting innovative approaches to enhance students' knowledge and skills.",
+      "Presidential Schools: There are 14 Presidential schools located in various regions of the country, dedicated to identifying and supporting gifted students.",
     ],
   },
 
   {
     id: "4",
-    title: "Fan olimpiadalari markazi",
+    title: "Science Olympiad Center",
     logo: fom,
-    description: `O‘zbekiston Respublikasi Prezidentining 2024-yil 30-sentabrdagi "Iqtidorli yoshlar bilan ishlash tizimini yanada takomillashtirish chora-tadbirlari to‘g‘risida"gi qaroriga muvofiq, Ixtisoslashtirilgan ta’lim muassasalari agentligi huzurida davlat muassasasi shaklida Fan olimpiadalari markazi tashkil etildi. Markazning asosiy vazifalari quyidagilardan iborat:`,
+    description: `In accordance with the Presidential Decree of the Republic of Uzbekistan dated September 30, 2024, "On Measures to Further Improve the System of Working with Gifted Youth," the Science Olympiad Center was established as a state institution under the Agency for Specialized Educational Institutions. The main tasks of the center are as follows:`,
     points: [
-      "Iqtidorli o‘quvchilarni aniqlash va rivojlantirish: Fanlarni chuqur o‘rganishga qiziqadigan qobiliyatli yoshlarni aniqlash, ularning iqtidorini rivojlantirish uchun zarur sharoitlar yaratish.",
-      "Xalqaro olimpiadalarga tayyorgarlik: 5–8-sinf o‘quvchilari o‘rtasida olimpiadalarda yuqori natijalarga erishgan iqtidorli o‘quvchilar bazasini shakllantirish va ularni xalqaro olimpiadalarga maqsadli tayyorlash.",
-      "O‘quv materiallarini ishlab chiqish: Har bir fan yo‘nalishi bo‘yicha o‘quv dasturlari, adabiyotlar, metodik tavsiyalar va qo‘llanmalarni yaratish.",
-      "Trener-o‘qituvchilarni tayyorlash: O‘quvchilarni fan olimpiadalariga tayyorlovchi trener-o‘qituvchilarning uzluksiz kasbiy rivojlanishi uchun zarur sharoitlar yaratish va ularga yangi metodikalarni o‘rgatish.",
-      "Xalqaro hamkorlik: Fan olimpiadalari bo‘yicha milliy terma jamoalarning xorijiy davlatlar terma jamoalari bilan qo‘shma yig‘inlar o‘tkazish amaliyotini yo‘lga qo‘yish.",
-      "Psixologik tayyorgarlik: O‘quvchilar uchun xalqaro olimpiadalarda ruhiy bosimni yengish bo‘yicha seminarlar va motivatsion treninglar tashkil etish.",
-      `Intellektual oromgohlar tashkil etish: Asosiy fan olimpiadalarining hududiy bosqichida muvaffaqiyatli ishtirok etgan iqtidorli yoshlar uchun "Intellektual oromgohlar" tashkil etish.`,
+      "Identifying and Developing Talented Students: Recognizing gifted students who are interested in in-depth study of various subjects and creating the necessary conditions for their intellectual growth.",
+      "Preparation for International Olympiads: Establishing a database of talented students from grades 5 to 8 who have achieved high results in Olympiads and providing targeted training for international competitions.",
+      "Developing Educational Materials: Creating curricula, literature, methodological recommendations, and instructional guides for each subject area.",
+      "Training Coaches and Teachers: Ensuring the continuous professional development of coaches and teachers preparing students for Science Olympiads by providing necessary training and new methodologies.",
+      "International Cooperation: Organizing joint training camps between national Science Olympiad teams and teams from other countries to enhance experience and knowledge exchange.",
+      "Psychological Preparation: Conducting seminars and motivational training sessions to help students cope with psychological pressure during international Olympiads.",
+      `Establishing Intellectual Camps: Setting up "Intellectual Camps" for gifted students who successfully participate in the regional stages of major Science Olympiads.`,
     ],
   },
 ];

@@ -33,7 +33,7 @@ export default function Gallery() {
       </div>
 
       <div className="mx-auto mt-8 w-[80%] space-y-12">
-        <h1 className="text-center font-semibold text-4xl md:text-5xl lg:text-4xl text-gray-800 mt-8 mb-4 leading-snug">
+        <h1 className="text-center font-semibold text-4xl md:text-5xl lg:text-4xl text-white mt-8 mb-4 leading-snug">
           Scenes from Al-Khwarizmi Olympiad 2024
         </h1>
 

@@ -17,7 +17,7 @@ const regulations = [
     id: "registration",
     title: "Registration Procedure",
     content: [
-      "Countries wishing to participate must contact alxorazmiy2025@gmail.com.",
+      "Countries wishing to participate must contact khimio@olympcenter.uz.",
       "The Organizing Committee collects the necessary information about the participants.",
       "Registration closes 30 days before the start of the International Olympiad.",
     ],

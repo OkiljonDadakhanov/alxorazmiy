@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import registon from "@/public/gallery/registon.jpg";
 import buhoro from "@/public/gallery/buhoro.jpg";
+import Gallery from "../gallery/page";
 
 export default function About() {
   return (
@@ -15,12 +16,11 @@ export default function About() {
           <Card className="bg-[#1f2937] shadow-xl">
             <CardContent className="p-6">
               <p className="text-gray-300 mb-4">
-                The Al-Khwarizmi International Mathematical and Informatical
-                Olympiad is a unique opportunity where knowledge and
-                intellectual power converge. This competition offers
-                participants the chance to test their skills, showcase
-                innovative ideas, and explore the harmony of modern technology
-                and timeless traditions.
+                Al-Khwarizmi International Mathematics and Informatics Olympiad
+                is a unique opportunity where knowledge and intellectual power
+                converge. This competition offers participants the chance to
+                test their skills, showcase innovative ideas, and explore the
+                harmony of modern technology and timeless traditions.
               </p>
               <p className="text-gray-300">
                 We believe that every participant will unlock their potential
@@ -39,8 +39,8 @@ export default function About() {
               <p className="text-gray-300 mb-4">
                 To inspire and empower young minds by creating an inclusive
                 platform for innovation, exploration, and intellectual growth.
-                The Al-Khwarizmi International Mathematical and Informatical
-                Olympiad seeks to nurture the next generation of thinkers,
+                Al-Khwarizmi International Mathematics and Informatics Olympiad
+                seeks to nurture the next generation of thinkers,
                 problem-solvers, and trailblazers, fostering a passion for
                 science, technology, and critical thinking.
               </p>
@@ -103,63 +103,8 @@ export default function About() {
           </Card>
         </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6">About Uzbekistan</h2>
-          <Card className="bg-[#1f2937] shadow-xl">
-            <CardContent className="p-6">
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/2">
-                  <p className="text-gray-300 mb-4">
-                    Uzbekistan, a jewel of Central Asia, is proud to host the
-                    Al-Khwarizmi Olympiad. This ancient land, once a crucial
-                    part of the Silk Road, boasts a rich tapestry of history,
-                    culture, and scientific heritage.
-                  </p>
-                  <p className="text-gray-300 mb-4">
-                    Known for its stunning Islamic architecture, Uzbekistan is
-                    home to UNESCO World Heritage sites such as Samarkand,
-                    Bukhara, and Khiva. These cities, with their magnificent
-                    madrasas, minarets, and mausoleums, stand as testaments to
-                    the country`s intellectual and artistic achievements
-                    throughout history.
-                  </p>
-                  <p className="text-gray-300 mb-4">
-                    Uzbekistan`s contribution to mathematics and science is
-                    significant. The country gave birth to many renowned
-                    scholars, including Al-Khwarizmi himself, whose works on
-                    algebra and algorithms laid the foundation for much of
-                    modern mathematics and computer science.
-                  </p>
-                  <p className="text-gray-300">
-                    Today, Uzbekistan is a rapidly modernizing nation, balancing
-                    its rich traditions with contemporary advancements in
-                    education, technology, and infrastructure. The country`s
-                    warm hospitality, diverse landscapes - from the Tian Shan
-                    mountains to the Kyzylkum desert - and delicious cuisine
-                    make it an unforgettable destination for Olympiad
-                    participants.
-                  </p>
-                </div>
-                <div className="md:w-1/2 space-y-4">
-                  <Image
-                    src={registon}
-                    alt="Registan Square, Samarkand"
-                    width={400}
-                    height={200}
-                    className="rounded-lg"
-                  />
-                  <Image
-                    src={buhoro}
-                    alt="Bukhara Old"
-                    width={400}
-                    height={200}
-                    className="rounded-lg"
-                  />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
+        <Gallery />
+        
       </div>
     </main>
   );
