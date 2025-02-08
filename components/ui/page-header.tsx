@@ -10,6 +10,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title }) => {
       <h1 className="text-center text-3xl sm:text-4xl md:text-5xl font-semibold">
         {title}
       </h1>
+      
     </div>
   );
 };

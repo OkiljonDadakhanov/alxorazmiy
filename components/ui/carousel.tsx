@@ -23,7 +23,7 @@ const HeroPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Al-Khwarizmi Olympiad
+          Al-Khwarizmi
         </motion.h1>
         <motion.p
           className="text-xl sm:text-2xl text-[#8892b0] mb-8"
@@ -31,7 +31,7 @@ const HeroPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          International Mathematics and Informatics Challenge
+          International Mathematics and Informatics Olympiad
         </motion.p>
         <motion.div
           className="text-lg sm:text-xl text-[#a8b2d1] mb-12"
@@ -39,7 +39,7 @@ const HeroPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <p>May 7 - May 13, 2024</p>
+          <p>May 7 - 13, 2024</p>
           <p>Tashkent, Uzbekistan</p>
         </motion.div>
         <motion.div

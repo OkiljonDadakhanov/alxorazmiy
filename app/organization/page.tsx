@@ -20,6 +20,19 @@ import sunatulloImage from "@/public/images/team/sunatullo.jpeg";
 import temurImage from "@/public/images/team/temurbek.jpg";
 import dilshodImage from "@/public/images/team/dilshod.webp";
 import kimImage from "@/public/images/team/kim.jpg";
+import turaboy from "@/public/images/team/turaboy.jpg";
+import sevara from "@/public/images/team/sevara.jpg";
+import akrom from "@/public/images/team/akrom.jpg";
+import jurabek from "@/public/images/team/jurabek.jpg";
+import inom from "@/public/images/team/inom.jpg";
+import oybek from "@/public/images/team/oybek.jpg";
+import davron from "@/public/images/team/davron.jpg";
+import murodjon from "@/public/images/murodbek.jpg";
+import tamanno from "@/public/images/team/tamanno.jpg";
+import otabek from "@/public/images/team/otabek.jpg";
+import mirfozil from "@/public/images/team/mirfozil.jpg";
+import qahramon from "@/public/images/team/qahramon.jpg";
+import karim from "@/public/images/team/karim.jpg";
 
 interface OrganizationMember {
   id: string;
@@ -33,7 +46,82 @@ interface OrganizationMember {
 const members: {
   math: OrganizationMember[];
   informatics: OrganizationMember[];
+  mainorg: OrganizationMember[];
 } = {
+  mainorg: [
+    {
+      id: "1",
+      name: "To'raboy Shermatov",
+      location:
+        "Director of Science Olympiad Center and Chairman of the Organizing Committee",
+      imageUrl: turaboy,
+      isLeader: true,
+    },
+    {
+      id: "2",
+      name: "Shakirova Sevara",
+      location:
+        "Vice Diector of the Agency of Specialized Educational Institutions and Committee member",
+      imageUrl: sevara,
+      isLeader: false,
+    },
+    {
+      id: "3",
+      name: "Umarxodjayev Akromxo‘ja",
+      location: "Head of the event organization Department",
+      imageUrl: akrom,
+      isLeader: false,
+    },
+    {
+      id: "4",
+      name: "Jangirov Jo‘rabek",
+      location: "Head of the Web & Social Networks and Content Department",
+      imageUrl: jurabek,
+      isLeader: false,
+    },
+    {
+      id: "5",
+      name: "Xujamov Inom",
+      location: "Head of IT and technical Department",
+      imageUrl: inom,
+      isLeader: false,
+    },
+    {
+      id: "6",
+      name: "Usmonov Oybek",
+      location: "Head of the transport and logistics Department",
+      imageUrl: oybek,
+      isLeader: false,
+    },
+    {
+      id: "7",
+      name: "Tuxtayev Davron",
+      location: "Exam preparation and supporting track",
+      imageUrl: davron,
+      isLeader: false,
+    },
+    {
+      id: "8",
+      name: "Islamov Murotjon",
+      location: "Head of the Events and public relations track",
+      imageUrl: murodjon,
+      isLeader: false,
+    },
+    {
+      id: "9",
+      name: "To‘rayeva Tamanno",
+      location: "Media track",
+      imageUrl: tamanno,
+      isLeader: false,
+    },
+    {
+      id: "10",
+      name: "Karimov Otabek",
+      location: "Technology and technical support track",
+      imageUrl: otabek,
+      isLeader: false,
+    },
+  ],
   math: [
     {
       id: "1",
@@ -50,32 +138,51 @@ const members: {
     },
     {
       id: "3",
-      name: "Haydarov Farxod",
-      location: "Uzbekistan",
-      imageUrl: farhodImage,
+      name: "Prof. Mirzaahmedov Mirfozil",
+      location: "Member",
+      imageUrl: mirfozil,
     },
     {
       id: "4",
-      name: "Boltayev O`tkir",
-      location: "Uzbekistan",
-      imageUrl: otkirImage,
+      name: "Dr. Ibodullayev Qahramon",
+      location: "Member",
+      imageUrl: qahramon,
     },
     {
       id: "5",
-      name: "Baxromov Jasur",
-      location: "Uzbekistan",
-      imageUrl: jasurImage,
+      name: "Haydarov Farxod",
+      location: "Member",
+      imageUrl: farhodImage,
     },
     {
       id: "6",
+      name: "Boltayev O`tkir",
+      location: "Member",
+      imageUrl: otkirImage,
+    },
+
+    {
+      id: "7",
+      name: "Dr. Rahimov Karim",
+      location: "Member",
+      imageUrl: karim,
+    },
+    {
+      id: "8",
+      name: "Baxromov Jasur",
+      location: "Member",
+      imageUrl: jasurImage,
+    },
+    {
+      id: "9",
       name: "Imomov Jasurbek",
-      location: "Uzbekistan",
+      location: "Member",
       imageUrl: jasurbeImage,
     },
     {
-      id: "7",
+      id: "10",
       name: "Bazarbayev Sardor",
-      location: "Uzbekistan",
+      location: "Member",
       imageUrl: sardorImage,
     },
   ],
@@ -83,7 +190,7 @@ const members: {
     {
       id: "1",
       name: "Eljakim Schrijvers",
-      location: "Netherlands",
+      location: "Member",
       imageUrl: eljakimImage,
       isLeader: true,
     },
@@ -156,12 +263,16 @@ export default function OrganizationPage() {
     AOS.refresh();
   }, []);
 
-  const renderMembers = (category: "math" | "informatics", title: string) => {
+  const renderMembers = (
+    category: "mainorg" | "math" | "informatics",
+    title: string,
+    id: string
+  ) => {
     const leader = members[category].find((m) => m.isLeader);
     const others = members[category].filter((m) => !m.isLeader);
 
     return (
-      <>
+      <section id={id} className="scroll-mt-20">
         <div className="organizing__team text-center mb-8">
           <h2 className="text-5xl">{title}</h2>
         </div>
@@ -179,7 +290,7 @@ export default function OrganizationPage() {
             ))}
           </div>
         </div>
-      </>
+      </section>
     );
   };
 
@@ -188,8 +299,13 @@ export default function OrganizationPage() {
       <div className="bg-[#0a192f] text-white p-9 mb-8">
         <h1 className="text-center text-5xl font-semibold">Organization</h1>
       </div>
-      {renderMembers("math", "Scientific Committee (Mathematics)")}
-      {renderMembers("informatics", "Scientific Committee (Informatics)")}
+      {renderMembers("mainorg", "Organizing team", "organization")}
+      {renderMembers("math", "Scientific Committee (Mathematics)", "math")}
+      {renderMembers(
+        "informatics",
+        "Scientific Committee (Informatics)",
+        "informatics"
+      )}
     </section>
   );
 }

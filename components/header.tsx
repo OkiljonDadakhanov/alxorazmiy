@@ -20,7 +20,11 @@ const menuItems = [
     label: "3rd Al-Khwarizmi IMIO",
     submenu: [
       { label: "Organizing Committee", href: "/organization" },
-      { label: "Scientific Committee", href: "/organization" },
+      { label: "Scientific Committee(Maths)", href: "/organization#math" },
+      {
+        label: "Scientific Committee(Informatics)",
+        href: "/organization#informatics",
+      },
       { label: "Program", href: "/programme" },
       { label: "Regulation", href: "/regulations" },
     ],

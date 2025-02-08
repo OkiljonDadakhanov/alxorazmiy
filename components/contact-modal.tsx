@@ -75,7 +75,7 @@ export function ContactDialog({ isOpen, onClose }: ContactModalProps) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                +998775503366
+                WhatsApp: +998775503366
               </a>
             </div>
           </div>

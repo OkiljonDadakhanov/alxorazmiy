@@ -31,11 +31,23 @@ const formSchema = z.object({
   country: z.string().min(1, { message: "Please select a country." }),
   role: z.string().min(1, { message: "Please select a role." }),
   subject: z.string().min(1, { message: "Please select a subject." }),
-  past_participation: z.boolean(),
   email: z.string().email({ message: "Please enter a valid email address." }),
-  contact_information: z
+  contact_information: z.string().regex(/^\+[1-9]\d{1,14}$/, {
+    message:
+      "Please enter a valid WhatsApp number starting with + (e.g., +1234567890)",
+  }),
+  maths_students: z
     .string()
-    .min(1, { message: "Please enter contact information." }),
+    .min(1, { message: "Please select number of math students." }),
+  informatics_students: z
+    .string()
+    .min(1, { message: "Please select number of informatics students." }),
+  maths_team_leaders: z
+    .string()
+    .min(1, { message: "Please select number of math team leaders." }),
+  informatics_team_leaders: z
+    .string()
+    .min(1, { message: "Please select number of informatics team leaders." }),
 });
 
 const RegistrationForm: React.FC = () => {
@@ -43,12 +55,15 @@ const RegistrationForm: React.FC = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       full_name: "",
-      country: undefined,
-      role: undefined,
-      subject: undefined,
-      past_participation: false,
+      country: "",
+      role: "",
+      subject: "",
       email: "",
       contact_information: "",
+      maths_students: "0",
+      informatics_students: "0",
+      maths_team_leaders: "0",
+      informatics_team_leaders: "0",
     },
   });
 
@@ -60,14 +75,20 @@ const RegistrationForm: React.FC = () => {
 
   useEffect(() => {
     async function fetchCountries() {
-      const res = await fetch("http://192.168.1.108:8080/api/countries/", {
-        method: "GET",
-        headers: {
-          Accept: "*/*",
-        },
-      });
-      const data = await res.json();
-      setCountries(data);
+      try {
+        const res = await fetch("http://192.168.1.108:8080/api/countries/", {
+          method: "GET",
+          headers: {
+            Accept: "*/*",
+          },
+        });
+        if (!res.ok) throw new Error("Failed to fetch countries");
+        const data = await res.json();
+        setCountries(data);
+      } catch (error) {
+        console.error("Error fetching countries:", error);
+        toast.error("Failed to load countries");
+      }
     }
     fetchCountries();
   }, []);
@@ -81,18 +102,14 @@ const RegistrationForm: React.FC = () => {
             Accept: "*/*",
           },
         });
-
-        if (!res.ok) {
-          throw new Error("Failed to fetch roles");
-        }
-
+        if (!res.ok) throw new Error("Failed to fetch roles");
         const data = await res.json();
         setRoles(data);
       } catch (error) {
         console.error("Error fetching roles:", error);
+        toast.error("Failed to load roles");
       }
     }
-
     fetchRoles();
   }, []);
 
@@ -105,23 +122,34 @@ const RegistrationForm: React.FC = () => {
             Accept: "*/*",
           },
         });
-
-        if (!res.ok) {
-          throw new Error("Failed to fetch subjects");
-        }
-
+        if (!res.ok) throw new Error("Failed to fetch subjects");
         const data = await res.json();
         setSubjects(data);
       } catch (error) {
         console.error("Error fetching subjects:", error);
+        toast.error("Failed to load subjects");
       }
     }
-
     fetchSubjects();
   }, []);
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
+      const formData = {
+        full_name: values.full_name,
+        country: values.country,
+        role: values.role,
+        subject: values.subject,
+        email: values.email,
+        contact_information: values.contact_information,
+        participants: {
+          maths_students: values.maths_students,
+          informatics_students: values.informatics_students,
+          maths_team_leaders: values.maths_team_leaders,
+          informatics_team_leaders: values.informatics_team_leaders,
+        },
+      };
+
       const res = await fetch(
         "http://192.168.1.108:8080/api/participation-requests/",
         {
@@ -129,7 +157,7 @@ const RegistrationForm: React.FC = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(values),
+          body: JSON.stringify(formData),
         }
       );
 
@@ -137,13 +165,34 @@ const RegistrationForm: React.FC = () => {
         toast.success("Registration submitted successfully!");
         form.reset();
       } else {
-        toast.error("Failed to submit registration.");
+        const errorData = await res.json();
+        toast.error(errorData.message || "Failed to submit registration.");
       }
     } catch (error) {
       toast.error("An error occurred while submitting.");
       console.error(error);
     }
   }
+
+  const studentCountsMaths = [
+    { id: "0", value: "0", label: "0 student" },
+    { id: "1", value: "1", label: "1 student" },
+    { id: "2", value: "2", label: "2 students" },
+    { id: "3", value: "3", label: "3 students" },
+    { id: "4", value: "4", label: "4 students" },
+  ];
+
+  const studentCountsInfo = [
+    { id: "0", value: "0", label: "0 student" },
+    { id: "1", value: "1", label: "1 student" },
+    { id: "2", value: "2", label: "2 students" },
+  ];
+
+  const teamLeaders = [
+    { id: "0", value: "0", label: "0 team leader" },
+    { id: "1", value: "1", label: "1 team leader" },
+    { id: "2", value: "2", label: "2 team leaders" },
+  ];
 
   return (
     <motion.div
@@ -171,7 +220,6 @@ const RegistrationForm: React.FC = () => {
               </FormItem>
             )}
           />
-
           <FormField
             control={form.control}
             name="country"
@@ -203,7 +251,6 @@ const RegistrationForm: React.FC = () => {
               </FormItem>
             )}
           />
-
           <FormField
             control={form.control}
             name="role"
@@ -231,7 +278,6 @@ const RegistrationForm: React.FC = () => {
               </FormItem>
             )}
           />
-
           <FormField
             control={form.control}
             name="subject"
@@ -262,32 +308,118 @@ const RegistrationForm: React.FC = () => {
               </FormItem>
             )}
           />
-
           <FormField
             control={form.control}
-            name="past_participation"
+            name="maths_students"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Past Participation</FormLabel>
+                <FormLabel>How many students are coming? (Maths)</FormLabel>
                 <Select
-                  onValueChange={(value) => field.onChange(value === "true")}
-                  defaultValue={field.value ? "true" : "false"}
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Have you participated before?" />
+                      <SelectValue placeholder="Select number of students" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="true">Yes</SelectItem>
-                    <SelectItem value="false">No</SelectItem>
+                    {studentCountsMaths.map((option) => (
+                      <SelectItem key={option.id} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
                 <FormMessage />
               </FormItem>
             )}
           />
-
+          <FormField
+            control={form.control}
+            name="informatics_students"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>
+                  How many students are coming? (Informatics)
+                </FormLabel>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select number of students" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {studentCountsInfo.map((option) => (
+                      <SelectItem key={option.id} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="maths_team_leaders"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>How many team leaders are coming? (Maths)</FormLabel>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select number of team leaders" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {teamLeaders.map((option) => (
+                      <SelectItem key={option.id} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="informatics_team_leaders"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>
+                  How many team leaders are coming? (Informatics)
+                </FormLabel>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select number of team leaders" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {teamLeaders.map((option) => (
+                      <SelectItem key={option.id} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <FormField
             control={form.control}
             name="email"
@@ -305,21 +437,19 @@ const RegistrationForm: React.FC = () => {
               </FormItem>
             )}
           />
-
           <FormField
             control={form.control}
             name="contact_information"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Contact Information</FormLabel>
+                <FormLabel>WhatsApp Number</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your contact information" {...field} />
+                  <Input placeholder="+1234567890" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-
           <Button
             type="submit"
             className="w-full bg-blue-500 hover:bg-blue-600 text-white"
