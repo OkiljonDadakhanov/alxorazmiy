@@ -24,7 +24,7 @@ export default function Partnership() {
         type="single"
         collapsible
         defaultValue={partnershipsData[0].id}
-        className="w-[90%] ml-1"
+        className="w-[90%] m-auto"
       >
         {partnershipsData.map((partner) => (
           <AccordionItem key={partner.id} value={partner.id}>
