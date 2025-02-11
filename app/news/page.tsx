@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 interface SocialCardProps {
-  icon: LucideIcon;
+  icon: any;
   title: string;
   handle: string;
   link: string;
