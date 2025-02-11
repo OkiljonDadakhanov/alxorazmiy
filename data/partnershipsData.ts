@@ -1,6 +1,6 @@
 import maktabgacha from "@/public/logo/maktabgacha.png";
 import tech from "@/public/logo/tech.png";
-import pima from "@/public/logo/pima.png";
+import agentlik from "@/public/logo/agentlik.png";
 import fom from "@/public/logo/olympic.png";
 export const partnershipsData = [
   {
@@ -35,7 +35,7 @@ The ongoing reforms focus on updating the learning process in general education 
   {
     id: "3",
     title: "The Agency for Specialized Educational Institutions",
-    logo: pima,
+    logo: agentlik,
     description: `The Agency for Specialized Educational Institutions is the government body responsible for managing specialized educational institutions aimed at identifying, supporting, and developing gifted students in the country. The agency's main tasks include:`,
     points: [
       "Implementing a STEAM Assessment System: Establishing an evaluation system for students and educators in STEAM (Science, Technology, Engineering, Arts, and Mathematics) subjects in accordance with international program requirements. This includes issuing internationally recognized AS and A-LEVEL certificates.",

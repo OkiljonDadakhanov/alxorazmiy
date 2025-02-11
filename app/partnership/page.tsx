@@ -38,9 +38,10 @@ export default function Partnership() {
                   <Image
                     src={partner.logo}
                     alt={`${partner.title} Logo`}
-                    width={120}
-                    height={60}
+                    width={150}
+                    height={80}
                     className="object-contain"
+                    
                   />
                 </div>
 
