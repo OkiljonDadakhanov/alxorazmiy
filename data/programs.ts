@@ -106,9 +106,9 @@ export const programsData: {
       },
       {
         time: "13:30 - 14:30",
-        contestants: "lunch(school)",
-        deputyLeaders: "lunch(school)",
-        leaders: "lunch(school)",
+        contestants: "lunch (school)",
+        deputyLeaders: "lunch (school)",
+        leaders: "lunch (school)",
       },
       {
         time: "15:00 - 17:00",
@@ -118,9 +118,9 @@ export const programsData: {
       },
       {
         time: "18:00 - 19:00",
-        contestants: "dinner(school)",
-        deputyLeaders: "dinner(school)",
-        leaders: "dinner(hotel)",
+        contestants: "dinner (school)",
+        deputyLeaders: "dinner (school)",
+        leaders: "dinner (hotel)",
       },
     ],
   },
@@ -149,9 +149,9 @@ export const programsData: {
       },
       {
         time: "13:30 - 14:30",
-        contestants: "lunch(school)",
-        leaders: "lunch(school)",
-        deputyLeaders: "lunch(school)",
+        contestants: "lunch (school)",
+        leaders: "lunch (school)",
+        deputyLeaders: "lunch (school)",
       },
       {
         time: "15:00 - 17:00",
@@ -161,9 +161,9 @@ export const programsData: {
       },
       {
         time: "18:00 - 19:00",
-        contestants: "dinner(school)",
-        deputyLeaders: "dinner(school)",
-        leaders: "dinner(hotel)",
+        contestants: "dinner (school)",
+        deputyLeaders: "dinner (school)",
+        leaders: "dinner (hotel)",
       },
     ],
   },
@@ -186,9 +186,9 @@ export const programsData: {
       },
       {
         time: "13:00 - 14:00",
-        contestants: "lunch(school)",
-        leaders: "lunch(school)",
-        deputyLeaders: "lunch(school)",
+        contestants: "lunch (school)",
+        leaders: "lunch (school)",
+        deputyLeaders: "lunch (school)",
       },
       {
         time: "17:00 - 19:00",
@@ -198,9 +198,9 @@ export const programsData: {
       },
       {
         time: "20:00 - 21:00",
-        contestants: "dinner(school)",
-        deputyLeaders: "dinner(school)",
-        leaders: "dinner(school)",
+        contestants: "dinner (school)",
+        deputyLeaders: "dinner (school)",
+        leaders: "dinner (school)",
       },
     ],
   },
@@ -223,9 +223,9 @@ export const programsData: {
       },
       {
         time: "13:00 - 14:00",
-        contestants: "lunch(school)",
-        leaders: "lunch(hotel)",
-        deputyLeaders: "lunch(hotel)",
+        contestants: "lunch (school)",
+        leaders: "lunch (hotel)",
+        deputyLeaders: "lunch (hotel)",
       },
       {
         time: "16:00 - 18:00",
@@ -243,7 +243,7 @@ export const programsData: {
   },
 
   {
-    title: "Day 2 - Tuesday",
+    title: "Day 7 - Tuesday",
     date: "May 13",
     programs: [
       {
@@ -260,9 +260,9 @@ export const programsData: {
       },
       {
         time: "13:00 - 14:00",
-        contestants: "lunch(school)",
-        leaders: "lunch(hotel)",
-        deputyLeaders: "lunch(hotel)",
+        contestants: "lunch (school)",
+        leaders: "lunch (hotel)",
+        deputyLeaders: "lunch (hotel)",
       },
     ],
   },
