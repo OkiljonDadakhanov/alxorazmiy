@@ -42,7 +42,14 @@ const menuItems = [
       { label: "Al-Khwarizmi IMIO results", href: "/results" },
     ],
   },
-  { label: "News/Media", href: "/news" },
+  {
+    label: "Media & Press",
+    href: "/news",
+    submenu: [
+      { label: "Media", href: "/media" },
+      { label: "Press release", href: "/press" },
+    ],
+  },
 ];
 
 const Header: React.FC = () => {

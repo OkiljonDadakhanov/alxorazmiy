@@ -86,10 +86,10 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="absolute bottom-8 text-gray-400 text-sm w-full text-center">
-          <p>
-            Copyright © {new Date().getFullYear()}{" "}
+          <p className="">
             <span className="font-medium">
               Al-Khwarizmi International Mathematics and Informatics Olympiad.
+              ©Copyright 2023
             </span>
           </p>
         </div>

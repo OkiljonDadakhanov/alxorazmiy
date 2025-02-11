@@ -1,8 +1,4 @@
-import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import registon from "@/public/gallery/registon.jpg";
-import buhoro from "@/public/gallery/buhoro.jpg";
-import Gallery from "../gallery/page";
 
 export default function About() {
   return (
@@ -102,9 +98,6 @@ export default function About() {
             </CardContent>
           </Card>
         </section>
-
-        <Gallery />
-        
       </div>
     </main>
   );
