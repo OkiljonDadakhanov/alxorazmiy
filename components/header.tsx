@@ -17,7 +17,7 @@ import {
 const menuItems = [
   { label: "Home", href: "/" },
   {
-    label: "3rd Al-Khwarizmi IMIO",
+    label: "3-Al-Khwarizmi IMIO",
     submenu: [
       { label: "Organizing Committee", href: "/organization" },
       { label: "Scientific Committee(Maths)", href: "/organization#math" },
@@ -38,8 +38,8 @@ const menuItems = [
   {
     label: "Results/Problems",
     submenu: [
-      { label: "Al-Khwarizmi IMIO 2023/24 problems", href: "/problems" },
-      { label: "Al-Khwarizmi IMIO 2023/24 results", href: "/results" },
+      { label: "Al-Khwarizmi IMIO problems", href: "/problems" },
+      { label: "Al-Khwarizmi IMIO results", href: "/results" },
     ],
   },
   { label: "News/Media", href: "/news" },

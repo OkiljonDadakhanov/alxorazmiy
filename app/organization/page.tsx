@@ -10,8 +10,6 @@ import shavkatImage from "@/public/images/team/shavkat.jpg";
 import azimboyImage from "@/public/images/team/azimboy.png";
 import farhodImage from "@/public/images/team/farhod.jpg";
 import otkirImage from "@/public/images/team/utkir.jpg";
-import jasurImage from "@/public/images/team/jasur.jpg";
-import jasurbeImage from "@/public/images/team/jasur2.jpg";
 import sardorImage from "@/public/images/team/sardor.jpg";
 import eljakimImage from "@/public/images/team/eljakim.jpg";
 import farkhodImage from "@/public/images/team/farkhod.jpg";
@@ -19,7 +17,6 @@ import ahmedImage from "@/public/images/team/ahmed.jpg";
 import sunatulloImage from "@/public/images/team/sunatullo.jpeg";
 import temurImage from "@/public/images/team/temurbek.jpg";
 import dilshodImage from "@/public/images/team/dilshod.webp";
-import kimImage from "@/public/images/team/kim.jpg";
 import turaboy from "@/public/images/team/turaboy.jpg";
 import sevara from "@/public/images/team/sevara.jpg";
 import akrom from "@/public/images/team/akrom.jpg";
@@ -33,6 +30,14 @@ import otabek from "@/public/images/team/otabek.jpg";
 import mirfozil from "@/public/images/team/mirfozil.jpg";
 import qahramon from "@/public/images/team/qahramon.jpg";
 import karim from "@/public/images/team/karim.jpg";
+import nosir from "@/public/images/team/nosir.png";
+import abdulla from "@/public/images/team/abdulla.png";
+import navid from "@/public/images/team/navid.png";
+import david from "@/public/images/team/david.png";
+import bahodir from "@/public/images/team/bahodir.jpg";
+import xakimjon from "@/public/images/team/hakimjon.png";
+import xusniddin from "@/public/images/team/xusniddin.png";
+import davlat from "@/public/images/team/davlat.png";
 
 interface OrganizationMember {
   id: string;
@@ -59,7 +64,7 @@ const members: {
     },
     {
       id: "2",
-      name: "Shakirova Sevara",
+      name: "Sevara Shakirova ",
       location:
         "Vice Diector of the Agency of Specialized Educational Institutions and Committee member",
       imageUrl: sevara,
@@ -67,14 +72,14 @@ const members: {
     },
     {
       id: "3",
-      name: "Umarxodjayev Akromxo‘ja",
+      name: "Akromxo‘ja Umarxodjayev ",
       location: "Head of the event organization Department",
       imageUrl: akrom,
       isLeader: false,
     },
     {
       id: "4",
-      name: "Jangirov Jo‘rabek",
+      name: "Jo‘rabek Jangirov ",
       location: "Head of the Web & Social Networks and Content Department",
       imageUrl: jurabek,
       isLeader: false,
@@ -95,28 +100,28 @@ const members: {
     },
     {
       id: "7",
-      name: "Tuxtayev Davron",
+      name: "Davron Tuxtayev ",
       location: "Exam preparation and supporting track",
       imageUrl: davron,
       isLeader: false,
     },
     {
       id: "8",
-      name: "Islamov Murotjon",
+      name: "Murotjon Islamov ",
       location: "Head of the Events and public relations track",
       imageUrl: murodjon,
       isLeader: false,
     },
     {
       id: "9",
-      name: "To‘rayeva Tamanno",
+      name: "Tamanno To‘rayeva ",
       location: "Media track",
       imageUrl: tamanno,
       isLeader: false,
     },
     {
       id: "10",
-      name: "Karimov Otabek",
+      name: "Otabek Karimov ",
       location: "Technology and technical support track",
       imageUrl: otabek,
       isLeader: false,
@@ -125,10 +130,16 @@ const members: {
   math: [
     {
       id: "1",
-      name: "Shavkat Ayupov",
+      name: "Prof. Shavkat Ayupov",
       location: "Chairman of Scientific Committee",
       imageUrl: shavkatImage,
       isLeader: true,
+    },
+    {
+      id: "11",
+      name: "Navid Safaei",
+      location: "Vice Chairman of Scientific Commmitte",
+      imageUrl: navid,
     },
     {
       id: "2",
@@ -138,69 +149,100 @@ const members: {
     },
     {
       id: "3",
-      name: "Prof. Mirzaahmedov Mirfozil",
+      name: "Prof. Mirfozil Mirzaahmedov ",
       location: "Member",
       imageUrl: mirfozil,
     },
+
+    {
+      id: "12",
+      name: "Prof. Abdulla A'zamov ",
+      location: "Member",
+      imageUrl: abdulla,
+    },
+
+    {
+      id: "9",
+      name: "Prof. Nosir G'anixodjayev ",
+      location: "Member",
+      imageUrl: nosir,
+    },
+    {
+      id: "10",
+      name: "David Allan Hrushka",
+      location: "Member",
+      imageUrl: david,
+    },
+
     {
       id: "4",
-      name: "Dr. Ibodullayev Qahramon",
+      name: "Dr. Qahramon Ibodullayev ",
       location: "Member",
       imageUrl: qahramon,
     },
+
     {
       id: "5",
-      name: "Haydarov Farxod",
+      name: "Farxod Haydarov ",
       location: "Member",
       imageUrl: farhodImage,
-    },
-    {
-      id: "6",
-      name: "Boltayev O`tkir",
-      location: "Member",
-      imageUrl: otkirImage,
     },
 
     {
       id: "7",
-      name: "Dr. Rahimov Karim",
+      name: "Dr. Karim Rahimov ",
       location: "Member",
       imageUrl: karim,
     },
     {
       id: "8",
-      name: "Baxromov Jasur",
-      location: "Member",
-      imageUrl: jasurImage,
-    },
-    {
-      id: "9",
-      name: "Imomov Jasurbek",
-      location: "Member",
-      imageUrl: jasurbeImage,
-    },
-    {
-      id: "10",
-      name: "Bazarbayev Sardor",
+      name: " Sardor Bazarbayev ",
       location: "Member",
       imageUrl: sardorImage,
+    },
+    {
+      id: "6",
+      name: "O'tkir Boltayev ",
+      location: "Member",
+      imageUrl: otkirImage,
     },
   ],
   informatics: [
     {
       id: "1",
-      name: "Eljakim Schrijvers",
-      location: "Member",
-      imageUrl: eljakimImage,
+      name: "Dr. Muminov Bahodir",
+      location:
+        "Chairman of Scientific Committee and Doctor of technical sciences at the department 'Basics of Informatics' ",
+      imageUrl: bahodir,
       isLeader: true,
     },
     {
+      id: "8",
+      name: "Eljakim Schrijvers ",
+      location: "Vice chairman of Scientific Committee",
+      imageUrl: eljakimImage,
+    },
+    {
+      id: "9",
+      name: "Prof. Xakimjon Zaynidinov",
+      location: "Member",
+      imageUrl: xakimjon,
+    },
+    {
+      id: "10",
+      name: "Dr. Xusniddin Mamadaliyev",
+      location: "Member",
+      imageUrl: xusniddin,
+    },
+
+    {
       id: "2",
-      name: "Khakimiyon Farkhod",
+      name: "Farkhod Khakimiyon ",
       location: "Member",
       imageUrl: farkhodImage,
     },
     { id: "3", name: "Ahmed Khaled", location: "Member", imageUrl: ahmedImage },
+
     {
       id: "4",
       name: "Sunatullo Xojiyev",
@@ -214,16 +256,16 @@ const members: {
       imageUrl: temurImage,
     },
     {
+      id: "7",
+      name: "Davlatbek Miroqilov",
+      location: "Member",
+      imageUrl: davlat,
+    },
+    {
       id: "6",
       name: "Dilshodbek Xo'jayev",
       location: "Member",
       imageUrl: dilshodImage,
-    },
-    {
-      id: "7",
-      name: "Svyatoslov Kim",
-      location: "Member",
-      imageUrl: kimImage,
     },
   ],
 };
