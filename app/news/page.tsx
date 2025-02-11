@@ -2,6 +2,7 @@ import React from "react";
 import PageHeader from "@/components/ui/page-header";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
+  LucideIcon,
   Twitter,
   Facebook,
   Youtube,
@@ -9,7 +10,6 @@ import {
   Instagram,
   Globe,
   ExternalLink,
-  LucideIcon,
 } from "lucide-react";
 
 interface SocialCardProps {
@@ -20,13 +20,13 @@ interface SocialCardProps {
   description: string;
 }
 
-const SocialCard = ({
+const SocialCard: React.FC<SocialCardProps> = ({
   icon: Icon,
   title,
   handle,
   link,
   description,
-}: SocialCardProps) => (
+}) => (
   <Card className="group hover:shadow-lg transition-shadow">
     <CardHeader className="space-y-1">
       <div className="flex items-center space-x-2">
