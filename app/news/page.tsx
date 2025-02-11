@@ -9,9 +9,24 @@ import {
   Instagram,
   Globe,
   ExternalLink,
+  LucideIcon,
 } from "lucide-react";
 
-const SocialCard = ({ icon: Icon, title, handle, link, description }) => (
+interface SocialCardProps {
+  icon: LucideIcon;
+  title: string;
+  handle: string;
+  link: string;
+  description: string;
+}
+
+const SocialCard: React.FC<SocialCardProps> = ({
+  icon: Icon,
+  title,
+  handle,
+  link,
+  description,
+}) => (
   <Card className="group hover:shadow-lg transition-shadow">
     <CardHeader className="space-y-1">
       <div className="flex items-center space-x-2">
@@ -32,7 +47,7 @@ const SocialCard = ({ icon: Icon, title, handle, link, description }) => (
 );
 
 export default function News() {
-  const socialAccounts = [
+  const socialAccounts: SocialCardProps[] = [
     {
       icon: Globe,
       title: "Kun.uz - News about Uzbekistan",
@@ -118,7 +133,7 @@ export default function News() {
             apps covering Uzbekistan and educational competitions.
           </p>
           <p>
-            • Follow Uzbekistan’s major news agencies: Kun.uz, Gazeta.uz,
+            • Follow Uzbekistan's major news agencies: Kun.uz, Gazeta.uz,
             Daryo.uz.
           </p>
           <p>
