@@ -60,18 +60,7 @@ const MediaPage = () => {
     },
   ];
 
-  const videos = [
-    {
-      id: 1,
-      src: "/media/highlights.MP4",
-      title: "Competition Video Highlights",
-    },
-    {
-      id: 2,
-      src: "/media/highlights.MP4",
-      title: "Competition Video Highlights",
-    },
-  ];
+
 
   return (
     <section>
@@ -139,25 +128,7 @@ const MediaPage = () => {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-            {videos.map((video) => (
-              <Card
-                key={video.id}
-                className="group hover:shadow-lg transition-all"
-              >
-                <CardContent className="p-3">
-                  <div className="relative aspect-video mb-2">
-                    <video width="640" height="360" controls>
-                      <source src="/media/highlights.MP4" type="video/mp4" />
-                    </video>
-                  </div>
-                  <p className="text-sm font-medium text-gray-900">
-                    {video.title}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        
         </div>
       </div>
     </section>
