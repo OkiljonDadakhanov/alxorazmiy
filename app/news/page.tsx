@@ -20,13 +20,13 @@ interface SocialCardProps {
   description: string;
 }
 
-const SocialCard: React.FC<SocialCardProps> = ({
+const SocialCard = ({
   icon: Icon,
   title,
   handle,
   link,
   description,
-}) => (
+}: SocialCardProps) => (
   <Card className="group hover:shadow-lg transition-shadow">
     <CardHeader className="space-y-1">
       <div className="flex items-center space-x-2">
