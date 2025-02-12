@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import PageHeader from "@/components/ui/page-header";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -60,8 +62,6 @@ const MediaPage = () => {
     },
   ];
 
-
-
   return (
     <section>
       <PageHeader title="Media" />
@@ -94,10 +94,12 @@ const MediaPage = () => {
               >
                 <CardContent className="p-3">
                   <div className="relative aspect-video mb-2">
-                    <img
+                    <Image
                       src={image.src}
                       alt={image.alt}
                       className="rounded-lg object-cover w-full h-full"
+                      width={120}
+                      height={120}
                     />
                   </div>
                   <p className="text-sm font-medium text-gray-900">
@@ -116,7 +118,7 @@ const MediaPage = () => {
               <Video className="w-6 h-6 text-blue-600" />
               <h2 className="text-2xl font-semibold">Video Gallery</h2>
             </div>
-            <a
+            <Link
               href="https://drive.google.com/drive/folders/1K64fxCgVyJrtYy0LLvn7n7DTMHi0CPmX"
               target="_blank"
               rel="noopener noreferrer"
@@ -125,10 +127,8 @@ const MediaPage = () => {
               <FolderOpen className="w-4 h-4" />
               <span>View All Videos</span>
               <ExternalLink className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
-
-        
         </div>
       </div>
     </section>

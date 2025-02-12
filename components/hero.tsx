@@ -6,7 +6,6 @@ export default function HeroPage() {
   return (
     <section>
       <HeroCarousel />
-
       <WelcomeMessage />
       <Organizers />
     </section>

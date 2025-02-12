@@ -1,11 +1,9 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 const HeroPage = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a192f]">
-      {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
           className="absolute inset-0 bg-repeat bg-center"
@@ -42,42 +40,9 @@ const HeroPage = () => {
           <p>May 7 - 13, 2024</p>
           <p>Tashkent, Uzbekistan</p>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        ></motion.div>
       </div>
 
       {/* Decorative elements */}
-      <motion.div
-        className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 0.1, x: 0 }}
-        transition={{ duration: 1, delay: 0.8 }}
-      >
-        <Image
-          src="/placeholder.svg?height=400&width=400"
-          alt="Mathematical symbol"
-          width={400}
-          height={400}
-          className="opacity-20"
-        />
-      </motion.div>
-      <motion.div
-        className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 0.1, x: 0 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
-        <Image
-          src="/placeholder.svg?height=400&width=400"
-          alt="Informatics symbol"
-          width={400}
-          height={400}
-          className="opacity-20"
-        />
-      </motion.div>
     </div>
   );
 };
