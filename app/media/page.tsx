@@ -62,6 +62,21 @@ const MediaPage = () => {
     },
   ];
 
+  const videos = [
+    {
+      id: 1,
+      src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/full_hd.mp4",
+      title: "2024 Olympiad Highlights",
+      thumbnail: "/media/winners.jpg", // You can use one of your existing images as thumbnail
+    },
+    {
+      id: 2,
+      src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/IMG_5505.MP4",
+      title: "Presidential Decree on Science Olympiad Center",
+      thumbnail: "/media/opening.jpg", // You can use one of your existing images as thumbnail
+    },
+  ];
+
   return (
     <section>
       <PageHeader title="Media" />
@@ -128,6 +143,35 @@ const MediaPage = () => {
               <span>View All Videos</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {videos.map((video) => (
+              <Card
+                key={video.id}
+                className="group hover:shadow-lg transition-all"
+              >
+                <CardContent className="p-3">
+                  <div className="relative aspect-video mb-2">
+                    <video
+                      className="rounded-lg w-full h-full object-cover"
+                      controls
+                      poster={video.thumbnail}
+                    >
+                      <source src={video.src} type="video/mp4" />
+                      <source
+                        src={video.src.replace(".mp4", ".MP4")}
+                        type="video/MP4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <p className="text-sm font-medium text-gray-900">
+                    {video.title}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
