@@ -1,26 +1,31 @@
-"use client";
-
-import { type FC, useEffect } from "react";
+import { type FC } from "react";
 import Image from "next/image";
-import "aos/dist/aos.css";
-import AOS from "aos";
+
+const BULLET_POINTS = [
+  {
+    id: "challenge",
+    text: "Challenging Problems: Engage in thought-provoking tasks with high intellectual standards for junior level",
+  },
+  {
+    id: "collaboration",
+    text: "Collaboration: Connect with like-minded individuals from diverse backgrounds and exchange knowledge",
+  },
+  {
+    id: "recognition",
+    text: "Recognition: Showcase your talents and be celebrated for your achievements",
+  },
+  {
+    id: "legacy",
+    text: "Legacy of Excellence: Be part of an event that honors the timeless contributions of Al-Khwarizmi to science and mathematics",
+  },
+] as const;
 
 const WelcomeMessage: FC = () => {
-  useEffect(() => {
-    // Initialize AOS only on the client side
-    if (typeof window !== "undefined") {
-      AOS.init({
-        // Disable AOS on initial load to prevent hydration mismatch
-        startEvent: "load",
-        // Use consistent values for animations
-        duration: 800,
-        once: true,
-      });
-    }
-  }, []);
-
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-gray-50 to-white">
+    <section
+      className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-gray-50 to-white"
+      aria-label="Welcome to Al-Khwarizmi Olympiad"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[90%]">
         <div className="flex flex-col items-center">
           <div className="mb-8">
@@ -31,6 +36,7 @@ const WelcomeMessage: FC = () => {
               height={300}
               className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-contain"
               priority
+              loading="eager"
             />
           </div>
 
@@ -51,8 +57,11 @@ const WelcomeMessage: FC = () => {
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 text-center md:text-left">
-            <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+            <section aria-labelledby="mission-heading">
+              <h2
+                id="mission-heading"
+                className="text-2xl font-semibold text-gray-900 mb-4"
+              >
                 Our Mission
               </h2>
               <p className="text-gray-700">
@@ -68,53 +77,41 @@ const WelcomeMessage: FC = () => {
                 Al-Khwarizmi by encouraging excellence, collaboration, and
                 creativity among youth from all corners of the world.
               </p>
-            </div>
-            <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+            </section>
+
+            <section aria-labelledby="expectations-heading">
+              <h2
+                id="expectations-heading"
+                className="text-2xl font-semibold text-gray-900 mb-4"
+              >
                 What to Expect
               </h2>
               <p className="text-gray-700 mb-4">
                 At the Al-Khwarizmi Olympiad, you can expect a dynamic and
                 inspiring environment where innovation meets intellectual
-                curiosity. Here`s what awaits you:
+                curiosity. Here's what awaits you:
               </p>
 
-              <ul className="text-gray-700 space-y-2 list-none">
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>
-                    Challenging Problems: Engage in thought-provoking tasks with
-                    high intellectual standards for junior level
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>
-                    Collaboration: Connect with like-minded individuals from
-                    diverse backgrounds and exchange knowledge
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>
-                    Recognition: Showcase your talents and be celebrated for
-                    your achievements
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>
-                    Legacy of Excellence: Be part of an event that honors the
-                    timeless contributions of Al-Khwarizmi to science and
-                    mathematics
-                  </span>
-                </li>
+              <ul
+                className="text-gray-700 space-y-2 list-none"
+                role="list"
+                aria-label="Key features of the Olympiad"
+              >
+                {BULLET_POINTS.map((point) => (
+                  <li key={point.id} className="flex items-start">
+                    <span className="mr-2" aria-hidden="true">
+                      •
+                    </span>
+                    <span>{point.text}</span>
+                  </li>
+                ))}
               </ul>
+
               <p className="text-gray-700 mt-4">
                 Prepare to be inspired, challenged, and empowered as you embark
                 on this extraordinary journey!
               </p>
-            </div>
+            </section>
           </div>
         </div>
       </div>
