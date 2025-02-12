@@ -144,37 +144,64 @@ const results: ResultsData = {
 
 // Components
 const ResultTable: React.FC<ResultTableProps> = ({ year, data }) => {
-  const tableHeaders = ["Rank", "Participant team", "Name", "Score"];
-
   return (
     <div className="mb-8">
       <h2 className="text-2xl font-bold text-blue-400 mb-4">
         {year} Gold medalists
       </h2>
-      <table className="w-full bg-white shadow-md rounded-lg overflow-hidden">
-        <thead className="bg-blue-500 text-white">
-          <tr>
-            {tableHeaders.map((header) => (
-              <th key={header} className="py-3 px-4 text-left">
-                {header}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((result, index) => (
-            <tr
-              key={`${result.participant}-${result.rank}`}
-              className={index % 2 === 0 ? "bg-gray-100" : ""}
-            >
-              <td className="py-3 px-4">{result.rank}</td>
-              <td className="py-3 px-4">{result.participant}</td>
-              <td className="py-3 px-4">{result.name}</td>
-              <td className="py-3 px-4">{result.score}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="overflow-x-auto -mx-4 sm:mx-0">
+        <div className="inline-block min-w-full align-middle">
+          <div className="overflow-hidden shadow-md rounded-lg">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-blue-500">
+                <tr>
+                  <th
+                    scope="col"
+                    className="py-3 px-4 text-left text-xs font-medium text-white uppercase tracking-wider whitespace-nowrap"
+                  >
+                    Rank
+                  </th>
+                  <th
+                    scope="col"
+                    className="py-3 px-4 text-left text-xs font-medium text-white uppercase tracking-wider whitespace-nowrap"
+                  >
+                    Participant team
+                  </th>
+                  <th
+                    scope="col"
+                    className="py-3 px-4 text-left text-xs font-medium text-white uppercase tracking-wider whitespace-nowrap"
+                  >
+                    Name
+                  </th>
+                  <th
+                    scope="col"
+                    className="py-3 px-4 text-left text-xs font-medium text-white uppercase tracking-wider whitespace-nowrap"
+                  >
+                    Score
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {data.map((result, index) => (
+                  <tr
+                    key={`${result.participant}-${result.rank}`}
+                    className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
+                  >
+                    <td className="py-2 px-4 text-sm whitespace-nowrap">
+                      {result.rank}
+                    </td>
+                    <td className="py-2 px-4 text-sm">{result.participant}</td>
+                    <td className="py-2 px-4 text-sm">{result.name}</td>
+                    <td className="py-2 px-4 text-sm whitespace-nowrap">
+                      {result.score}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -182,7 +209,7 @@ const ResultTable: React.FC<ResultTableProps> = ({ year, data }) => {
 const DownloadButton: React.FC<DownloadButtonProps> = ({ year }) => {
   return (
     <Link href={`/problems/results${year}.pdf`}>
-      <Button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+      <Button className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center">
         <Download className="w-4 h-4 mr-2" />
         Download {year} Full Results
       </Button>
@@ -193,16 +220,16 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ year }) => {
 const ResultsHeader: React.FC = () => <PageHeader title="Olympiad Results" />;
 
 const ResultsContent: React.FC = () => (
-  <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
-    <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">
+  <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6 mb-8">
+    <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-600 mb-4 sm:mb-6">
       {YEARS.PREVIOUS} - {YEARS.CURRENT} Gold medalists
     </h2>
-    <p className="text-lg text-center text-gray-600 mb-8">
+    <p className="text-base sm:text-lg text-center text-gray-600 mb-6 sm:mb-8">
       Congratulations to all participants! Here are the top performers for the
       past two years.
     </p>
 
-    <div className="flex justify-center space-x-4 mb-8">
+    <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
       <DownloadButton year={YEARS.CURRENT} />
       <DownloadButton year={YEARS.PREVIOUS} />
     </div>
