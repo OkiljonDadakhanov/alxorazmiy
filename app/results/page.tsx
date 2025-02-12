@@ -148,7 +148,9 @@ const ResultTable: React.FC<ResultTableProps> = ({ year, data }) => {
 
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-bold text-blue-400 mb-4">{year} Results</h2>
+      <h2 className="text-2xl font-bold text-blue-400 mb-4">
+        {year} Gold medalists
+      </h2>
       <table className="w-full bg-white shadow-md rounded-lg overflow-hidden">
         <thead className="bg-blue-500 text-white">
           <tr>
@@ -193,7 +195,7 @@ const ResultsHeader: React.FC = () => <PageHeader title="Olympiad Results" />;
 const ResultsContent: React.FC = () => (
   <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
     <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">
-      {YEARS.PREVIOUS} - {YEARS.CURRENT} Results
+      {YEARS.PREVIOUS} - {YEARS.CURRENT} Gold medalists
     </h2>
     <p className="text-lg text-center text-gray-600 mb-8">
       Congratulations to all participants! Here are the top performers for the
