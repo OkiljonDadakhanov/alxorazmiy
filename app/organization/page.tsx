@@ -38,11 +38,18 @@ import bahodir from "@/public/images/team/bahodir.jpg";
 import xakimjon from "@/public/images/team/hakimjon.png";
 import xusniddin from "@/public/images/team/xusniddin.png";
 import davlat from "@/public/images/team/davlat.png";
+import jasur from '@/public/images/team/jasur.jpg'
+import jasur2 from '@/public/images/team/jasur2.jpg'
+import jahongir from '@/public/images/team/jahongir.png'
+import axadov from '@/public/images/team/axadov.png'
+import akilhan from '@/public/images/team/akilhan.jpeg'
+
 
 interface OrganizationMember {
   id: string;
   name: string;
   location: string;
+  desc?: string;
   imageUrl: StaticImageData;
   isLeader?: boolean;
 }
@@ -126,12 +133,19 @@ const members: {
       imageUrl: otabek,
       isLeader: false,
     },
+    {
+      id: "11",
+      name: "Dadaxanov Oqiljon",
+      location: "Software engineer",
+      imageUrl: akilhan,
+    },
   ],
   math: [
     {
       id: "1",
       name: "Prof. Shavkat Ayupov",
       location: "Chairman of Scientific Committee",
+      desc: 'President of the Academy of Sciences of Uzbekistan.',
       imageUrl: shavkatImage,
       isLeader: true,
     },
@@ -139,73 +153,101 @@ const members: {
       id: "11",
       name: "Navid Safaei",
       location: "Vice Chairman of Scientific Commmitte",
+      desc: 'Researcher at the Sharif University of Technology, Tehran, Iran.',
       imageUrl: navid,
     },
     {
       id: "2",
       name: "Azimboy Sadullayev",
-      location: "Member",
+      location: "Member of the Academy of Sciences of Uzbekistan",
       imageUrl: azimboyImage,
     },
     {
       id: "3",
       name: "Prof. Mirfozil Mirzaahmedov ",
-      location: "Member",
+      location: "Professor of the “Theory of Probability” department of the National University of Uzbekistan",
       imageUrl: mirfozil,
     },
 
     {
       id: "12",
       name: "Prof. Abdulla A'zamov ",
-      location: "Member",
+      location: "Member of the Academy of Sciences of Uzbekistan",
       imageUrl: abdulla,
     },
 
     {
       id: "9",
       name: "Prof. Nosir G'anixodjayev ",
-      location: "Member",
+      location: "Head of the laboratory of the Institute of Mathematics named after V.I.Romanovsky",
       imageUrl: nosir,
     },
     {
       id: "10",
       name: "David Allan Hrushka",
-      location: "Member",
+      location: "Researcher at the Grant MacEwan University",
       imageUrl: david,
     },
 
     {
       id: "4",
       name: "Dr. Qahramon Ibodullayev ",
-      location: "Member",
+      location: "Dean of the Preschool Education Faculty of Chirchik State Pedagogical University",
       imageUrl: qahramon,
     },
 
     {
       id: "5",
       name: "Farxod Haydarov ",
-      location: "Member",
+      location: "Researcher of the Institute of Mathematics named after V.I.Romanovsky",
       imageUrl: farhodImage,
     },
 
     {
       id: "7",
       name: "Dr. Karim Rahimov ",
-      location: "Member",
+      location: "Researcher of the Institute of Mathematics named after V.I.Romanovsky",
       imageUrl: karim,
     },
     {
       id: "8",
       name: " Sardor Bazarbayev ",
-      location: "Member",
+      location: "Researcher of the National University of Uzbekistan",
       imageUrl: sardorImage,
     },
     {
       id: "6",
       name: "O'tkir Boltayev ",
-      location: "Member",
+      location: "Researcher of the Institute of Mathematics named after V.I.Romanovsky",
       imageUrl: otkirImage,
     },
+
+    {
+      id: "13",
+      name: "Jasur Baxromov  ",
+      location: "Researcher of the National University of Uzbekistan",
+      imageUrl: jasur,
+    },
+    {
+      id: "14",
+      name: "Jahongir Norboyev",
+      location: "Researcher of the National University of Uzbekistan",
+      imageUrl: jahongir,
+    },
+    {
+      id: "15",
+      name: "Abdushukur Axadov ",
+      location: "Researcher of the National University of Uzbekistan",
+      imageUrl: axadov,
+    },
+
+    {
+      id: "16",
+      name: "Jasurbek Imomov ",
+      location: "Researcher of the National University of Uzbekistan",
+      imageUrl: jasur2,
+    },
+    
   ],
   informatics: [
     {
@@ -293,6 +335,7 @@ function OrganizationCard({ member }: { member: OrganizationMember }) {
         <div className="text-center">
           <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
           <p className="text-sm text-gray-500">{member.location}</p>
+          <p className="text-sm text-gray-500">{member.desc}</p>
         </div>
       </div>
     </div>
