@@ -17,13 +17,13 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="bg-gray-800 p-6">
+    <header className="bg-[#0a1e3f] p-6">
       <nav>
         <div className="flex justify-between items-center">
           <Logo />
 
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex items-center space-x-6 text-[18px] text-white">
+          <ul className="hidden lg:flex items-center space-x-6 text-[18px] text-white ">
             {menuItems.map((item, index) => (
               <DesktopMenuItem key={index} item={item} />
             ))}

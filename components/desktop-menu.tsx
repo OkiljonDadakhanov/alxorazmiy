@@ -18,7 +18,7 @@ const DesktopMenuItem = ({ item }: { item: MenuItem }) => {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-gray-800 text-white px-4 text-1xl py-2 rounded-lg hover:bg-gray-700 transition-colors">
+            <NavigationMenuTrigger className="bg-[#0a1e3f] text-white px-4 text-1xl py-2 rounded-lg hover:bg-gray-700 transition-colors">
               {item.label}
             </NavigationMenuTrigger>
             <NavigationMenuContent className="w-64">
