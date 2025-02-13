@@ -5,6 +5,7 @@ import {
   Instagram,
   Facebook,
   Youtube,
+  Phone
 } from "lucide-react";
 import Link from "next/link";
 import { FaTelegram } from "react-icons/fa6";
@@ -67,6 +68,11 @@ export default function Footer() {
               target="_blank"
             >
               <Facebook className="h-6 w-6 text-teal-500 hover:text-teal-400" />
+            </Link>
+            <Link
+            href="tel:+712070524"
+            >
+            <Phone className="h-6 w-6 text-teal-500 hover:text-teal-400" />
             </Link>
           </div>
 
