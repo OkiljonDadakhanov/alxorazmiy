@@ -29,6 +29,14 @@ export default function Partnership() {
         {partnershipsData.map((partner) => (
           <AccordionItem key={partner.id} value={partner.id}>
             <AccordionTrigger className="text-lg font-medium">
+            {/* <Image
+                    src={partner.logo}
+                    alt={`${partner.title} Logo`}
+                    width={150}
+                    height={80}
+                    className="object-contain"
+                    
+                  /> */}
               {partner.title}
             </AccordionTrigger>
             <AccordionContent>

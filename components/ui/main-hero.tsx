@@ -58,16 +58,16 @@ const EventDetails = memo(() => (
     <AnimatedText className="text-4xl sm:text-6xl font-extrabold text-[#64ffda] mb-6">
       {EVENT_DETAILS.title}
     </AnimatedText>
-
+{/* text-[#8892b0] */}
     <AnimatedText
-      className="text-xl sm:text-2xl text-[#8892b0] mb-8"
+      className="text-xl sm:text-2xl text-white  mb-8"
       delay={0.2}
     >
       {EVENT_DETAILS.subtitle}
     </AnimatedText>
 
     <AnimatedText
-      className="text-lg sm:text-xl text-[#a8b2d1] mb-12"
+      className="text-lg sm:text-xl text-white mb-12"
       delay={0.4}
     >
       <p>{EVENT_DETAILS.date}</p>
