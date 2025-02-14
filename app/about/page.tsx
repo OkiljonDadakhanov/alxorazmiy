@@ -8,7 +8,7 @@ export default function About() {
           About Al-Khwarizmi Olympiad
         </h1>
 
-        <section className="mb-16">
+        <section className="mb-16"> 
           <Card className="bg-[#1f2937] shadow-xl">
             <CardContent className="p-6">
               <p className="text-gray-300 mb-4">

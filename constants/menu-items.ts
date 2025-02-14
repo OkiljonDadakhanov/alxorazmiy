@@ -18,8 +18,13 @@ export const menuItems: MenuItem[] = [
   { label: "Partnership", href: "/partnership" },
   { label: "Uzbekistan", href: "/uzbekistan" },
   {
-    label: "About IMIO",
-    href: "/about",
+    label: "IMIO",
+
+    submenu: [
+      { label: "About IMIO", href: "/about" },
+      { label: "IMIO 2023", href: "/imio2023" },
+      { label: "IMIO 2024", href: "/imio2024" },
+    ],
   },
   {
     label: "Results/Problems",
