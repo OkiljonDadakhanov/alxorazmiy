@@ -38,12 +38,13 @@ import bahodir from "@/public/images/team/bahodir.jpg";
 import xakimjon from "@/public/images/team/hakimjon.png";
 import xusniddin from "@/public/images/team/xusniddin.png";
 import davlat from "@/public/images/team/davlat.png";
-import jasur from '@/public/images/team/jasur.jpg'
-import jasur2 from '@/public/images/team/jasur2.jpg'
-import jahongir from '@/public/images/team/jahongir.png'
-import axadov from '@/public/images/team/axadov.png'
-import akilhan from '@/public/images/team/akilhan.jpeg'
-
+import jasur from "@/public/images/team/jasur.jpg";
+import jasur2 from "@/public/images/team/jasur2.jpg";
+import jahongir from "@/public/images/team/jahongir.png";
+import axadov from "@/public/images/team/axadov.png";
+import akilhan from "@/public/images/team/akilhan.jpeg";
+import dilyor from "@/public/images/team/dilyor.png";
+import xusanboy from "@/public/images/team/xusanboy.png";
 
 interface OrganizationMember {
   id: string;
@@ -145,7 +146,7 @@ const members: {
       id: "1",
       name: "Prof. Shavkat Ayupov",
       location: "Chairman of Scientific Committee",
-      desc: 'President of the Academy of Sciences of Uzbekistan.',
+      desc: "President of the Academy of Sciences of Uzbekistan.",
       imageUrl: shavkatImage,
       isLeader: true,
     },
@@ -153,7 +154,7 @@ const members: {
       id: "11",
       name: "Navid Safaei",
       location: "Vice Chairman of Scientific Commmitte",
-      desc: 'Researcher at the Sharif University of Technology, Tehran, Iran.',
+      desc: "Researcher at the Sharif University of Technology, Tehran, Iran.",
       imageUrl: navid,
     },
     {
@@ -165,7 +166,8 @@ const members: {
     {
       id: "3",
       name: "Prof. Mirfozil Mirzaahmedov ",
-      location: "Professor of the “Theory of Probability” department of the National University of Uzbekistan",
+      location:
+        "Professor of the “Theory of Probability” department of the National University of Uzbekistan",
       imageUrl: mirfozil,
     },
 
@@ -179,7 +181,8 @@ const members: {
     {
       id: "9",
       name: "Prof. Nosir G'anixodjayev ",
-      location: "Head of the laboratory of the Institute of Mathematics named after V.I.Romanovsky",
+      location:
+        "Head of the laboratory of the Institute of Mathematics named after V.I.Romanovsky",
       imageUrl: nosir,
     },
     {
@@ -192,21 +195,24 @@ const members: {
     {
       id: "4",
       name: "Dr. Qahramon Ibodullayev ",
-      location: "Dean of the Preschool Education Faculty of Chirchik State Pedagogical University",
+      location:
+        "Dean of the Preschool Education Faculty of Chirchik State Pedagogical University",
       imageUrl: qahramon,
     },
 
     {
       id: "5",
       name: "Farxod Haydarov ",
-      location: "Researcher of the Institute of Mathematics named after V.I.Romanovsky",
+      location:
+        "Researcher of the Institute of Mathematics named after V.I.Romanovsky",
       imageUrl: farhodImage,
     },
 
     {
       id: "7",
       name: "Dr. Karim Rahimov ",
-      location: "Researcher of the Institute of Mathematics named after V.I.Romanovsky",
+      location:
+        "Researcher of the Institute of Mathematics named after V.I.Romanovsky",
       imageUrl: karim,
     },
     {
@@ -218,7 +224,8 @@ const members: {
     {
       id: "6",
       name: "O'tkir Boltayev ",
-      location: "Researcher of the Institute of Mathematics named after V.I.Romanovsky",
+      location:
+        "Researcher of the Institute of Mathematics named after V.I.Romanovsky",
       imageUrl: otkirImage,
     },
 
@@ -247,14 +254,13 @@ const members: {
       location: "Researcher of the National University of Uzbekistan",
       imageUrl: jasur2,
     },
-    
   ],
   informatics: [
     {
       id: "1",
       name: "Dr. Muminov Bahodir",
-      location:
-        "Chairman of Scientific Committee and Doctor of technical sciences at the department 'Basics of Informatics' ",
+      location: "Chairman of Scientific Committee ",
+      desc: "Doctor of technical sciences at the department 'Basics of Informatics'",
       imageUrl: bahodir,
       isLeader: true,
     },
@@ -262,52 +268,73 @@ const members: {
       id: "8",
       name: "Eljakim Schrijvers ",
       location: "Vice chairman of Scientific Committee",
+      desc: "Founder & CEO, Eljakim Information Technology bv",
       imageUrl: eljakimImage,
     },
     {
       id: "9",
       name: "Prof. Xakimjon Zaynidinov",
-      location: "Member",
+      location:
+        "Head of the Department of “Artificial Intelligence” at the University",
+      desc: "Doctor of technical sciences",
       imageUrl: xakimjon,
     },
     {
       id: "10",
       name: "Dr. Xusniddin Mamadaliyev",
-      location: "Member",
+      location:
+        "Head of the Department of “Algorithmizing and Mathematical Modeling” at the University.",
       imageUrl: xusniddin,
     },
 
     {
       id: "2",
       name: "Farkhod Khakimiyon ",
-      location: "Member",
+      location: "Scientific researcher of Innopolis University",
       imageUrl: farkhodImage,
     },
-    { id: "3", name: "Ahmed Khaled", location: "Member", imageUrl: ahmedImage },
+    {
+      id: "3",
+      name: "Ahmed Khaled",
+      location: "Researcher at the University of British Columbia (UBC).",
+      imageUrl: ahmedImage,
+    },
 
     {
       id: "4",
       name: "Sunatullo Xojiyev",
-      location: "Member",
+      location: "Researcher of Tashkent University of Information Technologies",
       imageUrl: sunatulloImage,
     },
     {
       id: "5",
       name: "Temurbek Xo'jayev",
-      location: "Member",
+      location: "Researcher of Tashkent University of Information Technologies",
       imageUrl: temurImage,
     },
     {
       id: "7",
       name: "Davlatbek Miroqilov",
-      location: "Member",
+      location: "Researcher of Tashkent University of Information Technologies",
       imageUrl: davlat,
     },
     {
       id: "6",
       name: "Dilshodbek Xo'jayev",
-      location: "Member",
+      location: "Researcher at Carnegie Mellon University in Qatar",
       imageUrl: dilshodImage,
+    },
+    {
+      id: "13",
+      name: "Valijonov Dilyor",
+      location: "Researcher at Saarland University, Saarland, Germany",
+      imageUrl: dilyor,
+    },
+    {
+      id: "12",
+      name: "Mansuraliyev Husanboy",
+      location: "Researcher at New Uzbekistan University",
+      imageUrl: xusanboy,
     },
   ],
 };
