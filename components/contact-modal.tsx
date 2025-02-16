@@ -28,14 +28,14 @@ export function ContactDialog({ isOpen, onClose }: ContactModalProps) {
           Contact Us
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[500px] shadow-2xl rounded-xl">
+      <DialogContent className="sm:max-w-[500px] shadow-2xl rounded-xl z-[10000]">
         <DialogHeader className="text-center">
           <DialogTitle className="text-2xl font-bold text-gray-800 mb-4">
             Our Contact Representative
           </DialogTitle>
         </DialogHeader>
 
-        <div className="flex flex-col items-center space-y-6 p-6">
+        <div className="flex flex-col items-center space-y-6 p-6 ">
           <div className="w-48 h-48 overflow-hidden rounded-full border-4 border-blue-500 shadow-lg">
             <Image
               src={Murodbek}
