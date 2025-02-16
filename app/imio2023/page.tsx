@@ -401,29 +401,29 @@ function OlympiadGallery() {
       caption: "Grand Opening Ceremony",
     },
     {
-      src: "/media/winners.jpg",
+      src: "/images/imio2023/proccess.JPG",
       alt: "Problem Solving",
       caption: "Participants Tackling Challenging Problems",
     },
     {
-      src: "/media/group.jpg",
+      src: "/images/imio2023/new.jpg",
       alt: "Group Discussion",
-      caption: "Collaborative Problem Solving Session",
+      caption: "A Gathering of Bright Minds: Olympiad Event Highlights",
     },
     {
-      src: "/placeholder.svg?height=300&width=400",
+      src: "/images/imio2023/rewards.jpg",
       alt: "Award Ceremony",
       caption: "Medal Award Ceremony",
     },
     {
-      src: "/placeholder.svg?height=300&width=400",
-      alt: "Cultural Performance",
-      caption: "Traditional Uzbek Dance Performance",
+      src: "/images/imio2023/discover.jpg",
+      alt: "Excursion",
+      caption: "Visit while having excursion",
     },
     {
-      src: "/placeholder.svg?height=300&width=400",
-      alt: "Excursion",
-      caption: "Visit to Amir Timur Square",
+      src: "images/imio2023/group.jpg",
+      alt: "group",
+      caption: "Group photo",
     },
   ];
 

@@ -368,34 +368,34 @@ function OlympiadGallery() {
 
   const images = [
     {
-      src: "/media/opening.jpg",
+      src: "/images/imio2024/photozone.JPG",
       alt: "Opening Ceremony",
-      caption: "Grand Opening Ceremony",
+      caption: "PhotoZone of Grand Opening Ceremony",
     },
     {
-      src: "/media/winners.jpg",
+      src: "images/imio2024/groupphoto.JPG",
       alt: "Problem Solving",
-      caption: "Participants Tackling Challenging Problems",
+      caption: "Group Photo",
     },
     {
-      src: "/media/group.jpg",
+      src: "images/imio2024/awarding.JPG",
       alt: "Group Discussion",
-      caption: "Collaborative Problem Solving Session",
-    },
-    {
-      src: "/placeholder.svg?height=300&width=400",
-      alt: "Award Ceremony",
       caption: "Medal Award Ceremony",
     },
     {
-      src: "/placeholder.svg?height=300&width=400",
-      alt: "Cultural Performance",
-      caption: "Traditional Uzbek Dance Performance",
+      src: "images/imio2024/discover.jpg",
+      alt: "Award Ceremony",
+      caption: "A Visit To Museum",
     },
     {
-      src: "/placeholder.svg?height=300&width=400",
+      src: "images/imio2024/KI8A4568.JPG",
+      alt: "Cultural Performance",
+      caption: "Diverse Participants",
+    },
+    {
+      src: "images/imio2024/comments.jpg",
       alt: "Excursion",
-      caption: "Visit to Amir Timur Square",
+      caption: "Comments on Olympiad Competetion Problems",
     },
   ];
 
