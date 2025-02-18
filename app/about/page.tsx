@@ -67,7 +67,9 @@ export default function About() {
           <Card className="bg-[#1f2937] shadow-xl">
             <CardContent className="p-6">
               <div className="mb-6">
-                <h3 className="text-xl font-semibold mb-2">Mathematics</h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">
+                  Mathematics
+                </h3>
                 <ul className="list-disc pl-5 space-y-2 text-gray-300">
                   <li>Two rounds of written examinations</li>
                   <li>4 problems per round, each worth 7 points</li>
@@ -76,7 +78,9 @@ export default function About() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Informatics</h3>
+                <h3 className="text-xl font-semibold mb-2 text-white">
+                  Informatics
+                </h3>
                 <ul className="list-disc pl-5 space-y-2 text-gray-300">
                   <li>Conducted over two days through an online system</li>
                   <li>3 problems per day, each worth 100 points</li>
