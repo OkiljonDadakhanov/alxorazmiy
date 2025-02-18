@@ -161,7 +161,7 @@ function CompetitionHighlights() {
   const videos = [
     {
       id: 1,
-      src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/imio2023video.m4v",
+      src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/tayyor_telegram.mp4",
       title: "2023 Olympiad Highlights",
       thumbnail: "/media/winners.jpg", // You can use one of your existing images as thumbnail
     },
