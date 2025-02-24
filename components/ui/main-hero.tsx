@@ -74,11 +74,11 @@ const CountdownTimer = memo(() => {
   }, []);
 
   return (
-    <div className="flex justify-center space-x-4 text-white">
+    <div className="flex justify-center space-x-6 text-white">
       {Object.entries(timeLeft).map(([unit, value]) => (
         <div key={unit} className="flex flex-col items-center">
           <motion.div
-            className="text-4xl font-bold"
+            className="text-5xl sm:text-6xl font-bold"
             initial={{ scale: 1 }}
             animate={{ scale: [1, 1.1, 1] }}
             transition={{
@@ -89,7 +89,7 @@ const CountdownTimer = memo(() => {
           >
             {value}
           </motion.div>
-          <div className="text-sm uppercase">{unit}</div>
+          <div className="text-base sm:text-lg uppercase mt-2">{unit}</div>
         </div>
       ))}
     </div>
@@ -98,15 +98,15 @@ const CountdownTimer = memo(() => {
 CountdownTimer.displayName = "CountdownTimer";
 
 const EventDetails = memo(() => (
-  <div className="text-left max-w-xl">
-    <AnimatedText className="text-4xl sm:text-6xl font-extrabold text-[#64ffda] mb-6">
+  <div className="text-left max-w-2xl">
+    <AnimatedText className="text-5xl sm:text-7xl font-extrabold text-[#64ffda] mb-8">
       {EVENT_DETAILS.title}
     </AnimatedText>
-    <AnimatedText className="text-xl sm:text-2xl text-white mb-8" delay={0.2}>
+    <AnimatedText className="text-2xl sm:text-3xl text-white mb-10" delay={0.2}>
       {EVENT_DETAILS.subtitle}
     </AnimatedText>
-    <AnimatedText className="text-lg sm:text-xl text-white mb-12" delay={0.4}>
-      <p>{EVENT_DETAILS.date}</p>
+    <AnimatedText className="text-xl sm:text-2xl text-white mb-12" delay={0.4}>
+      <p className="mb-2">{EVENT_DETAILS.date}</p>
       <p>{EVENT_DETAILS.location}</p>
     </AnimatedText>
   </div>
@@ -116,13 +116,13 @@ EventDetails.displayName = "EventDetails";
 const HeroPage = () => {
   return (
     <section
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0a192f] px-4 sm:px-6 lg:px-8"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0a192f] px-4 sm:px-6 lg:px-12"
       aria-label="Hero section"
     >
       <BackgroundPattern />
-      <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-12 mb-12">
+      <div className="w-full max-w-screen-2xl flex flex-col lg:flex-row items-center justify-between gap-16 mb-16">
         <EventDetails />
-        <div className="relative w-full lg:w-1/2 aspect-video rounded-lg overflow-hidden">
+        <div className="relative w-full lg:w-3/5 aspect-video rounded-lg overflow-hidden shadow-2xl">
           <video 
             src="https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/al-khwarazmi_3.mp4" 
             className="w-full h-full object-cover" 
@@ -133,7 +133,7 @@ const HeroPage = () => {
           />
         </div>
       </div>
-      <AnimatedText className="w-full max-w-7xl" delay={0.6}>
+      <AnimatedText className="w-full max-w-screen-2xl" delay={0.6}>
         <CountdownTimer />
       </AnimatedText>
     </section>
