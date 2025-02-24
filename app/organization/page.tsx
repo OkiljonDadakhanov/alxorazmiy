@@ -167,7 +167,7 @@ const members: {
       id: "3",
       name: "Prof. Mirfozil Mirzaahmedov ",
       location:
-        "Professor of the “Theory of Probability” department of the National University of Uzbekistan",
+        "The head teacher of the specialized school named after Muhammad al-Khorazmi",
       imageUrl: mirfozil,
     },
 

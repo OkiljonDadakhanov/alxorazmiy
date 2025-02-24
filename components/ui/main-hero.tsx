@@ -98,7 +98,7 @@ const CountdownTimer = memo(() => {
 CountdownTimer.displayName = "CountdownTimer";
 
 const EventDetails = memo(() => (
-  <div className="text-left max-w-2xl">
+  <div className="text-left w-full lg:w-3/5 pr-0 lg:pr-8">
     <AnimatedText className="text-5xl sm:text-7xl font-extrabold text-[#64ffda] mb-8">
       {EVENT_DETAILS.title}
     </AnimatedText>
@@ -122,7 +122,7 @@ const HeroPage = () => {
       <BackgroundPattern />
       <div className="w-full max-w-screen-2xl flex flex-col lg:flex-row items-center justify-between gap-16 mb-16">
         <EventDetails />
-        <div className="relative w-full lg:w-3/5 aspect-video rounded-lg overflow-hidden shadow-2xl">
+        <div className="relative w-full lg:w-2/5 aspect-video rounded-lg overflow-hidden shadow-2xl">
           <video 
             src="https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/al-khwarazmi_3.mp4" 
             className="w-full h-full object-cover" 
@@ -133,7 +133,7 @@ const HeroPage = () => {
           />
         </div>
       </div>
-      <AnimatedText className="w-full max-w-screen-2xl" delay={0.6}>
+      <AnimatedText className="w-full max-w-screen-2xl mt-8" delay={0.6}>
         <CountdownTimer />
       </AnimatedText>
     </section>
