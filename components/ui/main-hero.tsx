@@ -124,7 +124,7 @@ const HeroPage = () => {
         <EventDetails />
         <div className="relative w-full lg:w-1/2 aspect-video rounded-lg overflow-hidden">
           <video 
-            src="https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/IMG_5505.MP4" 
+            src="https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/al-khwarazmi_3.mp4" 
             className="w-full h-full object-cover" 
             autoPlay 
             muted
