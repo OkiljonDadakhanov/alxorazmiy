@@ -1,11 +1,9 @@
 "use client";
 
 import type React from "react";
-
 import { memo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-// Constants
 const ANIMATION_CONFIG = {
   initial: { opacity: 0, y: -20 },
   animate: { opacity: 1, y: 0 },
@@ -21,7 +19,6 @@ const EVENT_DETAILS = {
     'url(\'data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\')',
 } as const;
 
-// Background Pattern Component
 const BackgroundPattern = memo(() => (
   <div className="absolute inset-0 opacity-5">
     <div
@@ -33,7 +30,6 @@ const BackgroundPattern = memo(() => (
 ));
 BackgroundPattern.displayName = "BackgroundPattern";
 
-// Animated Text Component
 interface AnimatedTextProps {
   children: React.ReactNode;
   className: string;
@@ -54,7 +50,6 @@ const AnimatedText = memo(
 );
 AnimatedText.displayName = "AnimatedText";
 
-// Countdown Timer Component
 const CountdownTimer = memo(() => {
   const targetDate = new Date("2025-05-07T00:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -76,7 +71,7 @@ const CountdownTimer = memo(() => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []); // Removed calculateTimeLeft from dependencies
+  }, []);
 
   return (
     <div className="flex justify-center space-x-4 text-white">
@@ -102,9 +97,8 @@ const CountdownTimer = memo(() => {
 });
 CountdownTimer.displayName = "CountdownTimer";
 
-// Event Details Component
 const EventDetails = memo(() => (
-  <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+  <div className="text-left max-w-xl">
     <AnimatedText className="text-4xl sm:text-6xl font-extrabold text-[#64ffda] mb-6">
       {EVENT_DETAILS.title}
     </AnimatedText>
@@ -115,22 +109,33 @@ const EventDetails = memo(() => (
       <p>{EVENT_DETAILS.date}</p>
       <p>{EVENT_DETAILS.location}</p>
     </AnimatedText>
-    <AnimatedText className="mb-8" delay={0.6}>
-      <CountdownTimer />
-    </AnimatedText>
   </div>
 ));
 EventDetails.displayName = "EventDetails";
 
-// Main Hero Component
 const HeroPage = () => {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a192f]"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0a192f] px-4 sm:px-6 lg:px-8"
       aria-label="Hero section"
     >
       <BackgroundPattern />
-      <EventDetails />
+      <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-12 mb-12">
+        <EventDetails />
+        <div className="relative w-full lg:w-1/2 aspect-video rounded-lg overflow-hidden">
+          <video 
+            src="https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/IMG_5505.MP4" 
+            className="w-full h-full object-cover" 
+            autoPlay 
+            loop 
+             
+            controls
+          />
+        </div>
+      </div>
+      <AnimatedText className="w-full max-w-7xl" delay={0.6}>
+        <CountdownTimer />
+      </AnimatedText>
     </section>
   );
 };

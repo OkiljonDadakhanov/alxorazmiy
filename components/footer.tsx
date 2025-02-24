@@ -82,14 +82,14 @@ export default function Footer() {
               <span className="font-semibold">Contact Us: </span>
               <Link
                 href="mailto:khwarizmi@olympcenter.uz"
-                className="text-teal-500 hover:text-teal-400"
+                className="text-teal-500 hover:text-teal-400 "
               >
                 khimio@olympcenter.uz
               </Link>
             </p>
             <p className="text-sm"> Phone number: 
-            <span className=" text-teal-500 hover:text-teal-400">
-             +712070524
+            <span className=" text-teal-500 hover:text-teal-400 ">
+            +998 71 207 05 24
 
             </span>
             </p>
