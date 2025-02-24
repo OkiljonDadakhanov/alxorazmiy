@@ -87,6 +87,12 @@ export default function Footer() {
                 khimio@olympcenter.uz
               </Link>
             </p>
+            <p className="text-sm"> Phone number: 
+            <span className=" text-teal-500 hover:text-teal-400">
+             +712070524
+
+            </span>
+            </p>
           </div>
         </div>
 
