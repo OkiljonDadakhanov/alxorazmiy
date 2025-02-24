@@ -127,8 +127,8 @@ const HeroPage = () => {
             src="https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/IMG_5505.MP4" 
             className="w-full h-full object-cover" 
             autoPlay 
+            muted
             loop 
-             
             controls
           />
         </div>
