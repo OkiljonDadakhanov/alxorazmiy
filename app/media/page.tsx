@@ -72,7 +72,7 @@ const MediaPage = () => {
     {
       id: 2,
       src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/IMG_5505.MP4",
-      title: "Presidential Decree on Science Olympiad Center",
+      title: "Presidential Resolution on Science Olympiad Center",
       thumbnail: "/media/opening.jpg", // You can use one of your existing images as thumbnail
     },
   ];
