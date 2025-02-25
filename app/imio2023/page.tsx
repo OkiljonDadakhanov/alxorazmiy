@@ -158,14 +158,7 @@ function HeroSection() {
 }
 
 function CompetitionHighlights() {
-  const videos = [
-    {
-      id: 1,
-      src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/tayyor_telegram.mp4",
-      title: "2023 Olympiad Highlights",
-      thumbnail: "/media/winners.jpg", // You can use one of your existing images as thumbnail
-    },
-  ];
+
   return (
     <motion.section
       className="bg-white rounded-lg shadow-lg p-8 mb-12 transform hover:scale-105 transition duration-300"
@@ -189,29 +182,7 @@ function CompetitionHighlights() {
         their analytical thinking, logical reasoning, and creativity.
       </p>
 
-      <div className="">
-        {videos.map((video) => (
-          <Card key={video.id} className="group hover:shadow-lg transition-all">
-            <CardContent className="p-3">
-              <div className="relative aspect-video mb-2">
-                <video
-                  className="rounded-lg w-full h-full object-cover"
-                  controls
-                  poster={video.thumbnail}
-                >
-                  <source src={video.src} type="video/mp4" />
-                  <source
-                    src={video.src.replace(".m4v", ".webm")}
-                    type="video/webm"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <p className="text-sm font-medium text-gray-900">{video.title}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      
     </motion.section>
   );
 }
@@ -327,10 +298,7 @@ function CulturalExcursion({ highlights, y }: CulturalExcursionProps) {
     >
       <div
         className="absolute inset-0 bg-cover bg-center opacity-10 z-0"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1672353928061-0a740ff0b763?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-        }}
+        
       />
       <div className="relative z-10">
         <h2 className="text-3xl font-semibold mb-6 text-indigo-700">

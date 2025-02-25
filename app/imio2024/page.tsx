@@ -236,7 +236,7 @@ function MedalCounter({ icon: Icon, count, color, label }: MedalCounterProps) {
 
 function CountryResults({ results }: CountryResultsProps) {
   return (
-    <section className="bg-white rounded-lg shadow-lg p-8 mb-12 overflow-hidden">
+    <section className="bg-white rounded-lg shadow-lg p-8 mb-12 overflow-hidden ">
       <h2 className="text-3xl font-semibold mb-6 text-indigo-700">
         Country-wise Results
       </h2>
@@ -297,10 +297,7 @@ function CulturalExcursion({ highlights, y }: CulturalExcursionProps) {
     >
       <div
         className="absolute inset-0 bg-cover bg-center opacity-10 z-0"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1672353928061-0a740ff0b763?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-        }}
+       
       />
       <div className="relative z-10">
         <h2 className="text-3xl font-semibold mb-6 text-indigo-700">
