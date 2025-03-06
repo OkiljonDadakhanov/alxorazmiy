@@ -45,7 +45,7 @@ import axadov from "@/public/images/team/axadov.png";
 import akilhan from "@/public/images/team/akilhan.jpeg";
 import dilyor from "@/public/images/team/dilyor.png";
 import xusanboy from "@/public/images/team/xusanboy.png";
-import ruxsora from '@/public/images/team/ruxsora.jpg'
+import ruxsora from '@/public/images/team/ruxsora.webp'
 
 interface OrganizationMember {
   id: string;
