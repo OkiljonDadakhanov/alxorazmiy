@@ -45,6 +45,7 @@ import axadov from "@/public/images/team/axadov.png";
 import akilhan from "@/public/images/team/akilhan.jpeg";
 import dilyor from "@/public/images/team/dilyor.png";
 import xusanboy from "@/public/images/team/xusanboy.png";
+import ruxsora from '@/public/images/team/ruxsora.jpg'
 
 interface OrganizationMember {
   id: string;
@@ -140,6 +141,12 @@ const members: {
       location: "Software engineer",
       imageUrl: akilhan,
     },
+    {
+      id: "12",
+      name: "Ruxsora Toirova ",
+      location: "Lead Specialist", 
+      imageUrl: ruxsora
+    }
   ],
   math: [
     {
