@@ -15,7 +15,7 @@ const MobileMenuItem = ({ item }: { item: MenuItem }) => {
               <Link
                 href={sub.href}
                 className="block px-4 py-2 hover:bg-gray-700 rounded-md"
-              >
+              >        
                 {sub.label}
               </Link>
             </li>
