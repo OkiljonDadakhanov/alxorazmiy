@@ -1,146 +1,172 @@
+"use client";
+
 import React from "react";
 import PageHeader from "@/components/ui/page-header";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  LucideIcon,
-  Twitter,
-  Facebook,
-  Youtube,
-  Linkedin,
-  Instagram,
-  Globe,
-  ExternalLink,
-} from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Globe, MapPin, Calendar, Phone, Mail, FileText } from "lucide-react";
 
-interface SocialCardProps {
-  icon: any;
-  title: string;
-  handle: string;
-  link: string;
-  description: string;
-}
-
-const SocialCard: React.FC<SocialCardProps> = ({
-  icon: Icon,
-  title,
-  handle,
-  link,
-  description,
-}) => (
-  <Card className="group hover:shadow-lg transition-shadow">
-    <CardHeader className="space-y-1">
-      <div className="flex items-center space-x-2">
-        <Icon className="w-5 h-5" />
-        <CardTitle className="text-lg">{title}</CardTitle>
-      </div>
-      <a
-        href={link}
-        className="text-sm text-blue-600 hover:underline flex items-center"
-      >
-        {handle} <ExternalLink className="ml-1 w-3 h-3" />
-      </a>
-    </CardHeader>
-    <CardContent>
-      <p className="text-gray-600">{description}</p>
-    </CardContent>
-  </Card>
-);
-
-export default function News() {
-  const socialAccounts: SocialCardProps[] = [
-    {
-      icon: Globe,
-      title: "Kun.uz - News about Uzbekistan",
-      handle: "kun.uz",
-      link: "https://kun.uz/en",
-      description:
-        "Stay updated with the latest news on Uzbekistan, including politics, economy, society, and major local events.",
-    },
-    {
-      icon: Instagram,
-      title: "Al-Khwarizmi Olympiad",
-      handle: "@fan_olimpiadalari_markazi",
-      link: "https://www.instagram.com/fan_olimpiadalari_markazi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-      description:
-        "Official Instagram page of the Al-Khwarizmi International Mathematics and Informatics Olympiad. Stay updated with competition highlights, announcements, and participant achievements.",
-    },
-    {
-      icon: Globe,
-      title: "Al-Khwarizmi Olympiad on Telegram",
-      handle: "@Fan_olimpiadalari_M",
-      link: "https://t.me/Fan_olimpiadalari_M",
-      description:
-        "Join the official Telegram channel of the Al-Khwarizmi International Mathematics and Informatics Olympiad for the latest updates, announcements, and competition insights.",
-    },
-    {
-      icon: Youtube,
-      title: "Al-Khwarizmi Olympiad",
-      handle: "@olympdep",
-      link: "http://bit.ly/olimpdep",
-      description:
-        "Official video coverage of the Al-Khwarizmi International Mathematics and Informatics Olympiad, including competition highlights, expert insights, and participant interviews.",
-    },
-    {
-      icon: Facebook,
-      title: "Al-Khwarizmi Olympiad - Facebook",
-      handle: "@Fan-olimpiadalari-markazi",
-      link: "https://www.facebook.com/share/14NAmhu2D5/?mibextid=wwXIfr",
-      description:
-        "Follow the official Facebook page of the Al-Khwarizmi International Mathematics and Informatics Olympiad for updates, announcements, and insights into the competition.",
-    },
-  ];
-
+export default function PressRelease() {
   return (
     <section>
-      <PageHeader title="Press release" />
+      <PageHeader title="Press Release" />
 
-      <div className="mt-8 max-w-7xl mx-auto px-4 py-8">
-        <h2 className="text-2xl font-semibold mb-6">
-          Recommended News Sources
-        </h2>
+      <div className="mt-8 max-w-4xl mx-auto px-4 py-8">
+        <Card className="border-0 shadow-lg">
+          <CardContent className="p-8">
+            <h1 className="text-3xl font-bold text-center mb-8 text-gray-900">
+              Tashkent will host the Al-Khwarizmi International Olympiad in
+              Mathematics and Informatics
+            </h1>
 
-        <p className="mb-4">
-          To stay informed about the Al-Khwarizmi International Mathematics and
-          Informatics Olympiad, follow these trusted sources on social media:
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {socialAccounts.map((account) => (
-            <SocialCard
-              key={account.handle}
-              icon={account.icon}
-              title={account.title}
-              handle={account.handle}
-              link={account.link}
-              description={account.description}
-            />
-          ))}
-        </div>
-      </div>
+            <div className="space-y-6 text-gray-700">
+              <p className="text-lg leading-relaxed">
+                The Al-Khwarizmi International Olympiad in Mathematics and
+                Informatics will take place in Tashkent, Uzbekistan, from May 7
+                to 13, 2025. This prestigious event will gather talented high
+                school students from across the globe to showcase their skills
+                in two of the most fundamental fields of science: mathematics
+                and informatics.
+              </p>
 
-      <div className="mt-12 bg-gray-50 rounded-lg p-6">
-        <div className="flex items-center space-x-2 mb-4">
-          <Globe className="w-5 h-5 text-blue-600" />
-          <h2 className="text-xl font-semibold">Tips for Following News</h2>
-        </div>
-        <div className="space-y-3 text-gray-600">
-          <p>
-            • Follow official government pages (Ministry of Education, Ministry
-            of Digital Technologies of Uzbekistan).
-          </p>
-          <p>• Check official Olympiad pages for announcements.</p>
-          <p>
-            • Turn on notifications for Telegram channels, Twitter (X), and news
-            apps covering Uzbekistan and educational competitions.
-          </p>
-          <p>
-            • Follow Uzbekistan's major news agencies: Kun.uz, Gazeta.uz,
-            Daryo.uz.
-          </p>
-          <p>
-            • Join local Facebook groups, Telegram channels, and forums
-            discussing science and education in Uzbekistan.
-          </p>
-        </div>
+              <p className="text-lg leading-relaxed">
+                More than ten countries, including Uzbekistan, Kazakhstan,
+                Kyrgyzstan, Turkmenistan, Tajikistan, Azerbaijan, Belarus,
+                Turkey, Italy, Malaysia, and South Korea are expected to
+                participate in this year's Olympiad.
+              </p>
+
+              <div className="bg-blue-50 rounded-lg p-6 my-8">
+                <h2 className="text-xl font-semibold mb-4 text-blue-900">
+                  More information:
+                </h2>
+
+                <p className="mb-6">
+                  The opening ceremony of the Al-Khwarizmi International
+                  Olympiad in Mathematics and Informatics will be held at the
+                  Specialized School named after Muhammad Al-Khwarizmi
+                  (Tashkent, Mahtumkuli Street, 1A). The closing and awards
+                  ceremony will also take place at the same location, with the
+                  presence of officials from the Ministry of Preschool and
+                  School Education of the Republic of Uzbekistan, international
+                  guests, and diplomatic representatives of the participating
+                  countries.
+                </p>
+
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center space-x-2">
+                    <Calendar className="w-5 h-5 text-blue-600" />
+                    <span className="font-medium">Opening Ceremony:</span>
+                    <span>8 May 2025, 10:00</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Calendar className="w-5 h-5 text-blue-600" />
+                    <span className="font-medium">
+                      Closing & Awards Ceremony:
+                    </span>
+                    <span>12 May 2025, 16:00</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6 my-8">
+                <h2 className="text-xl font-semibold mb-4 text-gray-900">
+                  The main venues of the Olympiad:
+                </h2>
+                <div className="flex items-start space-x-2">
+                  <MapPin className="w-5 h-5 text-gray-600 mt-1 flex-shrink-0" />
+                  <span>
+                    Specialized School named after Muhammad Al-Khwarizmi
+                    (Tashkent, Mahtumkuli Street, 1A)
+                  </span>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6 my-8">
+                <h2 className="text-xl font-semibold mb-4 text-gray-900">
+                  Participants and accommodation:
+                </h2>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-2">
+                    <MapPin className="w-5 h-5 text-gray-600 mt-1 flex-shrink-0" />
+                    <span>
+                      Hotel Roadside by Khorrot (Tashkent, Bogishamol Drive,
+                      95A)
+                    </span>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <MapPin className="w-5 h-5 text-gray-600 mt-1 flex-shrink-0" />
+                    <span>
+                      Accommodation of the Specialized School named after
+                      Muhammad Al-Khwarizmi (Tashkent, Mahtumkuli Street, 1A)
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6 my-8">
+                <h2 className="text-xl font-semibold mb-4 text-gray-900">
+                  Organizing Committee of the Olympiad:
+                </h2>
+                <div className="space-y-3">
+                  <div className="font-semibold text-lg">
+                    Science Olympiad Center
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <MapPin className="w-5 h-5 text-gray-600 mt-1 flex-shrink-0" />
+                    <span>
+                      100099, Otchopar-1, Darvozakent Street, House 60
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-5 h-5 text-gray-600" />
+                    <span>
+                      Phone: +998712070524, Telegram/WhatsApp: +998775503366
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Globe className="w-5 h-5 text-gray-600" />
+                    <span>
+                      Website:{" "}
+                      <a
+                        href="https://arbicho.uz"
+                        className="text-blue-600 hover:underline"
+                      >
+                        https://arbicho.uz
+                      </a>
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Mail className="w-5 h-5 text-gray-600" />
+                    <span>
+                      Email:{" "}
+                      <a
+                        href="mailto:arbicho@olympcenter.uz"
+                        className="text-blue-600 hover:underline"
+                      >
+                        arbicho@olympcenter.uz
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center pt-8">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="flex items-center space-x-2 mx-auto"
+                  onClick={() =>
+                    window.open("/press-release-uzbek.pdf", "_blank")
+                  }
+                >
+                  <FileText className="w-5 h-5" />
+                  <span>Read in Uzbek (PDF)</span>
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
