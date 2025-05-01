@@ -156,9 +156,7 @@ export default function PressRelease() {
                   variant="outline"
                   size="lg"
                   className="flex items-center space-x-2 mx-auto"
-                  onClick={() =>
-                    window.open("/press-release-uzbek.pdf", "_blank")
-                  }
+                  onClick={() => window.open("/press_uzb.pdf", "_blank")}
                 >
                   <FileText className="w-5 h-5" />
                   <span>Read in Uzbek (PDF)</span>
