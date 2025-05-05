@@ -40,6 +40,7 @@ import jahongir from "@/public/images/team/jahongir.png";
 import axadov from "@/public/images/team/axadov.png";
 import akilhan from "@/public/images/team/akilhan.jpeg";
 import xusanboy from "@/public/images/team/xusanboy.png";
+import profile from "@/public/images/team/profile.png";
 import Hasan from "@/public/images/team/Hasan.jpg";
 import ruxsora from "@/public/images/team/ruxsora.webp";
 
@@ -279,6 +280,7 @@ const members: {
       desc: "Doctor of technical sciences",
       imageUrl: xakimjon,
     },
+
     {
       id: "10",
       name: "Dr. Xusniddin Mamadaliyev",
@@ -305,6 +307,12 @@ const members: {
       name: "Temurbek Xo'jayev",
       location: " IOI 2017 and ICPC world finalist",
       imageUrl: temurImage,
+    },
+    {
+      id: "88",
+      name: "Marinov Miroslav",
+      location: "Member of Scientific Committee",
+      imageUrl: profile,
     },
     {
       id: "7",
