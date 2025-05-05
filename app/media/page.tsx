@@ -75,6 +75,12 @@ const MediaPage = () => {
       title: "Presidential Resolution on Science Olympiad Center",
       thumbnail: "/media/opening.jpg", // You can use one of your existing images as thumbnail
     },
+    {
+      id: 3,
+      src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/0504%20(1)(2).mp4",
+      title: "The Al-Khwarizmi International Olympiad in Mathematics and Informatics will be held! The Olympiad held in Tashkent from May 7th to 13th. 202 participants from teams representing Turkiye, Azerbaijan, Belarus, Malaysia, Kazakhstan, Kyrgyzstan, Tajikistan, and Turkmenistan will be competing. The 3rd Al-Khwarizmi International Olympiad in Mathematics and Informatics is the first time competition organizing in two disciplines: Mathematics and Informatics. We wish you the highest achievements!",
+      
+    }
   ];
 
   return (
