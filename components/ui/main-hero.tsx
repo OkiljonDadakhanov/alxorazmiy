@@ -65,6 +65,8 @@ const CountdownTimer = memo(() => {
     return timeLeft;
   }
 
+  const isEventStarted = () => new Date().getTime() >= targetDate;
+
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
@@ -75,42 +77,89 @@ const CountdownTimer = memo(() => {
 
   return (
     <div className="flex justify-center space-x-6 text-white">
-      {Object.entries(timeLeft).map(([unit, value]) => (
-        <div key={unit} className="flex flex-col items-center">
+      {isEventStarted() ? (
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-5xl sm:text-7xl font-extrabold text-[#64ffda] mb-4">
+            The Event Has Started!
+          </h2>
+          <p className="text-2xl sm:text-3xl mb-8">
+            Welcome all participants to Al-Khwarizmi International Mathematics and Informatics Olympiad 2025!
+          </p>
           <motion.div
-            className="text-5xl sm:text-6xl font-bold"
-            initial={{ scale: 1 }}
-            animate={{ scale: [1, 1.1, 1] }}
+            className="text-4xl sm:text-5xl"
+            animate={{
+              rotateY: [0, 360],
+            }}
             transition={{
-              duration: 0.5,
+              duration: 2,
               repeat: Number.POSITIVE_INFINITY,
-              repeatDelay: 0.5,
+              repeatDelay: 3,
             }}
           >
-            {value}
+            🎉 🎓 🏆
           </motion.div>
-          <div className="text-base sm:text-lg uppercase mt-2">{unit}</div>
-        </div>
-      ))}
+        </motion.div>
+      ) : (
+        Object.entries(timeLeft).map(([unit, value]) => (
+          <div key={unit} className="flex flex-col items-center">
+            <motion.div
+              className="text-5xl sm:text-6xl font-bold"
+              initial={{ scale: 1 }}
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{
+                duration: 0.5,
+                repeat: Number.POSITIVE_INFINITY,
+                repeatDelay: 0.5,
+              }}
+            >
+              {value}
+            </motion.div>
+            <div className="text-base sm:text-lg uppercase mt-2">{unit}</div>
+          </div>
+        ))
+      )}
     </div>
   );
 });
 CountdownTimer.displayName = "CountdownTimer";
 
-const EventDetails = memo(() => (
-  <div className="text-left w-full lg:w-3/5 pr-0 lg:pr-8">
-    <AnimatedText className="text-5xl sm:text-7xl font-extrabold text-[#64ffda] mb-8">
-      {EVENT_DETAILS.title}
-    </AnimatedText>
-    <AnimatedText className="text-2xl sm:text-3xl text-white mb-10" delay={0.2}>
-      {EVENT_DETAILS.subtitle}
-    </AnimatedText>
-    <AnimatedText className="text-xl sm:text-2xl text-white mb-12" delay={0.4}>
-      <p className="mb-2">{EVENT_DETAILS.date}</p>
-      <p>{EVENT_DETAILS.location}</p>
-    </AnimatedText>
-  </div>
-));
+const EventDetails = memo(() => {
+  const [isEventDay, setIsEventDay] = useState(false);
+  
+  useEffect(() => {
+    setIsEventDay(new Date().getTime() >= new Date("2025-05-07T00:00:00").getTime());
+  }, []);
+  
+  return (
+    <div className="text-left w-full lg:w-3/5 pr-0 lg:pr-8">
+      <AnimatedText className="text-5xl sm:text-7xl font-extrabold text-[#64ffda] mb-8">
+        {EVENT_DETAILS.title}
+      </AnimatedText>
+      <AnimatedText className="text-2xl sm:text-3xl text-white mb-10" delay={0.2}>
+        {EVENT_DETAILS.subtitle}
+      </AnimatedText>
+      <AnimatedText className="text-xl sm:text-2xl text-white mb-12" delay={0.4}>
+        {isEventDay ? (
+          <>
+            <p className="mb-2 text-green-400">The competition is now LIVE!</p>
+            <p>May the best minds win - Good luck to all participants!</p>
+            <p className="mt-4">{EVENT_DETAILS.location}</p>
+          </>
+        ) : (
+          <>
+            <p className="mb-2">{EVENT_DETAILS.date}</p>
+            <p>{EVENT_DETAILS.location}</p>
+          </>
+        )}
+      </AnimatedText>
+    </div>
+  );
+});
 EventDetails.displayName = "EventDetails";
 
 const HeroPage = () => {
