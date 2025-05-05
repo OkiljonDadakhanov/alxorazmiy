@@ -11,12 +11,9 @@ import azimboyImage from "@/public/images/team/azimboy.png";
 import farhodImage from "@/public/images/team/farhod.jpg";
 import otkirImage from "@/public/images/team/utkir.jpg";
 import sardorImage from "@/public/images/team/sardor.jpg";
-import eljakimImage from "@/public/images/team/eljakim.jpg";
 import farkhodImage from "@/public/images/team/farkhod.jpg";
-import ahmedImage from "@/public/images/team/ahmed.jpg";
 import sunatulloImage from "@/public/images/team/sunatullo.jpeg";
 import temurImage from "@/public/images/team/temurbek.jpg";
-import dilshodImage from "@/public/images/team/dilshod.webp";
 import turaboy from "@/public/images/team/turaboy.jpg";
 import sevara from "@/public/images/team/sevara.jpg";
 import akrom from "@/public/images/team/akrom.jpg";
@@ -33,7 +30,6 @@ import karim from "@/public/images/team/karim.jpg";
 import nosir from "@/public/images/team/nosir.png";
 import abdulla from "@/public/images/team/abdulla.png";
 import navid from "@/public/images/team/navid.png";
-import david from "@/public/images/team/david.png";
 import bahodir from "@/public/images/team/bahodir.jpg";
 import xakimjon from "@/public/images/team/hakimjon.png";
 import xusniddin from "@/public/images/team/xusniddin.png";
@@ -43,9 +39,9 @@ import jasur2 from "@/public/images/team/jasur2.jpg";
 import jahongir from "@/public/images/team/jahongir.png";
 import axadov from "@/public/images/team/axadov.png";
 import akilhan from "@/public/images/team/akilhan.jpeg";
-import dilyor from "@/public/images/team/dilyor.png";
 import xusanboy from "@/public/images/team/xusanboy.png";
-import ruxsora from '@/public/images/team/ruxsora.webp'
+import Hasan from "@/public/images/team/Hasan.jpg";
+import ruxsora from "@/public/images/team/ruxsora.webp";
 
 interface OrganizationMember {
   id: string;
@@ -144,9 +140,9 @@ const members: {
     {
       id: "12",
       name: "Ruxsora Toirova ",
-      location: "Lead Specialist", 
-      imageUrl: ruxsora
-    }
+      location: "Lead Specialist",
+      imageUrl: ruxsora,
+    },
   ],
   math: [
     {
@@ -191,12 +187,6 @@ const members: {
       location:
         "Head of the laboratory of the Institute of Mathematics named after V.I.Romanovsky",
       imageUrl: nosir,
-    },
-    {
-      id: "10",
-      name: "David Allan Hrushka",
-      location: "Researcher at the Grant MacEwan University",
-      imageUrl: david,
     },
 
     {
@@ -271,13 +261,16 @@ const members: {
       imageUrl: bahodir,
       isLeader: true,
     },
+
     {
-      id: "8",
-      name: "Eljakim Schrijvers ",
-      location: "Vice chairman of Scientific Committee",
-      desc: "Founder & CEO, Eljakim Information Technology bv",
-      imageUrl: eljakimImage,
+      id: "132",
+      name: "Hasan Ghulomzoda",
+      location: "Chairman of Scientific Committee ",
+      desc: "Leading Instructor at Olympiad Center “Yozdah Tarhi Yak",
+      imageUrl: Hasan,
+      isLeader: false,
     },
+
     {
       id: "9",
       name: "Prof. Xakimjon Zaynidinov",
@@ -297,14 +290,8 @@ const members: {
     {
       id: "2",
       name: "Farkhod Khakimiyon ",
-      location: "Scientific researcher of Innopolis University",
+      location: "Founder of Olympiad Center “Yozdah Tarhi Yak” in Tajikistan",
       imageUrl: farkhodImage,
-    },
-    {
-      id: "3",
-      name: "Ahmed Khaled",
-      location: "Researcher at the University of British Columbia (UBC).",
-      imageUrl: ahmedImage,
     },
 
     {
@@ -316,7 +303,7 @@ const members: {
     {
       id: "5",
       name: "Temurbek Xo'jayev",
-      location: "Researcher of Tashkent University of Information Technologies",
+      location: " IOI 2017 and ICPC world finalist",
       imageUrl: temurImage,
     },
     {
@@ -325,18 +312,7 @@ const members: {
       location: "Researcher of Tashkent University of Information Technologies",
       imageUrl: davlat,
     },
-    {
-      id: "6",
-      name: "Dilshodbek Xo'jayev",
-      location: "Researcher at Carnegie Mellon University in Qatar",
-      imageUrl: dilshodImage,
-    },
-    {
-      id: "13",
-      name: "Valijonov Dilyor",
-      location: "Researcher at Saarland University, Saarland, Germany",
-      imageUrl: dilyor,
-    },
+
     {
       id: "12",
       name: "Mansuraliyev Husanboy",
