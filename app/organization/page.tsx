@@ -252,6 +252,12 @@ const members: {
       location: "Researcher of the National University of Uzbekistan",
       imageUrl: jasur2,
     },
+    {
+      id: "88",
+      name: "Marinov Miroslav",
+      location: "Member of Scientific Committee",
+      imageUrl: profile,
+    },
   ],
   informatics: [
     {
@@ -264,12 +270,10 @@ const members: {
     },
 
     {
-      id: "132",
-      name: "Hasan Ghulomzoda",
-      location: "Chairman of Scientific Committee ",
-      desc: "Leading Instructor at Olympiad Center “Yozdah Tarhi Yak",
-      imageUrl: Hasan,
-      isLeader: false,
+      id: "2",
+      name: "Farkhod Khakimiyon ",
+      location: "Founder of Olympiad Center “Yozdah Tarhi Yak” in Tajikistan",
+      imageUrl: farkhodImage,
     },
 
     {
@@ -289,11 +293,15 @@ const members: {
       imageUrl: xusniddin,
     },
 
+  
+
     {
-      id: "2",
-      name: "Farkhod Khakimiyon ",
-      location: "Founder of Olympiad Center “Yozdah Tarhi Yak” in Tajikistan",
-      imageUrl: farkhodImage,
+      id: "132",
+      name: "Hasan Ghulomzoda",
+      location: "",
+      desc: "Leading Instructor at Olympiad Center “Yozdah Tarhi Yak",
+      imageUrl: Hasan,
+      isLeader: false,
     },
 
     {
@@ -308,12 +316,7 @@ const members: {
       location: " IOI 2017 and ICPC world finalist",
       imageUrl: temurImage,
     },
-    {
-      id: "88",
-      name: "Marinov Miroslav",
-      location: "Member of Scientific Committee",
-      imageUrl: profile,
-    },
+   
     {
       id: "7",
       name: "Davlatbek Miroqilov",
