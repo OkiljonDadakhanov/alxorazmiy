@@ -71,8 +71,8 @@ const MediaPage = () => {
     },
     {
       id: 2,
-      src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/IMG_5505.MP4",
-      title: "Presidential Resolution on Science Olympiad Center",
+      src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/al-khwarazmi.mp4",
+      title: "Compete with the best minds from around the world – May 7-13, 2025.",
       thumbnail: "/media/opening.jpg", // You can use one of your existing images as thumbnail
     },
     {
