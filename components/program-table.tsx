@@ -20,7 +20,7 @@ const ProgramTable: React.FC<ProgramTableProps> = ({ programs }) => {
           <TableHead>Time</TableHead>
           <TableHead>Contestants</TableHead>
           <TableHead>Team Leaders</TableHead>
-          <TableHead>Juries</TableHead>
+          <TableHead>Judges</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -29,7 +29,7 @@ const ProgramTable: React.FC<ProgramTableProps> = ({ programs }) => {
             <TableCell className="font-medium">{program.time}</TableCell>
             <TableCell>{program.contestants}</TableCell>
             <TableCell>{program.leaders}</TableCell>
-            <TableCell>{program.deputyLeaders}</TableCell>
+            <TableCell>{program.judges}</TableCell>
           </TableRow>
         ))}
       </TableBody>
