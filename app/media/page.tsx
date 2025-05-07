@@ -82,6 +82,82 @@ const MediaPage = () => {
     },
   ];
 
+  // New welcome section images
+  const welcomeImages: ImageItem[] = [
+    {
+      id: 1,
+      src: "/2025/1.jpg",
+      alt: "Arrival of participants",
+      title: "Participants Arrival Day",
+    },
+    {
+      id: 2,
+      src: "/2025/4.jpg",
+      alt: "Registration desk",
+      title: "Registration Process",
+    },
+    {
+      id: 3,
+      src: "/2025/3.jpg",
+      alt: "Welcome ceremony",
+      title: "Welcome Ceremony",
+    },
+    {
+      id: 4,
+      src: "/2025/5.jpg",
+      alt: "Preparation meeting",
+      title: "Preparation Meeting",
+    },
+    {
+      id: 5,
+      src: "/2025/9.jpg",
+      alt: "Campus tour",
+      title: "Campus Tour",
+    },
+    {
+      id: 6,
+      src: "/2025/10.jpg",
+      alt: "Team introductions",
+      title: "Team Introductions",
+    },
+    {
+      id: 7,
+      src: "/2025/11.jpg",
+      alt: "Welcome dinner",
+      title: "Welcome Dinner",
+    },
+    {
+      id: 8,
+      src: "/2025/12.jpg",
+      alt: "Venue preparation",
+      title: "Venue Preparation",
+    },
+    {
+      id: 9,
+      src: "/2025/13.jpg",
+      alt: "Participants orientation",
+      title: "Participants Orientation",
+    },
+    {
+      id: 10,
+      src: "/2025/16.jpg",
+      alt: "Welcome kit distribution",
+      title: "Welcome Kit Distribution",
+    },
+    {
+      id: 11,
+      src: "/2025/15.jpg",
+      alt: "Welcome kit distribution",
+      title: "Welcome Kit Distribution",
+    },
+    {
+      id: 12,
+      src: "/2025/14.jpg",
+      alt: "Welcome kit distribution",
+      title: "Welcome Kit Distribution",
+    },
+  ];
+
   const videos: VideoItem[] = [
     {
       id: 1,
@@ -153,7 +229,9 @@ const MediaPage = () => {
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-2">
               <ImageIcon className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-semibold">Photo Gallery</h2>
+              <h2 className="text-2xl font-semibold">
+                Photo Gallery of IMIO 2024
+              </h2>
             </div>
             <a
               href="https://drive.google.com/drive/folders/1K64fxCgVyJrtYy0LLvn7n7DTMHi0CPmX?usp=sharing"
@@ -186,6 +264,40 @@ const MediaPage = () => {
                   <p className="text-sm font-medium text-gray-900">
                     {image.title}
                   </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* New Welcome Section */}
+        <div className="mb-12">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-2">
+              <ImageIcon className="w-6 h-6 text-blue-600" />
+              <h2 className="text-2xl font-semibold">
+                Welcoming participants and preparation for Al-Khwarizmi
+                International Mathematics and Informatics Olympiad 2025
+              </h2>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {welcomeImages.map((image) => (
+              <Card
+                key={image.id}
+                className="group hover:shadow-lg transition-all"
+              >
+                <CardContent className="p-2">
+                  <div className="relative aspect-square mb-0">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      className="rounded-lg object-cover w-full h-full"
+                      width={120}
+                      height={120}
+                    />
+                  </div>
                 </CardContent>
               </Card>
             ))}
