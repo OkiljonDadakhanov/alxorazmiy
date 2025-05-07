@@ -15,12 +15,12 @@ import { programsData } from "@/data/programs";
 export default function Programme() {
   const handleDownloadUzbek = () => {
     // URL to your Uzbek version document
-    const uzbekDocumentUrl = "/documents/Dastur-Al-Xorazmiy-uzb.pdf";
+    const uzbekDocumentUrl = "/dastur.pdf";
 
     // Create a link element
     const link = document.createElement("a");
     link.href = uzbekDocumentUrl;
-    link.download = "Al-Khwarezmi-Olympiad-Program-Uzbek.pdf";
+    link.download = "dastur.pdf";
 
     // Append to the body, click and remove
     document.body.appendChild(link);
@@ -29,9 +29,10 @@ export default function Programme() {
   };
 
   return (
-    <section>
+    <section> 
+      <PageHeader title="Programme" />
       <div className="w-[70%] mx-auto mb-6">
-        <PageHeader title="Programme" />
+       
         <div className="flex justify-end mt-2">
           <Button
             onClick={handleDownloadUzbek}
@@ -47,7 +48,7 @@ export default function Programme() {
 
       <div className="w-[70%] mx-auto mb-4 p-4 bg-blue-50 rounded-md">
         <h2 className="text-xl font-semibold mb-2">
-          AL-KHWAREZMI INTERNATIONAL OLYMPIAD IN MATHEMATICS AND INFORMATICS
+        AL-KHWARIZMI INTERNATIONAL OLYMPIAD IN MATHEMATICS AND INFORMATICS
         </h2>
         <p className="text-sm italic mb-2">
           May 7-13, 2025, Tashkent, Uzbekistan
