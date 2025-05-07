@@ -121,6 +121,13 @@ const MediaPage = () => {
       description:
         "The teams from Tajikistan and Kyrgyzstan are warmly welcomed to the Al-Khwarizmi International Olympiad in Mathematics and Informatics. Get to know the participants and hear what they're looking forward to at the Olympiad watch in our interview video!",
     },
+    {
+      id: 6,
+      src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/07-05-25-eng.mp4",
+      title: "Belarus and Turkiye Team Interview",
+      description:
+        "⚡️The teams from Belarus and Turkiye participating in the Al-Khwarizmi International Mathematics and Informatics Olympiad have been warmly welcomed. What do the international participants think about this prestigious competition? More details — in the interview.",
+    },
   ];
 
   // State to track which descriptions are expanded
