@@ -204,6 +204,13 @@ const MediaPage = () => {
       description:
         "⚡️The teams from Belarus and Turkiye participating in the Al-Khwarizmi International Mathematics and Informatics Olympiad have been warmly welcomed. What do the international participants think about this prestigious competition? More details — in the interview.",
     },
+    {
+      id: 7,
+      src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/0507%20(2)(1).mp4",
+      title: "IMIO 2025: The Journey Begins!",
+      description:
+        "Al-Khwarizmi International Olympiad in Mathematics and Informatics is ABOUT TO START! More details in the video report.",
+    },
   ];
 
   // State to track which descriptions are expanded
