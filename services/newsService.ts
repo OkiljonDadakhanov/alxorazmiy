@@ -25,8 +25,7 @@ export interface GalleryImage {
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json",
-            "X-MEDIA-ACCESS": "SECRET123",
-            "User-Agent": "Mozilla/5.0",
+        
           },
       });
   
