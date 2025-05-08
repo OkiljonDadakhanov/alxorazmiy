@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   output: "export",
   images: {
     unoptimized: true, // Agar Next.js rasmi optimizatsiyasini ishlatmasa
+    domains: ['api.olympcenter.uz'],
   },
 };
 

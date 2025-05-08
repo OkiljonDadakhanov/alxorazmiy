@@ -35,10 +35,11 @@ export const menuItems: MenuItem[] = [
   },
   {
     label: "Media & Press",
-    href: "/news",
+    href: "/",
     submenu: [
       { label: "Media", href: "/media" },
       { label: "Press release", href: "/press" },
+      { label: "News", href: "/news" },
     ],
   },
 ];
