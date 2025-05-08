@@ -48,6 +48,11 @@ export interface GalleryImage {
       const response = await fetch(`${API_URL}/api/blog/${id}/`, {
         cache: "no-store",
         next: { revalidate: 0 },
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+          "X-MEDIA-ACCESS": "SECRET123",
+        },
       });
   
       if (!response.ok) {
