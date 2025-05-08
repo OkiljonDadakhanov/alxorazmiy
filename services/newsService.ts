@@ -19,22 +19,27 @@ export interface GalleryImage {
   
   export async function getAllNews(): Promise<NewsItem[]> {
     try {
+      console.log("Starting API fetch to", `${API_URL}/api/blog/`);
+      
       const response = await fetch(`${API_URL}/api/blog/`, {
         cache: "no-store",
         next: { revalidate: 0 },
         headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-        
-          },
+          "Content-Type": "application/json", // Fixed the space
+          "Accept": "application/json",
+          // Consider adding this if your API requires it
+        },
       });
-  
+    
+      console.log("API response status:", response.status);
+      
       if (!response.ok) {
         throw new Error(`Error fetching news: ${response.status}`);
       }
-  
+    
       const data = await response.json();
-  
+      console.log("Data received:", data ? "yes" : "no", "length:", Array.isArray(data) ? data.length : "not an array");
+      
       // Optional: add basic runtime validation if needed
       return Array.isArray(data) ? data : [];
     } catch (error) {
@@ -51,7 +56,7 @@ export interface GalleryImage {
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json",
-          "X-MEDIA-ACCESS": "SECRET123",
+          
         },
       });
   
