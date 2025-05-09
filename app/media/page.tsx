@@ -211,6 +211,13 @@ const MediaPage = () => {
       description:
         "Al-Khwarizmi International Olympiad in Mathematics and Informatics is ABOUT TO START! More details in the video report.",
     },
+      {
+      id: 8,
+      src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/0509(1).mp4",
+      title: "IMIO 2025: First Round in Motion.",
+      description:
+        "📌 Video from the 1st round of the Al-Khwarizmi International Mathematics and Informatics Olympiad",
+    },
   ];
 
   // State to track which descriptions are expanded
