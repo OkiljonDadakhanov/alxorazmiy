@@ -53,15 +53,15 @@ const EventHighlights = memo(() => {
         transition={{ delay: 0.8, duration: 1 }}
       >
         <div className="bg-[#112240] p-6 rounded-lg shadow-lg">
-          <div className="text-[#64ffda] text-4xl mb-4">120+</div>
+          <div className="text-[#64ffda] text-4xl mb-4">205</div>
           <h3 className="text-white text-xl font-bold mb-2">Participants</h3>
           <p className="text-gray-300">
-            Talented students from over 25 countries competed in this year's olympiad
+            Talented students from over 9 countries competed in this year's olympiad
           </p>
         </div>
 
         <div className="bg-[#112240] p-6 rounded-lg shadow-lg">
-          <div className="text-[#64ffda] text-4xl mb-4">48</div>
+          <div className="text-[#64ffda] text-4xl mb-4">110</div>
           <h3 className="text-white text-xl font-bold mb-2">Medals Awarded</h3>
           <p className="text-gray-300">
             Gold, silver, and bronze medals awarded to top performers in both mathematics and informatics
