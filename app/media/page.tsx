@@ -156,6 +156,54 @@ const MediaPage = () => {
       alt: "Welcome kit distribution",
       title: "Welcome Kit Distribution",
     },
+     {
+      id: 13,
+      src: "/2025/17.jpg",
+      alt: "Welcome kit distribution",
+      title: "Welcome Kit Distribution",
+    },
+     {
+      id: 14,
+      src: "/2025/18.jpg",
+      alt: "Welcome kit distribution",
+      title: "Welcome Kit Distribution",
+    },
+     {
+      id: 15,
+      src: "/2025/19.jpg",
+      alt: "Welcome kit distribution",
+      title: "Welcome Kit Distribution",
+    },
+     {
+      id: 16,
+      src: "/2025/20.jpg",
+      alt: "Welcome kit distribution",
+      title: "Welcome Kit Distribution",
+    },
+     {
+      id: 17,
+      src: "/2025/21.jpg",
+      alt: "Welcome kit distribution",
+      title: "Welcome Kit Distribution",
+    },
+     {
+      id: 18,
+      src: "/2025/22.jpg",
+      alt: "Welcome kit distribution",
+      title: "Welcome Kit Distribution",
+    },
+     {
+      id: 19,
+      src: "/2025/23.jpg",
+      alt: "Welcome kit distribution",
+      title: "Welcome Kit Distribution",
+    },
+     {
+      id: 20,
+      src: "/2025/30.jpg",
+      alt: "Welcome kit distribution",
+      title: "Welcome Kit Distribution",
+    },
   ];
 
   const videos: VideoItem[] = [
