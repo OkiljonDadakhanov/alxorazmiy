@@ -81,12 +81,11 @@ export default function AlKhwarizmiOlympiad() {
   }, [goldCount, silverCount, bronzeCount]);
 
   const countryResults: CountryResult[] = [
-    { country: "Uzbekistan", gold: 5, silver: 15, bronze: 13, total: 33 },
-    { country: "Kazakhstan", gold: 2, silver: 1, bronze: 2, total: 5 },
-    { country: "Kyrgyzstan", gold: 2, silver: 1, bronze: 5, total: 8 },
-    { country: "Tajikistan", gold: 1, silver: 2, bronze: 1, total: 4 },
-    { country: "Turkey", gold: 0, silver: 0, bronze: 5, total: 5 },
-    { country: "Azerbaijan", gold: 0, silver: 0, bronze: 0, total: 0 },
+    { country: "Uzbekistan", gold: 2, silver: 13, bronze: 16, total: 31 },
+    { country: "Kazakhstan", gold: 4, silver: 2, bronze: 0, total: 6 },
+    { country: "Kyrgyzstan", gold: 1, silver: 0, bronze: 2, total: 3 },
+    { country: "Tajikistan", gold: 1, silver: 2, bronze: 6, total: 9 },
+    { country: "Turkmenistan", gold: 2, silver: 1, bronze: 2, total: 5 },
   ];
 
   const excursionHighlights: ExcursionHighlight[] = [
@@ -295,10 +294,7 @@ function CulturalExcursion({ highlights, y }: CulturalExcursionProps) {
       style={{ y }}
       className="bg-white rounded-lg shadow-lg p-8 mb-12 relative overflow-hidden"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-10 z-0"
-       
-      />
+      <div className="absolute inset-0 bg-cover bg-center opacity-10 z-0" />
       <div className="relative z-10">
         <h2 className="text-3xl font-semibold mb-6 text-indigo-700">
           Cultural and Historical Excursion in Tashkent

@@ -83,10 +83,10 @@ export default function AlKhwarizmiOlympiad() {
 
   const countryResults: CountryResult[] = [
     { country: "Uzbekistan", gold: 3, silver: 6, bronze: 13, total: 22 },
-    { country: "Kazakhstan", gold: 3, silver: 1, bronze: 1, total: 5 },
-    { country: "Kyrgyzstan", gold: 1, silver: 5, bronze: 6, total: 12 },
-    { country: "Tajikistan", gold: 0, silver: 1, bronze: 0, total: 1 },
-    { country: "Azerbaijan", gold: 0, silver: 1, bronze: 0, total: 1 },
+    { country: "Kazakhstan", gold: 3, silver: 5, bronze: 0, total: 8 },
+    { country: "Kyrgyzstan", gold: 1, silver: 1, bronze: 1, total: 3 },
+    { country: "Tajikistan", gold: 0, silver: 1, bronze: 3, total: 4 },
+    { country: "Azerbaijan", gold: 0, silver: 1, bronze: 3, total: 4 },
   ];
 
   const excursionHighlights: ExcursionHighlight[] = [
