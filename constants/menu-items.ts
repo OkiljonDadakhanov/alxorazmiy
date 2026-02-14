@@ -3,7 +3,7 @@ import { MenuItem } from "@/types/navigation";
 export const menuItems: MenuItem[] = [
   { label: "Home", href: "/" },
   {
-    label: "3-Al-Khwarizmi IMIO",
+    label: "4-Al-Khwarizmi KHIMIO",
     submenu: [
       { label: "Organizing Committee", href: "/organization" },
       { label: "Scientific Committee(Maths)", href: "/organization#math" },
@@ -18,24 +18,23 @@ export const menuItems: MenuItem[] = [
   { label: "Partnership", href: "/partnership" },
   { label: "Uzbekistan", href: "/uzbekistan" },
   {
-    label: "IMIO",
-
+    label: "KHIMIO",
     submenu: [
-      { label: "About IMIO", href: "/about" },
-      { label: "IMIO 2023", href: "/imio2023" },
-      { label: "IMIO 2024", href: "/imio2024" },
+      { label: "About KHIMIO", href: "/about" },
+      { label: "KHIMIO 2023", href: "/imio2023" },
+      { label: "KHIMIO 2024", href: "/imio2024" },
+      { label: "KHIMIO 2025", href: "/khimio2025" },
     ],
   },
   {
     label: "Results/Problems",
     submenu: [
-      { label: "Al-Khwarizmi IMIO problems", href: "/problems" },
-      { label: "Al-Khwarizmi IMIO results", href: "/results" },
+      { label: "Al-Khwarizmi KHIMIO problems", href: "/problems" },
+      { label: "Al-Khwarizmi KHIMIO results", href: "/results" },
     ],
   },
   {
-    label: "Media & Press",
-    href: "/",
+    label: "News & Media",
     submenu: [
       { label: "Media", href: "/media" },
       { label: "Press release", href: "/press" },

@@ -13,7 +13,7 @@ export default function About() {
             <CardContent className="p-6">
               <p className="text-gray-300 mb-4">
                 The Al-Khwarizmi International Mathematics and Informatics
-                Olympiad (IMIO) is a prestigious global competition that aims to
+                Olympiad (KHIMIO) is a prestigious global competition that aims to
                 identify and nurture exceptional talent in mathematics and
                 informatics. Named after the legendary Persian mathematician
                 Al-Khwarizmi, the Olympiad serves as a platform for bright young
@@ -22,7 +22,7 @@ export default function About() {
                 peers who share a passion for mathematics and computing.
               </p>
               <p className="text-gray-300">
-                The 3rd Al-Khwarizmi IMIO will take place from May 7–13, 2025,
+                The 4th Al-Khwarizmi KHIMIO will take place from May 25–31, 2026,
                 in Uzbekistan, bringing together talented students from multiple
                 countries to compete in the fields of Mathematics and
                 Informatics.
@@ -38,7 +38,7 @@ export default function About() {
               <p className="text-gray-300 mb-4">
                 To inspire and empower young minds by creating an inclusive
                 platform for innovation, exploration, and intellectual growth.
-                Al-Khwarizmi IMIO seeks to:
+                Al-Khwarizmi KHIMIO seeks to:
               </p>
               <ul className="list-disc pl-5 space-y-2 text-gray-300">
                 <li>
@@ -102,7 +102,7 @@ export default function About() {
               </p>
               <ul className="list-disc pl-5 space-y-2 text-gray-300">
                 <li>4 participants for the Mathematics competition</li>
-                <li>2 participants for the Informatics competition</li>
+                <li>4 participants for the Informatics competition</li>
                 <li>
                   2 team leaders to accompany and support the participants
                 </li>

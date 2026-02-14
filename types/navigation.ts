@@ -3,7 +3,7 @@ export interface MenuItem {
     href?: string;
     submenu?: SubMenuItem[];
   }
-  
+
   export interface SubMenuItem {
     label: string;
     href: string;

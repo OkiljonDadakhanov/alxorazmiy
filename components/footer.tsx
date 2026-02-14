@@ -70,7 +70,7 @@ export default function Footer() {
               <Facebook className="h-6 w-6 text-teal-500 hover:text-teal-400" />
             </Link>
             <Link
-            href="tel:+712070524"
+            href="tel:+998775503366"
             >
             <Phone className="h-6 w-6 text-teal-500 hover:text-teal-400" />
             </Link>
@@ -89,7 +89,7 @@ export default function Footer() {
             </p>
             <p className="text-sm"> Phone number: 
             <span className=" text-teal-500 hover:text-teal-400 ">
-            +998 71 207 05 24
+            +998 77 550 33 66
 
             </span>
             </p>

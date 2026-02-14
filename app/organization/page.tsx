@@ -43,6 +43,8 @@ import xusanboy from "@/public/images/team/xusanboy.png";
 import profile from "@/public/images/team/profile.png";
 import Hasan from "@/public/images/team/Hasan.jpg";
 import ruxsora from "@/public/images/team/ruxsora.webp";
+import charos from "@/public/images/team/charos.jpg";
+import ibrat from "@/public/images/team/ibrat.jpg";
 
 interface OrganizationMember {
   id: string;
@@ -78,71 +80,64 @@ const members: {
     },
     {
       id: "3",
-      name: "Akromxo‘ja Umarxodjayev ",
+      name: "Alham Shaymardanov",
       location: "Head of the event organization Department",
       imageUrl: akrom,
       isLeader: false,
     },
     {
       id: "4",
-      name: "Jo‘rabek Jangirov ",
-      location: "Head of the Web & Social Networks and Content Department",
-      imageUrl: jurabek,
-      isLeader: false,
-    },
-    {
-      id: "5",
       name: "Xujamov Inom",
       location: "Head of IT and technical Department",
       imageUrl: inom,
       isLeader: false,
     },
     {
-      id: "6",
+      id: "5",
       name: "Usmonov Oybek",
       location: "Head of the transport and logistics Department",
       imageUrl: oybek,
       isLeader: false,
     },
     {
-      id: "7",
+      id: "6",
       name: "Davron Tuxtayev ",
       location: "Exam preparation and supporting track",
       imageUrl: davron,
       isLeader: false,
     },
     {
-      id: "8",
-      name: "Murotjon Islamov ",
-      location: "Head of the Events and public relations track",
-      imageUrl: murodjon,
-      isLeader: false,
-    },
-    {
-      id: "9",
-      name: "Tamanno To‘rayeva ",
-      location: "Media track",
-      imageUrl: tamanno,
-      isLeader: false,
-    },
-    {
-      id: "10",
-      name: "Otabek Karimov ",
-      location: "Technology and technical support track",
-      imageUrl: otabek,
-      isLeader: false,
-    },
-    {
-      id: "11",
+      id: "7",
       name: "Dadaxanov Oqiljon",
       location: "Software engineer",
       imageUrl: akilhan,
     },
     {
-      id: "12",
+      id: "8",
+      name: "Tamanno To'rayeva ",
+      location: "Media track",
+      imageUrl: tamanno,
+      isLeader: false,
+    },
+    {
+      id: "9",
+      name: "O'runov Ibrat",
+      location: "Technology and technical support track",
+      imageUrl: ibrat,
+      isLeader: false,
+    },
+    {
+      id: "10",
       name: "Ruxsora Toirova ",
       location: "Lead Specialist",
       imageUrl: ruxsora,
+    },
+    {
+      id: "11",
+      name: "Abdusattorova Charos",
+      location: "Head of the Organizing Committee",
+      imageUrl: charos,
+      isLeader: false,
     },
   ],
   math: [

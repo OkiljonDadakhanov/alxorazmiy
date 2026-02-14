@@ -17,14 +17,14 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title:
-    "Al-Khwarizmi IMIO - International Mathematics and Informatics Olympiad",
+    "Al-Khwarizmi KHIMIO - International Mathematics and Informatics Olympiad",
   description:
     "A prestigious global competition that identifies and nurtures exceptional talent in mathematics and informatics.",
   openGraph: {
     title:
-      "Al-Khwarizmi IMIO - International Mathematics and Informatics Olympiad",
+      "Al-Khwarizmi KHIMIO - International Mathematics and Informatics Olympiad",
     description:
-      "Join the 3rd Al-Khwarizmi IMIO from May 7–13, 2025, in Uzbekistan and compete with talented students worldwide.",
+      "Join the 4th Al-Khwarizmi KHIMIO from May 25–31, 2026, in Uzbekistan and compete with talented students worldwide.",
     url: "https://imio.uz",
     type: "website",
   },

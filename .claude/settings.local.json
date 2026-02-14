@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx next build:*)",
+      "Bash(npx xlsx-cli:*)",
+      "Bash(python -c:*)",
+      "Bash(pip install:*)"
+    ]
+  }
+}

@@ -3,8 +3,7 @@
 import React from "react";
 import PageHeader from "@/components/ui/page-header";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Globe, MapPin, Calendar, Phone, Mail, FileText } from "lucide-react";
+import { Globe, MapPin, Calendar, Phone, Mail } from "lucide-react";
 
 export default function PressRelease() {
   return (
@@ -15,15 +14,15 @@ export default function PressRelease() {
         <Card className="border-0 shadow-lg">
           <CardContent className="p-8">
             <h1 className="text-3xl font-bold text-center mb-8 text-gray-900">
-              Tashkent will host the Al-Khwarizmi International Olympiad in
+              Uzbekistan will host the Al-Khwarizmi International Olympiad in
               Mathematics and Informatics
             </h1>
 
             <div className="space-y-6 text-gray-700">
               <p className="text-lg leading-relaxed">
                 The Al-Khwarizmi International Olympiad in Mathematics and
-                Informatics will take place in Tashkent, Uzbekistan, from May 7
-                to 13, 2025. This prestigious event will gather talented high
+                Informatics will take place in Tashkent, Uzbekistan, from May 25
+                to 31, 2026. This prestigious event will gather talented high
                 school students from across the globe to showcase their skills
                 in two of the most fundamental fields of science: mathematics
                 and informatics.
@@ -32,8 +31,8 @@ export default function PressRelease() {
               <p className="text-lg leading-relaxed">
                 More than ten countries, including Uzbekistan, Kazakhstan,
                 Kyrgyzstan, Turkmenistan, Tajikistan, Azerbaijan, Belarus,
-                Turkey, Italy, Malaysia, and South Korea are expected to
-                participate in this year's Olympiad.
+                Turkey, Italy, Malaysia and Qatar are expected to
+                participate in this year&apos;s Olympiad.
               </p>
 
               <div className="bg-blue-50 rounded-lg p-6 my-8">
@@ -44,8 +43,7 @@ export default function PressRelease() {
                 <p className="mb-6">
                   The opening ceremony of the Al-Khwarizmi International
                   Olympiad in Mathematics and Informatics will be held at the
-                  Specialized School named after Muhammad Al-Khwarizmi
-                  (Tashkent, Mahtumkuli Street, 1A). The closing and awards
+                  Tashkent region, Uzbekistan. The closing and awards
                   ceremony will also take place at the same location, with the
                   presence of officials from the Ministry of Preschool and
                   School Education of the Republic of Uzbekistan, international
@@ -57,14 +55,14 @@ export default function PressRelease() {
                   <div className="flex items-center space-x-2">
                     <Calendar className="w-5 h-5 text-blue-600" />
                     <span className="font-medium">Opening Ceremony:</span>
-                    <span>8 May 2025, 10:00</span>
+                    <span>26 May 2026, 10:00</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Calendar className="w-5 h-5 text-blue-600" />
                     <span className="font-medium">
                       Closing & Awards Ceremony:
                     </span>
-                    <span>12 May 2025, 16:00</span>
+                    <span>30 May 2026, 15:00</span>
                   </div>
                 </div>
               </div>
@@ -76,8 +74,7 @@ export default function PressRelease() {
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-5 h-5 text-gray-600 mt-1 flex-shrink-0" />
                   <span>
-                    Specialized School named after Muhammad Al-Khwarizmi
-                    (Tashkent, Mahtumkuli Street, 1A)
+                    Renaissance (Tashkent Region, Uzbekistan)
                   </span>
                 </div>
               </div>
@@ -86,27 +83,18 @@ export default function PressRelease() {
                 <h2 className="text-xl font-semibold mb-4 text-gray-900">
                   Participants and accommodation:
                 </h2>
-                <div className="space-y-3">
-                  <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-gray-600 mt-1 flex-shrink-0" />
-                    <span>
-                      Hotel Roadside by Khorrot (Tashkent, Bogishamol Drive,
-                      95A)
-                    </span>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-gray-600 mt-1 flex-shrink-0" />
-                    <span>
-                      Accommodation of the Specialized School named after
-                      Muhammad Al-Khwarizmi (Tashkent, Mahtumkuli Street, 1A)
-                    </span>
-                  </div>
+                <div className="flex items-start space-x-2">
+                  <MapPin className="w-5 h-5 text-gray-600 mt-1 flex-shrink-0" />
+                  <span>
+                    Accommodation - Renaissance camp (Tashkent region,
+                    Bustonlik district, Burchmullo city, Yusufkhona street, 44)
+                  </span>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6 my-8">
                 <h2 className="text-xl font-semibold mb-4 text-gray-900">
-                  Organizing Committee of the Olympiad:
+                  Organising Committee of the Olympiad:
                 </h2>
                 <div className="space-y-3">
                   <div className="font-semibold text-lg">
@@ -121,7 +109,7 @@ export default function PressRelease() {
                   <div className="flex items-center space-x-2">
                     <Phone className="w-5 h-5 text-gray-600" />
                     <span>
-                      Phone: +998712070524, Telegram/WhatsApp: +998775503366
+                      Phone: +998775503366, Telegram/WhatsApp: +998775503366
                     </span>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -129,10 +117,10 @@ export default function PressRelease() {
                     <span>
                       Website:{" "}
                       <a
-                        href="https://arbicho.uz"
+                        href="https://khimio.uz"
                         className="text-blue-600 hover:underline"
                       >
-                        https://arbicho.uz
+                        https://khimio.uz
                       </a>
                     </span>
                   </div>
@@ -141,26 +129,14 @@ export default function PressRelease() {
                     <span>
                       Email:{" "}
                       <a
-                        href="mailto:arbicho@olympcenter.uz"
+                        href="mailto:khimio@olympcenter.uz"
                         className="text-blue-600 hover:underline"
                       >
-                        arbicho@olympcenter.uz
+                        khimio@olympcenter.uz
                       </a>
                     </span>
                   </div>
                 </div>
-              </div>
-
-              <div className="text-center pt-8">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="flex items-center space-x-2 mx-auto"
-                  onClick={() => window.open("/press_uzb.pdf", "_blank")}
-                >
-                  <FileText className="w-5 h-5" />
-                  <span>Read in Uzbek (PDF)</span>
-                </Button>
               </div>
             </div>
           </CardContent>

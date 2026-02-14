@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import Image from "next/image";
 import { User, Mail, Briefcase, Phone } from "lucide-react";
-import Murodbek from "@/public/images/murodbek.jpg";
+import charos from "@/public/images/team/charos.jpg";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -38,7 +38,7 @@ export function ContactDialog({ isOpen, onClose }: ContactModalProps) {
         <div className="flex flex-col items-center space-y-6 p-6 ">
           <div className="w-48 h-48 overflow-hidden rounded-full border-4 border-blue-500 shadow-lg">
             <Image
-              src={Murodbek}
+              src={charos}
               alt="Contact Representative"
               className="w-full h-full object-cover"
             />
@@ -48,13 +48,13 @@ export function ContactDialog({ isOpen, onClose }: ContactModalProps) {
             <div className="flex items-center space-x-2">
               <User className="text-blue-600" />
               <h2 className="text-xl font-semibold text-gray-700">
-                Murodbek Islamov
+                Abdusattorova Charos
               </h2>
             </div>
 
             <div className="flex items-center space-x-2">
               <Briefcase className="text-green-600" />
-              <p className="text-gray-600">Contact Person</p>
+              <p className="text-gray-600">Head of the Organizing Committee</p>
             </div>
 
             <div className="flex items-center space-x-2">
@@ -70,7 +70,7 @@ export function ContactDialog({ isOpen, onClose }: ContactModalProps) {
             <div className="flex items-center space-x-2">
               <Phone className="text-green-600" />
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/998775503366"
                 className="text-blue-500 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"

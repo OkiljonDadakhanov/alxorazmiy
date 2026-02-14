@@ -14,25 +14,19 @@ import { programsData } from "@/data/programs";
 
 export default function Programme() {
   const handleDownloadUzbek = () => {
-    // URL to your Uzbek version document
     const uzbekDocumentUrl = "/dastur.pdf";
-
-    // Create a link element
     const link = document.createElement("a");
     link.href = uzbekDocumentUrl;
     link.download = "dastur.pdf";
-
-    // Append to the body, click and remove
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   return (
-    <section> 
+    <section>
       <PageHeader title="Programme" />
       <div className="w-[70%] mx-auto mb-6">
-       
         <div className="flex justify-end mt-2">
           <Button
             onClick={handleDownloadUzbek}
@@ -51,25 +45,24 @@ export default function Programme() {
         AL-KHWARIZMI INTERNATIONAL OLYMPIAD IN MATHEMATICS AND INFORMATICS
         </h2>
         <p className="text-sm italic mb-2">
-          May 7-13, 2025, Tashkent, Uzbekistan
+          May 25–31, 2026, Tashkent Region, Uzbekistan
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div>
             <p>
-              <strong>Location:</strong> Specialized School named after Muhammad
-              al-Khwarizmi
+              <strong>Venue:</strong> &quot;Renessans&quot; Health Camp under the Agency
+              for Specialized Educational Institutions
             </p>
             <p>
-              <strong>Residence of participants:</strong> School
+              <strong>Participant Accommodation:</strong> &quot;Renessans&quot; Health Camp
             </p>
           </div>
           <div>
             <p>
-              <strong>Residence of judges and team leaders:</strong> Rakat
-              Komfort Hotel
+              <strong>Jury & Team Leader Accommodation:</strong> &quot;Renessans&quot; Health Camp
             </p>
             <p>
-              <strong>Organizer:</strong> Science Olympiad Center
+              <strong>Organizer:</strong> Center for Science Olympiads
             </p>
             <p>
               <strong>Website:</strong>{" "}
@@ -77,7 +70,7 @@ export default function Programme() {
                 href="https://www.khimio.uz/"
                 className="text-blue-600 hover:text-blue-800"
               >
-                https://www.khimio.uz/
+                www.khimio.uz
               </a>
             </p>
           </div>
@@ -94,13 +87,14 @@ export default function Programme() {
               {index === 0 && (
                 <div className="mt-4 p-3 bg-gray-50 text-sm border-l-4 border-blue-400 rounded">
                   <p>
-                    With the help of event organizers and volunteers, guests
-                    will be welcomed, taken to the school, and provided with SIM
-                    cards in conjunction with a partner telecommunications
-                    company, badges, uniforms, gift sets, and information
-                    brochures. A familiarization tour of the school will be
-                    organized by school volunteers, depending on the
-                    participants' arrival schedule.
+                    Guests will be welcomed by event organizers and volunteers
+                    and transported to the camp. In collaboration with our
+                    partner telecommunications company, participants will be
+                    provided with SIM cards. During registration, ID badges,
+                    official uniforms, gift kits, and information brochures will
+                    be distributed. Based on the arrival schedule, camp
+                    volunteers will organize guided orientation tours around the
+                    Renessans Camp for all participants.
                   </p>
                 </div>
               )}

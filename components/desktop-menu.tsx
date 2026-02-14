@@ -25,7 +25,7 @@ const DesktopMenuItem = ({ item }: { item: MenuItem }) => {
               {item.submenu.map((sub, index) => (
                 <NavigationMenuLink asChild key={index} className="w-full">
                   <Link
-                    href={sub.href}
+                    href={sub.href ?? "/"}
                     className="block px-4 py-2 hover:bg-gray-100 rounded-md cursor-pointer w-full whitespace-nowrap"
                   >
                     {sub.label}
