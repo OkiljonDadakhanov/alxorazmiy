@@ -17,13 +17,12 @@ import temurImage from "@/public/images/team/temurbek.jpg";
 import turaboy from "@/public/images/team/turaboy.jpg";
 import sevara from "@/public/images/team/sevara.jpg";
 import akrom from "@/public/images/team/akrom.jpg";
-import jurabek from "@/public/images/team/jurabek.jpg";
-import inom from "@/public/images/team/inom.jpg";
-import oybek from "@/public/images/team/oybek.jpg";
 import davron from "@/public/images/team/davron.jpg";
-import murodjon from "@/public/images/murodbek.jpg";
 import tamanno from "@/public/images/team/tamanno.jpg";
-import otabek from "@/public/images/team/otabek.jpg";
+import abduvali from "@/public/images/team/Abduvali.JPG";
+import fayyoz from "@/public/images/team/fayyoz.jpg";
+import shovqiddin from "@/public/images/team/shovqiddin.jpg";
+import tursunboy from "@/public/images/team/tursunboy.png";
 import mirfozil from "@/public/images/team/mirfozil.jpg";
 import qahramon from "@/public/images/team/qahramon.jpg";
 import karim from "@/public/images/team/karim.jpg";
@@ -72,71 +71,85 @@ const members: {
     },
     {
       id: "2",
-      name: "Sevara Shakirova ",
+      name: "Sevara Shakirova",
       location:
-        "Vice Diector of the Agency of Specialized Educational Institutions and Committee member",
+        "Director of the Agency of Specialized Educational Institutions and Committee member",
       imageUrl: sevara,
       isLeader: false,
     },
     {
       id: "3",
-      name: "Alham Shaymardanov",
-      location: "Head of the event organization Department",
-      imageUrl: akrom,
-      isLeader: false,
-    },
-    {
-      id: "4",
-      name: "Xujamov Inom",
-      location: "Head of IT and technical Department",
-      imageUrl: inom,
-      isLeader: false,
-    },
-    {
-      id: "5",
-      name: "Usmonov Oybek",
-      location: "Head of the transport and logistics Department",
-      imageUrl: oybek,
-      isLeader: false,
-    },
-    {
-      id: "6",
-      name: "Davron Tuxtayev ",
-      location: "Exam preparation and supporting track",
+      name: "Davron Tuxtayev",
+      location: "Head of the organizing committee",
       imageUrl: davron,
       isLeader: false,
     },
     {
+      id: "4",
+      name: "Abduvali Chuliyev",
+      location: "Head of the finance department",
+      imageUrl: abduvali,
+      isLeader: false,
+    },
+    {
+      id: "5",
+      name: "Fayyoz Tuychiev",
+      location: "Head of the event organization department",
+      imageUrl: fayyoz,
+      isLeader: false,
+    },
+    {
+      id: "6",
+      name: "Shovxiddin Ishmuradov",
+      location: "Head of the transport and logistics department",
+      imageUrl: shovqiddin,
+      isLeader: false,
+    },
+    {
       id: "7",
-      name: "Dadaxanov Oqiljon",
+      name: "Tursunboy Jumayev",
+      location: "Exam preparation and supporting track",
+      imageUrl: tursunboy,
+      isLeader: false,
+    },
+    {
+      id: "8",
+      name: "Oqiljon Dadaxanov",
       location: "Software engineer",
       imageUrl: akilhan,
     },
     {
-      id: "8",
-      name: "Tamanno To'rayeva ",
+      id: "9",
+      name: "Tamanno Turayeva",
       location: "Media track",
       imageUrl: tamanno,
       isLeader: false,
     },
     {
-      id: "9",
-      name: "O'runov Ibrat",
+      id: "10",
+      name: "Ibrat Urunov",
       location: "Technology and technical support track",
       imageUrl: ibrat,
       isLeader: false,
     },
     {
-      id: "10",
-      name: "Ruxsora Toirova ",
-      location: "Lead Specialist",
+      id: "11",
+      name: "Ruxsora Toirova",
+      location: "Lead specialist",
       imageUrl: ruxsora,
     },
     {
-      id: "11",
-      name: "Abdusattorova Charos",
-      location: "Head of the Organizing Committee",
+      id: "12",
+      name: "Charos Abdusattorova",
+      location: "Head coordinator of the KHiMIO 2026",
       imageUrl: charos,
+      isLeader: false,
+    },
+    {
+      id: "13",
+      name: "Abbosbek Akramov",
+      location: "Coordinator of the KHiMIO 2026",
+      imageUrl: akrom,
       isLeader: false,
     },
   ],
