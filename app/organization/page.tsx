@@ -16,8 +16,8 @@ import sunatulloImage from "@/public/images/team/sunatullo.jpeg";
 import temurImage from "@/public/images/team/temurbek.jpg";
 import turaboy from "@/public/images/team/turaboy.jpg";
 import sevara from "@/public/images/team/sevara.jpg";
-import akrom from "@/public/images/team/akrom.jpg";
-import davron from "@/public/images/team/davron.jpg";
+import abbos from "@/public/images/team/abbos.png";
+import tukhtaev from "@/public/images/team/tukhtaev.jpg";
 import tamanno from "@/public/images/team/tamanno.jpg";
 import abduvali from "@/public/images/team/abduvali.jpg";
 import fayyoz from "@/public/images/team/fayyoz.jpg";
@@ -81,7 +81,7 @@ const members: {
       id: "3",
       name: "Davron Tuxtayev",
       location: "Head of the organizing committee",
-      imageUrl: davron,
+      imageUrl: tukhtaev,
       isLeader: false,
     },
     {
@@ -149,7 +149,7 @@ const members: {
       id: "13",
       name: "Abbosbek Akramov",
       location: "Coordinator of the KHiMIO 2026",
-      imageUrl: akrom,
+      imageUrl: abbos,
       isLeader: false,
     },
   ],
