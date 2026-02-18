@@ -19,7 +19,7 @@ import sevara from "@/public/images/team/sevara.jpg";
 import akrom from "@/public/images/team/akrom.jpg";
 import davron from "@/public/images/team/davron.jpg";
 import tamanno from "@/public/images/team/tamanno.jpg";
-import abduvali from "@/public/images/team/Abduvali.JPG";
+import abduvali from "@/public/images/team/abduvali.jpg";
 import fayyoz from "@/public/images/team/fayyoz.jpg";
 import shovqiddin from "@/public/images/team/shovqiddin.jpg";
 import tursunboy from "@/public/images/team/tursunboy.png";
