@@ -69,3 +69,34 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
+.hero-title-shimmer {
+  color: #F0EDE6;
+  background: linear-gradient(
+    110deg,
+    #DDD0B3 0%,
+    #F5F0E3 35%,
+    #C9A84C 50%,
+    #F5F0E3 65%,
+    #DDD0B3 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heroShimmer 10s ease-in-out infinite;
+}
+
+@keyframes heroShimmer {
+  0%, 20% { background-position: 0% 50%; }
+  60%, 100% { background-position: 100% 50%; }
+}
+
+.hero-geo-rotate {
+  animation: heroGeoRotate 180s linear infinite;
+}
+
+@keyframes heroGeoRotate {
+  from { transform: rotate(0deg) scale(1.3); }
+  to { transform: rotate(360deg) scale(1.3); }
+}

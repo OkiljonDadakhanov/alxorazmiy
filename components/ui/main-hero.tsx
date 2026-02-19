@@ -5,28 +5,27 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-const EVENT_DETAILS = {
+const EVENT = {
   title: "Al-Khwarizmi",
   subtitle: "International Mathematics & Informatics Olympiad",
   edition: "4th KHIMIO",
-  dates: "25-31 May 2026",
+  dates: "25–31 May 2026",
   location: "Tashkent, Uzbekistan",
 };
 
-const COUNTDOWN_TARGET = new Date("2026-05-25T00:00:00").getTime();
+const TARGET = new Date("2026-05-25T00:00:00").getTime();
 
 function useCountdown() {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [t, setT] = useState({ d: 0, h: 0, m: 0, s: 0 });
 
   useEffect(() => {
     const tick = () => {
-      const now = Date.now();
-      const diff = Math.max(0, COUNTDOWN_TARGET - now);
-      setTimeLeft({
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / (1000 * 60)) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
+      const diff = Math.max(0, TARGET - Date.now());
+      setT({
+        d: Math.floor(diff / 86400000),
+        h: Math.floor((diff / 3600000) % 24),
+        m: Math.floor((diff / 60000) % 60),
+        s: Math.floor((diff / 1000) % 60),
       });
     };
     tick();
@@ -34,212 +33,280 @@ function useCountdown() {
     return () => clearInterval(id);
   }, []);
 
-  return timeLeft;
+  return t;
 }
 
-const FloatingShape = memo(
-  ({ className, delay, duration }: { className: string; delay: number; duration: number }) => (
-    <motion.div
-      className={`absolute rounded-full opacity-10 ${className}`}
-      animate={{
-        y: [0, -30, 0],
-        x: [0, 15, 0],
-        scale: [1, 1.1, 1],
-      }}
-      transition={{
-        duration,
-        delay,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
-    />
-  )
-);
-FloatingShape.displayName = "FloatingShape";
+const stagger = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
+  },
+};
 
-const CountdownBox = memo(({ value, label }: { value: number; label: string }) => (
-  <div className="flex flex-col items-center">
-    <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-      <span className="text-2xl sm:text-3xl font-bold text-white">
-        {String(value).padStart(2, "0")}
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const CountdownUnit = memo(
+  ({ value, label }: { value: number; label: string }) => (
+    <div className="flex flex-col items-center">
+      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-lg border border-[#C9A84C]/15 bg-[#C9A84C]/[0.03] backdrop-blur-sm flex items-center justify-center transition-colors duration-300 hover:border-[#C9A84C]/30 hover:bg-[#C9A84C]/[0.06]">
+        <span
+          className="text-2xl sm:text-[28px] font-light tracking-tight text-[#F0EDE6]"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
+          {String(value).padStart(2, "0")}
+        </span>
+      </div>
+      <span className="mt-1.5 text-[9px] sm:text-[10px] uppercase tracking-[0.18em] text-[#5C6F88] font-medium">
+        {label}
       </span>
     </div>
-    <span className="text-xs sm:text-sm text-gray-300 uppercase tracking-wider">{label}</span>
+  )
+);
+CountdownUnit.displayName = "CountdownUnit";
+
+const Colon = memo(() => (
+  <div className="h-14 sm:h-16 flex items-center">
+    <span className="text-[#C9A84C]/20 text-base font-light select-none">:</span>
   </div>
 ));
-CountdownBox.displayName = "CountdownBox";
+Colon.displayName = "Colon";
 
-const KhimioInfoPage = () => {
-  const countdown = useCountdown();
+const KhimioHero = () => {
+  const cd = useCountdown();
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      aria-label="KHIMIO Hero Section"
+      className="relative flex items-center justify-center overflow-hidden min-h-[calc(100vh-4.5rem)]"
+      style={{
+        background:
+          "linear-gradient(170deg, #040C1B 0%, #081428 40%, #0A1832 70%, #050E20 100%)",
+      }}
+      aria-label="KHIMIO Hero"
     >
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      {/* Background image */}
+      <div className="absolute inset-0">
         <Image
           src="/media/group.jpg"
           alt=""
           fill
-          className="object-cover"
+          className="object-cover opacity-[0.05]"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a192f]/95 via-[#0a192f]/85 to-[#112240]/90" />
       </div>
 
-      {/* Floating decorative shapes */}
-      <FloatingShape className="w-72 h-72 bg-[#64ffda] -top-20 -right-20 blur-3xl" delay={0} duration={8} />
-      <FloatingShape className="w-96 h-96 bg-blue-500 -bottom-32 -left-32 blur-3xl" delay={2} duration={10} />
-      <FloatingShape className="w-48 h-48 bg-purple-500 top-1/3 right-1/4 blur-2xl" delay={4} duration={7} />
+      {/* Geometric pattern overlay */}
+      <div className="absolute inset-[-120px] opacity-[0.035] pointer-events-none hero-geo-rotate">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern
+              id="geoStar"
+              width="80"
+              height="80"
+              patternUnits="userSpaceOnUse"
+            >
+              <rect
+                x="20" y="20" width="40" height="40"
+                fill="none" stroke="#C9A84C" strokeWidth="0.4"
+              />
+              <rect
+                x="20" y="20" width="40" height="40"
+                fill="none" stroke="#C9A84C" strokeWidth="0.4"
+                transform="rotate(45 40 40)"
+              />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#geoStar)" />
+        </svg>
+      </div>
 
-      {/* Grid pattern overlay */}
+      {/* Grain texture */}
+      <svg
+        className="absolute inset-0 w-full h-full opacity-[0.025] pointer-events-none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <filter id="heroNoise">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.65"
+            numOctaves="3"
+            stitchTiles="stitch"
+          />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#heroNoise)" />
+      </svg>
+
+      {/* Radial gold glow */}
       <div
-        className="absolute inset-0 opacity-[0.03] z-[1]"
+        className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] pointer-events-none"
         style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
+          background:
+            "radial-gradient(ellipse at center, rgba(201,168,76,0.05) 0%, transparent 60%)",
         }}
       />
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          {/* Left: Text content */}
-          <div className="flex-1 text-center lg:text-left">
-            {/* Edition badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-[#64ffda]/10 border border-[#64ffda]/30 rounded-full px-5 py-2 mb-8"
-            >
-              <span className="w-2 h-2 bg-[#64ffda] rounded-full animate-pulse" />
-              <span className="text-[#64ffda] font-medium text-sm tracking-wide">
-                {EVENT_DETAILS.edition} — Registration Open
-              </span>
-            </motion.div>
+      {/* Corner decorative borders */}
+      <div className="hidden lg:block absolute top-6 left-6 w-16 h-16 border-l border-t border-[#C9A84C]/10" />
+      <div className="hidden lg:block absolute top-6 right-6 w-16 h-16 border-r border-t border-[#C9A84C]/10" />
+      <div className="hidden lg:block absolute bottom-6 left-6 w-16 h-16 border-l border-b border-[#C9A84C]/10" />
+      <div className="hidden lg:block absolute bottom-6 right-6 w-16 h-16 border-r border-b border-[#C9A84C]/10" />
 
-            {/* Title */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-4"
-            >
-              {EVENT_DETAILS.title}
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-6 max-w-xl mx-auto lg:mx-0"
-            >
-              {EVENT_DETAILS.subtitle}
-            </motion.p>
-
-            {/* Date & Location */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8 text-gray-400"
-            >
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-[#64ffda]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <span className="text-white font-medium">{EVENT_DETAILS.dates}</span>
-              </div>
-              <span className="hidden sm:inline text-gray-600">|</span>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-[#64ffda]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span className="text-white font-medium">{EVENT_DETAILS.location}</span>
-              </div>
-            </motion.div>
-
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-gray-400 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0"
-            >
-              Registration for the 4th Al-Khwarizmi International Mathematics and
-              Informatics Olympiad is now officially open! We invite the world&#39;s
-              brightest young minds to compete for global recognition. Secure your
-              spot today.
-            </motion.p>
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="flex flex-wrap gap-4 justify-center lg:justify-start"
-            >
-              <Link
-                href="https://khimio-registration.vercel.app/"
-                target="_blank"
-                className="group relative bg-[#64ffda] text-[#0a192f] px-8 py-4 rounded-lg font-bold text-lg overflow-hidden transition-all hover:shadow-lg hover:shadow-[#64ffda]/25"
-              >
-                <span className="relative z-10">Register Now</span>
-                <div className="absolute inset-0 bg-white/0 group-hover:bg-white/20 transition-colors" />
-              </Link>
-              <Link
-                href="/about"
-                className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/5 transition-all backdrop-blur-sm"
-              >
-                Learn More
-              </Link>
-            </motion.div>
+      {/* ====== CONTENT ====== */}
+      <motion.div
+        variants={stagger}
+        initial="hidden"
+        animate="visible"
+        className="relative z-10 w-full max-w-3xl mx-auto px-6 py-8 sm:py-10 flex flex-col items-center text-center"
+      >
+        {/* Logo */}
+        <motion.div variants={fadeUp} className="mb-4">
+          <div className="relative">
+            <div className="absolute inset-0 rounded-full bg-[#C9A84C]/[0.08] blur-2xl scale-[2]" />
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-[#C9A84C]/15 bg-white/[0.02] backdrop-blur-sm p-2">
+              <Image
+                src="/logo/logowhite.png"
+                alt="KHIMIO Logo"
+                fill
+                className="object-contain p-1.5"
+                priority
+              />
+            </div>
           </div>
+        </motion.div>
 
-          {/* Right: Logo + Countdown */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="flex flex-col items-center gap-10"
+        {/* Edition badge */}
+        <motion.div variants={fadeUp} className="mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C9A84C]/20 bg-[#C9A84C]/[0.05] text-xs sm:text-sm font-medium tracking-[0.12em] uppercase text-[#C9A84C]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] animate-pulse" />
+            {EVENT.edition} — Registration Open
+          </span>
+        </motion.div>
+
+        {/* Title with gold shimmer */}
+        <motion.h1
+          variants={fadeUp}
+          className="hero-title-shimmer text-5xl sm:text-6xl md:text-7xl leading-[0.95] tracking-[-0.01em]"
+          style={{ fontFamily: "var(--font-display)", fontWeight: 500 }}
+        >
+          {EVENT.title}
+        </motion.h1>
+
+        {/* Subtitle */}
+        <motion.p
+          variants={fadeUp}
+          className="mt-2.5 text-sm sm:text-base md:text-lg text-[#8B9DB8] tracking-wide max-w-md"
+        >
+          {EVENT.subtitle}
+        </motion.p>
+
+        {/* Date & Location */}
+        <motion.div
+          variants={fadeUp}
+          className="mt-4 flex flex-wrap items-center justify-center gap-3"
+        >
+          <span className="flex items-center gap-1.5 text-sm font-medium text-[#D5CCBB]">
+            <svg
+              className="w-3.5 h-3.5 text-[#C9A84C]/70"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={1.5}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
+              />
+            </svg>
+            {EVENT.dates}
+          </span>
+          <span className="w-1 h-1 rounded-full bg-[#C9A84C]/30" />
+          <span className="flex items-center gap-1.5 text-sm font-medium text-[#D5CCBB]">
+            <svg
+              className="w-3.5 h-3.5 text-[#C9A84C]/70"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={1.5}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+              />
+            </svg>
+            {EVENT.location}
+          </span>
+        </motion.div>
+
+        {/* Thin separator */}
+        <motion.div
+          variants={fadeUp}
+          className="w-12 h-px bg-gradient-to-r from-transparent via-[#C9A84C]/25 to-transparent my-5"
+        />
+
+        {/* Countdown */}
+        <motion.div variants={fadeUp} className="mb-6">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-[#5C6F88] font-medium mb-3">
+            Event begins in
+          </p>
+          <div className="flex items-start gap-2 sm:gap-2.5">
+            <CountdownUnit value={cd.d} label="Days" />
+            <Colon />
+            <CountdownUnit value={cd.h} label="Hours" />
+            <Colon />
+            <CountdownUnit value={cd.m} label="Min" />
+            <Colon />
+            <CountdownUnit value={cd.s} label="Sec" />
+          </div>
+        </motion.div>
+
+        {/* CTA buttons */}
+        <motion.div
+          variants={fadeUp}
+          className="flex flex-wrap gap-3 justify-center"
+        >
+          <Link
+            href="https://khimio-registration.vercel.app/"
+            target="_blank"
+            className="group inline-flex items-center gap-2 px-7 py-3 rounded-lg font-semibold text-sm sm:text-base tracking-wide transition-all duration-300 bg-gradient-to-r from-[#B8952F] via-[#C9A84C] to-[#D4B85A] text-[#040C1B] hover:shadow-[0_0_32px_rgba(201,168,76,0.25)] active:scale-[0.98]"
           >
-            {/* Logo with glow */}
-            <div className="relative">
-              <div className="absolute inset-0 bg-[#64ffda]/20 rounded-full blur-3xl scale-150" />
-              <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-full p-6">
-                <Image
-                  src="/logo/logowhite.png"
-                  alt="Al-Khwarizmi KHIMIO Logo"
-                  width={200}
-                  height={200}
-                  className="w-40 h-40 sm:w-48 sm:h-48 object-contain"
-                  priority
-                />
-              </div>
-            </div>
-
-            {/* Countdown */}
-            <div className="text-center">
-              <p className="text-gray-400 text-sm uppercase tracking-widest mb-4">
-                Event starts in
-              </p>
-              <div className="flex gap-3 sm:gap-4">
-                <CountdownBox value={countdown.days} label="Days" />
-                <CountdownBox value={countdown.hours} label="Hours" />
-                <CountdownBox value={countdown.minutes} label="Min" />
-                <CountdownBox value={countdown.seconds} label="Sec" />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+            Register Now
+            <svg
+              className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2.5}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+              />
+            </svg>
+          </Link>
+          <Link
+            href="/about"
+            className="inline-flex items-center gap-2 px-7 py-3 rounded-lg font-medium text-sm sm:text-base text-[#C9A84C] border border-[#C9A84C]/20 hover:border-[#C9A84C]/40 hover:bg-[#C9A84C]/[0.05] transition-all duration-300 tracking-wide active:scale-[0.98]"
+          >
+            Learn More
+          </Link>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
 
-export default memo(KhimioInfoPage);
+export default memo(KhimioHero);

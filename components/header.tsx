@@ -17,7 +17,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="bg-[#0a1e3f] p-6 relative z-[9999]">
+    <header className="bg-[#0a1e3f] py-2 px-6 relative z-[9999]">
       <nav>
         <div className="flex justify-between items-center">
           <Logo />
