@@ -126,8 +126,8 @@ const videos = [
   { src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/malasia.mp4", title: "Malaysian Team Interview" },
   { src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/0506(2).mp4", title: "Tajikistan and Kyrgyzstan Team Interview" },
   { src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/07-05-25-eng.mp4", title: "Belarus and Turkiye Team Interview" },
-  { src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/0507%20(2)(1).mp4", title: "KHIMIO 2025: The Journey Begins!" },
-  { src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/0509(1).mp4", title: "KHIMIO 2025: First Round in Motion" },
+  { src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/0507%20(2)(1).mp4", title: "KhIMIOs 2025: The Journey Begins!" },
+  { src: "https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/0509(1).mp4", title: "KhIMIOs 2025: First Round in Motion" },
 ];
 
 /* ── Collapsible section component ── */
@@ -167,7 +167,7 @@ export default function Khimio2025() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            KHIMIO 2025
+            KhIMIOs 2025
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl"
@@ -212,7 +212,7 @@ export default function Khimio2025() {
       {/* Content sections */}
       <div className="max-w-5xl mx-auto px-4 pb-16">
         {/* About */}
-        <Section title="About KHIMIO 2025" defaultOpen>
+        <Section title="About KhIMIOs 2025" defaultOpen>
           <p className="text-gray-600 leading-relaxed mb-4">
             The 3rd Al-Khwarizmi International Mathematics and Informatics Olympiad was
             successfully held from May 7 to 13, 2025, in Tashkent, Uzbekistan. This was
@@ -360,7 +360,7 @@ export default function Khimio2025() {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
               {galleryImages.map((src, i) => (
                 <div key={i} className="relative aspect-square rounded-lg overflow-hidden">
-                  <Image src={src} alt={`KHIMIO 2025 photo ${i + 1}`} fill className="object-cover" />
+                  <Image src={src} alt={`KhIMIOs 2025 photo ${i + 1}`} fill className="object-cover" />
                 </div>
               ))}
             </div>

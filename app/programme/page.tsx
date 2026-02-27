@@ -62,7 +62,7 @@ export default function Programme() {
               <strong>Jury & Team Leader Accommodation:</strong> &quot;Renessans&quot; Health Camp
             </p>
             <p>
-              <strong>Organizer:</strong> Center for Science Olympiads
+              <strong>Organizer:</strong> Science Olympiad Center
             </p>
             <p>
               <strong>Website:</strong>{" "}

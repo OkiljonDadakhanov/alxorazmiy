@@ -103,7 +103,7 @@ const MediaPage = () => {
             <div className="flex items-center space-x-2">
               <ImageIcon className="w-6 h-6 text-blue-600" />
               <h2 className="text-2xl font-semibold">
-                Photo Gallery of KHIMIO 2024
+                Photo Gallery of KhIMIOs 2024
               </h2>
             </div>
             <a
@@ -150,7 +150,7 @@ const MediaPage = () => {
               <ImageIcon className="w-6 h-6 text-blue-600" />
               <h2 className="text-2xl font-semibold">
                 Welcoming participants and preparation for Al-Khwarizmi
-                International Mathematics and Informatics Olympiad (KHIMIO) 2025
+                International Mathematics and Informatics Olympiad (KhIMIOs) 2025
               </h2>
             </div>
           </div>

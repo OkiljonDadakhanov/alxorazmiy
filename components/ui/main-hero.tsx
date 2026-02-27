@@ -8,7 +8,7 @@ import Link from "next/link";
 const EVENT = {
   title: "Al-Khwarizmi",
   subtitle: "International Mathematics & Informatics Olympiad",
-  edition: "4th KHIMIO",
+  edition: "4th KhIMIOs",
   dates: "25–31 May 2026",
   location: "Tashkent, Uzbekistan",
 };
@@ -88,7 +88,7 @@ const KhimioHero = () => {
         background:
           "linear-gradient(170deg, #040C1B 0%, #081428 40%, #0A1832 70%, #050E20 100%)",
       }}
-      aria-label="KHIMIO Hero"
+      aria-label="KhIMIOs Hero"
     >
       {/* Background image */}
       <div className="absolute inset-0">
@@ -171,7 +171,7 @@ const KhimioHero = () => {
             <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-[#C9A84C]/15 bg-white/[0.02] backdrop-blur-sm p-2">
               <Image
                 src="/logo/logowhite.png"
-                alt="KHIMIO Logo"
+                alt="KhIMIOs Logo"
                 fill
                 className="object-contain p-1.5"
                 priority

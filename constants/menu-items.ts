@@ -3,8 +3,9 @@ import { MenuItem } from "@/types/navigation";
 export const menuItems: MenuItem[] = [
   { label: "Home", href: "/" },
   {
-    label: "4-Al-Khwarizmi KHIMIO",
+    label: "4-Al-Khwarizmi KhIMIOs",
     submenu: [
+      { label: "Supervisory Committee", href: "/organization#supervisory" },
       { label: "Organizing Committee", href: "/organization" },
       { label: "Scientific Committee(Maths)", href: "/organization#math" },
       {
@@ -13,24 +14,31 @@ export const menuItems: MenuItem[] = [
       },
       { label: "Program", href: "/programme" },
       { label: "Regulation", href: "/regulations" },
+      { label: "Call for Questions", href: "/call-for-questions" },
     ],
   },
   { label: "Partnership", href: "/partnership" },
-  { label: "Uzbekistan", href: "/uzbekistan" },
   {
-    label: "KHIMIO",
+    label: "Uzbekistan",
     submenu: [
-      { label: "About KHIMIO", href: "/about" },
-      { label: "KHIMIO 2023", href: "/imio2023" },
-      { label: "KHIMIO 2024", href: "/imio2024" },
-      { label: "KHIMIO 2025", href: "/khimio2025" },
+      { label: "About Uzbekistan", href: "/uzbekistan" },
+      { label: "Travel Details", href: "/travel-details" },
+    ],
+  },
+  {
+    label: "KhIMIOs",
+    submenu: [
+      { label: "About KhIMIOs", href: "/about" },
+      { label: "KhIMIOs 2023", href: "/imio2023" },
+      { label: "KhIMIOs 2024", href: "/imio2024" },
+      { label: "KhIMIOs 2025", href: "/khimio2025" },
     ],
   },
   {
     label: "Results/Problems",
     submenu: [
-      { label: "Al-Khwarizmi KHIMIO problems", href: "/problems" },
-      { label: "Al-Khwarizmi KHIMIO results", href: "/results" },
+      { label: "Al-Khwarizmi KhIMIOs problems", href: "/problems" },
+      { label: "Al-Khwarizmi KhIMIOs results", href: "/results" },
     ],
   },
   {

@@ -17,7 +17,7 @@ export interface Regulation {
       id: "participants",
       title: "Participants",
       content:
-        "The International Olympiad is held for students under the age of 15 (born on or after December 25, 2010) studying in general education schools.",
+        "The International Olympiad is held for students under the age of 15 (born on or after December 25, 2011) studying in general education schools.",
       icon: "",
     },
     {
