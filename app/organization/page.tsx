@@ -59,7 +59,13 @@ import AdizbekInformatics from "@/public/images/team/scientific-informatics/adiz
 import CaskurluInformatics from "@/public/images/team/scientific-informatics/Caskurlu.jpg";
 import AsilbekInformatics from "@/public/images/team/scientific-informatics/asilbek.png";
 import IkramovInformatics from "@/public/images/team/scientific-informatics/ikramov.jpg";
-
+import xusniddinInformatics from "@/public/images/team/scientific-informatics/xusniddin.png";
+import bahodirInformatics from "@/public/images/team/scientific-informatics/bahodir.jpg";
+import farkhodInformatics from "@/public/images/team/scientific-informatics/farkhod.jpg";
+import xakimjonInformatics from "@/public/images/team/scientific-informatics/hakimjon.png"
+import sunatulloImage from "@/public/images/team/sunatullo.jpeg";
+import miroqilovInformatics from "@/public/images/team/scientific-informatics/davlat.png";
+import xusanboy from "@/public/images/team/xusanboy.png";
 interface OrganizationMember {
   id: string;
   name: string;
@@ -385,7 +391,7 @@ const members: {
       id: "i1",
       name: "Farkhod Khakimiyon",
       location: "Founder of the \"Yozdah Tarhi Yak\" Olympic Center, Tajikistan",
-      imageUrl: profile,
+      imageUrl: farkhodInformatics,
     },
     {
       id: "i2",
@@ -417,7 +423,7 @@ const members: {
       name: "Muminov Bahodir",
       location: "Chairman of the Scientific Committee",
       desc: "Department \"Fundamentals of Informatics\"",
-      imageUrl: profile,
+      imageUrl: bahodirInformatics,
       isLeader: true,
     },
     {
@@ -425,25 +431,25 @@ const members: {
       name: "Xakimjon Zaynidinov",
       location: "Head of the Department of \"Artificial Intelligence\" of the Tashkent University of Information Technologies named after Muhammad al-Khwarizmi",
       desc: "Doctor of Technical Sciences",
-      imageUrl: profile,
+      imageUrl: xakimjonInformatics,
     },
     {
       id: "i8",
       name: "Xusniddin Mamadaliyev",
       location: "Head of the Department of \"Algorithmization and Mathematical Modeling\" of the Tashkent University of Information Technologies named after Muhammad al-Khwarizmi",
-      imageUrl: profile,
+      imageUrl: xusniddinInformatics,
     },
     {
       id: "i9",
       name: "Sunatullo Xojiyev",
       location: "Researcher of the Tashkent University of Information Technologies",
-      imageUrl: profile,
+      imageUrl: sunatulloImage,
     },
     {
       id: "i10",
       name: "Davlatbek Miroqilov",
       location: "Researcher of the Tashkent University of Information Technologies",
-      imageUrl: profile,
+      imageUrl: miroqilovInformatics,
     },
     {
       id: "i11",
@@ -461,7 +467,7 @@ const members: {
       id: "i13",
       name: "Mansuraliyev Husanboy",
       location: "Researcher of the New Uzbekistan University",
-      imageUrl: profile,
+      imageUrl: xusanboy,
     },
     {
       id: "i14",
