@@ -73,6 +73,7 @@ interface OrganizationMember {
   desc?: string;
   imageUrl: StaticImageData;
   isLeader?: boolean;
+  imageClass?: string;
 }
 
 const supervisoryMembers: OrganizationMember[] = [
@@ -124,6 +125,7 @@ const supervisoryMembers: OrganizationMember[] = [
     location:
       "First Deputy Minister of Digital Technologies, Member of the Supervisory Committee",
     imageUrl: Umarov,
+    imageClass: "object-[100%_center]",
   },
   {
     id: "s8",
@@ -507,7 +509,7 @@ function OrganizationCard({ member }: { member: OrganizationMember }) {
             src={member.imageUrl}
             alt={member.name}
             fill
-            className="object-cover"
+            className={`${member.imageClass ?? ""} object-cover`}
           />
         </div>
         <div className="text-center">
