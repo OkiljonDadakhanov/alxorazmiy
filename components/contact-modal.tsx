@@ -63,19 +63,19 @@ export function ContactDialog({ isOpen, onClose }: ContactModalProps) {
                 href="mailto:info@olympcenter.uz"
                 className="text-blue-500 hover:underline"
               >
-                info@olympcenter.uz
+               khimio@olympcenter.uz
               </a>
             </div>
 
             <div className="flex items-center space-x-2">
               <Phone className="text-green-600" />
               <a
-                href="https://wa.me/998775503366"
+                href="https://wa.me/998991994900"
                 className="text-blue-500 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                WhatsApp: +998775503366
+                WhatsApp: +998991994900
               </a>
             </div>
           </div>

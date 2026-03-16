@@ -74,7 +74,7 @@ export default function CallForQuestionsPage() {
           {/* Download Policy Files */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <a
-              href="/KHIMIO - 2026 policy.pdf"
+              href="/program.pdf"
               download
               className="inline-flex items-center gap-3 px-6 py-3 bg-red-50 border border-red-100 rounded-xl hover:bg-red-100 transition-colors"
             >

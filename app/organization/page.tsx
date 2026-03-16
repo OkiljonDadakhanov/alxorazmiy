@@ -6,13 +6,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import shavkatImage from "@/public/images/team/shavkat.jpg";
-import azimboyImage from "@/public/images/team/azimboy.png";
 import farhodImage from "@/public/images/team/farhod.jpg";
 import otkirImage from "@/public/images/team/utkir.jpg";
-import sardorImage from "@/public/images/team/sardor.jpg";
-import farkhodImage from "@/public/images/team/farkhod.jpg";
-import sunatulloImage from "@/public/images/team/sunatullo.jpeg";
-import temurImage from "@/public/images/team/temurbek.jpg";
 import turaboy from "@/public/images/team/turaboy.jpg";
 import sevara from "@/public/images/team/sevara.jpg";
 import abbos from "@/public/images/team/abbos.png";
@@ -24,26 +19,46 @@ import shovqiddin from "@/public/images/team/shovqiddin.jpg";
 import tursunboy from "@/public/images/team/tursunboy.png";
 import mirfozil from "@/public/images/team/mirfozil.jpg";
 import qahramon from "@/public/images/team/qahramon.jpg";
-import karim from "@/public/images/team/karim.jpg";
-import nosir from "@/public/images/team/nosir.png";
 import abdulla from "@/public/images/team/abdulla.png";
 import navid from "@/public/images/team/navid.png";
-import bahodir from "@/public/images/team/bahodir.jpg";
-import xakimjon from "@/public/images/team/hakimjon.png";
-import xusniddin from "@/public/images/team/xusniddin.png";
-import davlat from "@/public/images/team/davlat.png";
 import jasur from "@/public/images/team/jasur.jpg";
 import jasur2 from "@/public/images/team/jasur2.jpg";
 import jahongir from "@/public/images/team/jahongir.png";
 import axadov from "@/public/images/team/axadov.png";
 import akilhan from "@/public/images/team/akilhan.jpeg";
-import xusanboy from "@/public/images/team/xusanboy.png";
 import profile from "@/public/images/team/profile.png";
-import Hasan from "@/public/images/team/Hasan.jpg";
 import ruxsora from "@/public/images/team/ruxsora.webp";
 import charos from "@/public/images/team/charos.jpg";
 import ibrat from "@/public/images/team/ibrat.jpg";
 import AbbosMuhammedov from "@/public/images/team/Abbos_muhammedov.jpg";
+import Yakov from "@/public/images/team/scientific-maths/Yakov.jpg";
+import Anvarbek from "@/public/images/team/scientific-maths/anvarbek.jpg";
+import Madina from "@/public/images/team/scientific-maths/Madina.jpg";
+import FarhodSci from "@/public/images/team/scientific-maths/Farhod.jpg";
+import Zarif from "@/public/images/team/scientific-maths/ibragimov.jpeg";
+import Ismatov from "@/public/images/team/scientific-maths/ismatov.jpg";
+import Karimova from "@/public/images/team/supervisory/Karimova.png";
+import Sharipov from "@/public/images/team/supervisory/Sharipov.jpg";
+import Ayupov from "@/public/images/team/supervisory/Ayupov.jpg";
+import Aloev from "@/public/images/team/supervisory/A’loev.jpg";
+import Qudratxo from "@/public/images/team/supervisory/Qudratxo.jpg";
+import Norqulov from "@/public/images/team/supervisory/Norqulov.jpg";
+import Umarov from "@/public/images/team/supervisory/Umarov.jpg";
+import Boboev from "@/public/images/team/supervisory/Boboev.jpg";
+import Mirzayev from "@/public/images/team/supervisory/Mirzayev.jpg";
+import Omarov from "@/public/images/team/supervisory/Omarov.jpg";
+import Karimdjonovich from "@/public/images/team/supervisory/Karimdjonovich.jpg";
+import Sormonkulov from "@/public/images/team/supervisory/Sormonkulov.jpg";
+import Djuraboev from "@/public/images/team/supervisory/Djuraboev.jpg";
+import YusufInformatics from "@/public/images/team/scientific-informatics/Yusuf.jpg";
+import AzamatInformatics from "@/public/images/team/scientific-informatics/Azamat.jpg";
+import ShohruhInformatics from "@/public/images/team/scientific-informatics/Shohruh.jpg";
+import JamshedInformatics from "@/public/images/team/scientific-informatics/Rahimov.png";
+import KapitanovInformatics from "@/public/images/team/scientific-informatics/kapitanov.jpg";
+import AdizbekInformatics from "@/public/images/team/scientific-informatics/adizbek.jpg";
+import CaskurluInformatics from "@/public/images/team/scientific-informatics/Caskurlu.jpg";
+import AsilbekInformatics from "@/public/images/team/scientific-informatics/asilbek.png";
+import IkramovInformatics from "@/public/images/team/scientific-informatics/ikramov.jpg";
 
 interface OrganizationMember {
   id: string;
@@ -54,26 +69,97 @@ interface OrganizationMember {
   isLeader?: boolean;
 }
 
-interface SupervisoryMember {
-  id: string;
-  name: string;
-  role: string;
-}
-
-const supervisoryCommittee: SupervisoryMember[] = [
-  { id: "s1", name: "E.G. Karimova", role: "Minister of Preschool and School Education, Chair of the Supervisory Committee" },
-  { id: "s2", name: "Q.A. Sharipov", role: "Minister of Higher Education, Science and Innovation, Co-Chair of the Supervisory Committee" },
-  { id: "s3", name: "Sh.Sh. Abdurazakov", role: "Mayor of Namangan Region, Co-Chair of the Organizing Committee" },
-  { id: "s4", name: "Sh.A. Ayupov", role: "President of the Academy of Sciences" },
-  { id: "s5", name: "B.J. A'loev", role: "First Deputy Minister of Foreign Affairs, Member of the Supervisory Committee" },
-  { id: "s6", name: "A.T. Rahmatullaev", role: "First Deputy Minister of Internal Affairs, Member of the Supervisory Committee" },
-  { id: "s7", name: "I. Norqulov", role: "First Deputy Minister of Economy and Finance, Member of the Supervisory Committee" },
-  { id: "s8", name: "O.M. Umarov", role: "First Deputy Minister of Digital Technologies, Member of the Supervisory Committee" },
-  { id: "s9", name: "A.Sh. Boboev", role: "First Deputy Minister of Health, Member of the Supervisory Committee" },
-  { id: "s10", name: "M.A. Omarov", role: "First Deputy Minister of Transport, Member of the Supervisory Committee" },
-  { id: "s11", name: "T. Kuziyev", role: "First Deputy Director of the Cultural Heritage Agency, Member of the Supervisory Committee" },
-  { id: "s12", name: "A.R. Sormonkulov", role: "First Deputy Commander of the National Guard" },
-  { id: "s13", name: "A. Djuraboev", role: "Chairman of the National Television and Radio Company of Uzbekistan" },
+const supervisoryMembers: OrganizationMember[] = [
+  {
+    id: "s1",
+    name: "E.G. Karimova",
+    location:
+      "Minister of Preschool and School Education, Chair of the Supervisory Committee",
+    imageUrl: Karimova,
+    isLeader: true,
+  },
+  {
+    id: "s2",
+    name: "Q.A. Sharipov",
+    location:
+      "Minister of Higher Education, Science and Innovation, Co-Chair of the Supervisory Committee",
+    imageUrl: Sharipov,
+  },
+  {
+    id: "s3",
+    name: "Sh.A. Ayupov",
+    location: "President of the Academy of Sciences",
+    imageUrl: Ayupov,
+  },
+  {
+    id: "s4",
+    name: "B.J. A’loev",
+    location:
+      "First Deputy Minister of Foreign Affairs, Member of the Supervisory Committee",
+    imageUrl: Aloev,
+  },
+  {
+    id: "s5",
+    name: "B.B. Qudratxo'djayev",
+    location:
+      "First Deputy Minister of Internal Affairs, Member of the Supervisory Committee",
+    imageUrl: Qudratxo,
+  },
+  {
+    id: "s6",
+    name: "I. Norqulov",
+    location:
+      "First Deputy Minister of Economy and Finance, Member of the Supervisory Committee",
+    imageUrl: Norqulov,
+  },
+  {
+    id: "s7",
+    name: "O.M. Umarov",
+    location:
+      "First Deputy Minister of Digital Technologies, Member of the Supervisory Committee",
+    imageUrl: Umarov,
+  },
+  {
+    id: "s8",
+    name: "A.Sh. Boboev",
+    location:
+      "First Deputy Minister of Health, Member of the Supervisory Committee",
+    imageUrl: Boboev,
+  },
+  {
+    id: "s9",
+    name: "Z.T. Mirzayev",
+    location:
+      "Mayor of Tashkent Region, Co-Chair of the Organizing Committee",
+    imageUrl: Mirzayev,
+  },
+  {
+    id: "s10",
+    name: "M.A. Omarov",
+    location:
+      "First Deputy Minister of Transport, Member of the Supervisory Committee",
+    imageUrl: Omarov,
+  },
+  {
+    id: "s11",
+    name: "T.K. Karimdjonovich",
+    location:
+      "First Deputy Director of the Cultural Heritage Agency, Member of the Supervisory Committee",
+    imageUrl: Karimdjonovich,
+  },
+  {
+    id: "s12",
+    name: "A.R. Sormonkulov",
+    location: "First Deputy Commander of the National Guard",
+    imageUrl: Sormonkulov,
+  },
+  {
+    id: "s13",
+    name: "A. Djuraboev",
+    location:
+      "Chairman of the National Television and Radio Company of Uzbekistan",
+    imageUrl: Djuraboev,
+  },
 ];
 
 const members: {
@@ -193,7 +279,7 @@ const members: {
       name: "Yakov Shubin",
       location: "International Expert",
       desc: "Russia, Expert",
-      imageUrl: profile,
+      imageUrl: Yakov,
     },
     {
       id: "88",
@@ -266,146 +352,134 @@ const members: {
       id: "m15",
       name: "Anvarbek Sadulloyev",
       location: "Student of the National University of Uzbekistan",
-      imageUrl: profile,
+      imageUrl: Anvarbek,
     },
     {
       id: "m16",
       name: "Madina Suyunova",
       location: "Student of the National University of Uzbekistan",
-      imageUrl: profile,
+      imageUrl: Madina,
     },
     {
       id: "m17",
       name: "Ochilov Farhod",
       location: "Student of the National University of Uzbekistan",
-      imageUrl: profile,
+      imageUrl: FarhodSci,
     },
     {
       id: "m18",
       name: "Zarif Ibragimov",
       location: "Associate Professor of National Pedagogical University of Uzbekistan",
-      imageUrl: profile,
+      imageUrl: Zarif,
     },
     {
       id: "m19",
       name: "Abdulla Ismatov",
       location: "Teacher of Termez Specialized Boarding School N 1",
-      imageUrl: profile,
+      imageUrl: Ismatov,
     },
   ],
   informatics: [
+    // International experts
     {
-      id: "1",
-      name: "Dr. Muminov Bahodir",
-      location: "Chairman of Scientific Committee",
-      desc: "Department \"Fundamentals of Informatics\", Doctor of Technical Sciences",
-      imageUrl: bahodir,
-      isLeader: true,
+      id: "i1",
+      name: "Farkhod Khakimiyon",
+      location: "Founder of the \"Yozdah Tarhi Yak\" Olympic Center, Tajikistan",
+      imageUrl: profile,
     },
     {
-      id: "2",
-      name: "Farkhod Khakimiyon",
-      location: "Founder of Olympiad Center \"Yozdah Tarhi Yak\" in Tajikistan",
-      imageUrl: farkhodImage,
+      id: "i2",
+      name: "Jamshed Rahimov",
+      location: "Leading teacher of the \"Yozdah Tarhi Yak\" Olympic Center, Tajikistan",
+      imageUrl: JamshedInformatics,
     },
     {
       id: "i3",
-      name: "Jamshed Rahimov",
+      name: "Yusuf Rahimov",
       location: "Leading teacher of the \"Yozdah Tarhi Yak\" Olympic Center, Tajikistan",
-      imageUrl: profile,
+      imageUrl: YusufInformatics,
     },
     {
       id: "i4",
-      name: "Yusuf Rahimov",
-      location: "Leading teacher of the \"Yozdah Tarhi Yak\" Olympic Center, Tajikistan",
-      imageUrl: profile,
+      name: "Aleksandr Kapitonov",
+      location: "Professor at the New Uzbekistan University",
+      imageUrl: KapitanovInformatics,
     },
     {
       id: "i5",
-      name: "Aleksandr Kapitonov",
-      location: "Professor at the New Uzbekistan University",
-      imageUrl: profile,
-    },
-    {
-      id: "i6",
       name: "Caskurlu Bugra",
       location: "Professor at the New Uzbekistan University",
+      imageUrl: CaskurluInformatics,
+    },
+    // Local experts
+    {
+      id: "i6",
+      name: "Muminov Bahodir",
+      location: "Chairman of the Scientific Committee",
+      desc: "Department \"Fundamentals of Informatics\"",
+      imageUrl: profile,
+      isLeader: true,
+    },
+    {
+      id: "i7",
+      name: "Xakimjon Zaynidinov",
+      location: "Head of the Department of \"Artificial Intelligence\" of the Tashkent University of Information Technologies named after Muhammad al-Khwarizmi",
+      desc: "Doctor of Technical Sciences",
       imageUrl: profile,
     },
     {
-      id: "9",
-      name: "Prof. Xakimjon Zaynidinov",
-      location: "Head of the Department of \"Artificial Intelligence\" at the University",
-      desc: "Doctor of technical sciences",
-      imageUrl: xakimjon,
+      id: "i8",
+      name: "Xusniddin Mamadaliyev",
+      location: "Head of the Department of \"Algorithmization and Mathematical Modeling\" of the Tashkent University of Information Technologies named after Muhammad al-Khwarizmi",
+      imageUrl: profile,
     },
     {
-      id: "10",
-      name: "Dr. Xusniddin Mamadaliyev",
-      location: "Head of the Department of \"Algorithmizing and Mathematical Modeling\" at the University",
-      imageUrl: xusniddin,
-    },
-    {
-      id: "4",
+      id: "i9",
       name: "Sunatullo Xojiyev",
-      location: "Researcher of Tashkent University of Information Technologies",
-      imageUrl: sunatulloImage,
+      location: "Researcher of the Tashkent University of Information Technologies",
+      imageUrl: profile,
     },
     {
-      id: "5",
-      name: "Temurbek Xo'jayev",
-      location: "IOI 2017 and ICPC world finalist",
-      imageUrl: temurImage,
+      id: "i10",
+      name: "Davlatbek Miroqilov",
+      location: "Researcher of the Tashkent University of Information Technologies",
+      imageUrl: profile,
     },
     {
       id: "i11",
       name: "Azamat Rustamov",
       location: "2023, 2024, 2025 ICPC Semi-finalist",
-      imageUrl: profile,
+      imageUrl: AzamatInformatics,
     },
     {
       id: "i12",
       name: "Asilbek Sunnatov",
       location: "2025, 37th IOI silver medalist",
-      imageUrl: profile,
+      imageUrl: AsilbekInformatics,
     },
     {
-      id: "132",
-      name: "Hasan Ghulomzoda",
-      location: "",
-      desc: "Leading Instructor at Olympiad Center \"Yozdah Tarhi Yak\"",
-      imageUrl: Hasan,
-      isLeader: false,
-    },
-    {
-      id: "7",
-      name: "Davlatbek Miroqilov",
-      location: "Researcher of Tashkent University of Information Technologies",
-      imageUrl: davlat,
-    },
-    {
-      id: "12",
+      id: "i13",
       name: "Mansuraliyev Husanboy",
-      location: "Researcher at New Uzbekistan University",
-      imageUrl: xusanboy,
+      location: "Researcher of the New Uzbekistan University",
+      imageUrl: profile,
     },
     {
       id: "i14",
       name: "Alisher Ikramov",
       location: "Professor at the New Uzbekistan University",
-      imageUrl: profile,
+      imageUrl: IkramovInformatics,
     },
     {
       id: "i15",
       name: "Ergashev Adizbek",
-      location: "Researcher of the Tashkent University of Information Technologies",
-      imageUrl: profile,
+      location: "Researcher of the Tashkent University of Information Technologies named after Muhammad al-Khwarizmi",
+      imageUrl: AdizbekInformatics,
     },
     {
       id: "i16",
       name: "Shohruh Rahmatillayev",
       location: "Researcher of the Tashkent University of Information Technologies",
-      imageUrl: profile,
+      imageUrl: ShohruhInformatics,
     },
   ],
 };
@@ -489,22 +563,10 @@ export default function OrganizationPage() {
           <h2 className="text-5xl">Supervisory Committee</h2>
         </div>
         <div className="container mx-auto px-4 py-12 w-[80%]">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {supervisoryCommittee.map((member) => (
-              <div
-                key={member.id}
-                data-aos="fade-up"
-                className="bg-white rounded-lg shadow-md overflow-hidden transition-shadow hover:shadow-lg p-6"
-              >
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#0a192f] flex items-center justify-center">
-                    <span className="text-white text-xl font-bold">
-                      {member.name.charAt(0)}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-                  <p className="text-sm text-gray-500 mt-2">{member.role}</p>
-                </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            {supervisoryMembers.map((member) => (
+              <div key={member.id} data-aos="fade-up">
+                <OrganizationCard member={member} />
               </div>
             ))}
           </div>

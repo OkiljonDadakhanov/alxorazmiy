@@ -13,11 +13,10 @@ import ProgramTable from "@/components/program-table";
 import { programsData } from "@/data/programs";
 
 export default function Programme() {
-  const handleDownloadUzbek = () => {
-    const uzbekDocumentUrl = "/dastur.pdf";
+  const downloadFile = (path: string, filename: string) => {
     const link = document.createElement("a");
-    link.href = uzbekDocumentUrl;
-    link.download = "dastur.pdf";
+    link.href = path;
+    link.download = filename;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -27,15 +26,24 @@ export default function Programme() {
     <section>
       <PageHeader title="Programme" />
       <div className="w-[70%] mx-auto mb-6">
-        <div className="flex justify-end mt-2">
+        <div className="flex justify-end mt-2 gap-3 flex-wrap">
           <Button
-            onClick={handleDownloadUzbek}
+            onClick={() => downloadFile("/program-uz.pdf", "program-uz.pdf")}
             variant="outline"
             size="sm"
             className="flex items-center gap-2"
           >
             <Download size={16} />
             Download Uzbek Version
+          </Button>
+          <Button
+            onClick={() => downloadFile("/program-en.pdf", "program-en.pdf")}
+            variant="outline"
+            size="sm"
+            className="flex items-center gap-2"
+          >
+            <Download size={16} />
+            Download English Version
           </Button>
         </div>
       </div>

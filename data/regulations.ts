@@ -35,9 +35,9 @@ export interface Regulation {
       title: "Mathematics Olympiad",
       content: [
         "Two rounds of written exams",
-        "4 tasks per round, each worth 7 points (total: 28 points per round)",
+        "4 tasks per round, each worth 10 points (total: 40 points per round)",
         "4 hours (240 minutes) per round",
-        "Maximum total score: 56 points",
+        "Maximum total score: 80 points",
       ],
       icon: "",
     },
@@ -46,8 +46,8 @@ export interface Regulation {
       title: "Informatics Olympiad",
       content: [
         "Conducted over 2 days in an online system",
-        "3 problems each day, worth 100 points each (total: 600 points)",
-        "4 hours allotted each day",
+        "4 problems each day, worth 100 points each (total: 600 points)",
+        "5 hours allotted each day",
         "Programs must be written in C++",
       ],
       icon: "",
