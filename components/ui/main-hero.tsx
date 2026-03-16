@@ -82,6 +82,7 @@ const KhimioHero = () => {
   const cd = useCountdown();
 
   return (
+    <>
     <section
       className="relative flex items-center justify-center overflow-hidden min-h-[calc(100vh-4.5rem)]"
       style={{
@@ -306,6 +307,57 @@ const KhimioHero = () => {
         </motion.div>
       </motion.div>
     </section>
+
+    {/* Separate section: Watch & Invitation — video and copy side by side */}
+    <section
+      aria-label="Watch and learn about KhIMIOs"
+      className="relative py-16 sm:py-20 lg:py-24 bg-[#0A1628]"
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-[#050E20]/50 to-transparent pointer-events-none" />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-stretch">
+          {/* Video column */}
+          <div className="flex flex-col min-h-0">
+            <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-[#C9A84C] mb-4">
+              Watch
+            </span>
+            <div className="rounded-2xl overflow-hidden border border-[#C9A84C]/20 bg-[#040C1B] shadow-[0_24px_48px_-12px_rgba(0,0,0,0.4)] flex-1 min-h-[280px] sm:min-h-[320px]">
+              <iframe
+                src="https://www.youtube.com/embed/tiMFItX2qdw"
+                title="Al-Khwarizmi International Mathematics and Informatics Olympiad"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full min-h-[280px] sm:min-h-[320px]"
+              />
+            </div>
+          </div>
+          {/* Copy column */}
+          <div className="flex flex-col justify-center">
+            <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-[#C9A84C] mb-4">
+              Invitation
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-[2rem] font-bold text-[#F0EDE6] tracking-tight leading-tight mb-6" style={{ fontFamily: "var(--font-display)" }}>
+              The Olympiad is coming again
+            </h2>
+            <div className="space-y-5 text-[#8B9DB8] text-base sm:text-lg leading-relaxed">
+              <p>
+                We are pleased to invite talented students from around the world to participate in the 4th Al-Khwarizmi International Olympiad in Mathematics and Informatics.
+              </p>
+              <p>
+                This prestigious competition brings together young minds passionate about Mathematics and Computer Science, providing them with a unique opportunity to demonstrate their knowledge, creativity, and analytical thinking.
+              </p>
+              <p>
+                Come, challenge your knowledge, compete with the brightest minds, and become a winner!
+              </p>
+              <p className="text-[#B8C4D4] font-medium">
+                We look forward to welcoming participants from all over the world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </>
   );
 };
 
