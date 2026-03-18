@@ -66,6 +66,7 @@ import xakimjonInformatics from "@/public/images/team/scientific-informatics/hak
 import sunatulloImage from "@/public/images/team/sunatullo.jpeg";
 import miroqilovInformatics from "@/public/images/team/scientific-informatics/davlat.png";
 import xusanboy from "@/public/images/team/xusanboy.png";
+import shakirov from "@/public/images/team/shakirov.jpg";
 interface OrganizationMember {
   id: string;
   name: string;
@@ -134,13 +135,7 @@ const supervisoryMembers: OrganizationMember[] = [
       "First Deputy Minister of Health, Member of the Supervisory Committee",
     imageUrl: Boboev,
   },
-  {
-    id: "s9",
-    name: "Z.T. Mirzayev",
-    location:
-      "Mayor of Tashkent Region, Co-Chair of the Organizing Committee",
-    imageUrl: Mirzayev,
-  },
+
   {
     id: "s10",
     name: "M.A. Omarov",
@@ -187,8 +182,15 @@ const members: {
       id: "2",
       name: "Kh.R. Shakirov",
       location: "Deputy Director of the Agency for Specialized Educational Institutions, Co-Chair of the Organizing Committee",
-      imageUrl: sevara,
+      imageUrl: shakirov,
       isLeader: false,
+    },
+    {
+      id: "s9",
+      name: "Z.T. Mirzayev",
+      location:
+        "Mayor of Tashkent Region, Co-Chair of the Organizing Committee",
+      imageUrl: Mirzayev,
     },
     {
       id: "3",
