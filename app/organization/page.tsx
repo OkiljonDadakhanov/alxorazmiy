@@ -26,7 +26,7 @@ import jasur2 from "@/public/images/team/jasur2.jpg";
 import jahongir from "@/public/images/team/jahongir.png";
 import axadov from "@/public/images/team/axadov.png";
 import akilhan from "@/public/images/team/akilhan.jpeg";
-import profile from "@/public/images/team/profile.png";
+import profile from "@/public/images/team/scientific-maths/miroslav.jpg";
 import ruxsora from "@/public/images/team/ruxsora.webp";
 import charos from "@/public/images/team/charos.jpg";
 import ibrat from "@/public/images/team/ibrat.jpg";
