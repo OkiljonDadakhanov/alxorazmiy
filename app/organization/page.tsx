@@ -108,6 +108,13 @@ const supervisoryMembers: OrganizationMember[] = [
   },
   {
     id: "s5",
+    name: "Sevara Shakirova",
+    location:
+      "Director of the Agency for Specialized Educational Institutions",
+    imageUrl: sevara,
+  },
+  {
+    id: "s5",
     name: "B.B. Qudratxo'djayev",
     location:
       "First Deputy Minister of Internal Affairs, Member of the Supervisory Committee",
