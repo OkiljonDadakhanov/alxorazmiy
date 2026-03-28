@@ -1,9 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
+import Reveal from "@/components/ui/reveal";
 
 export default function About() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0a192f] to-[#112240] text-white py-16">
-      <div className="container mx-auto px-4">
+      <Reveal className="container mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">
           About Al-Khwarizmi Olympiad
         </h1>
@@ -228,7 +229,7 @@ export default function About() {
             </CardContent>
           </Card>
         </section>
-      </div>
+      </Reveal>
     </main>
   );
 }

@@ -17,13 +17,13 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="bg-[#0a1e3f] py-2 px-6 relative z-[9999]">
-      <nav>
-        <div className="flex justify-between items-center">
+    <header className="sticky top-0 z-[9999] bg-white/85 backdrop-blur-md border-b border-slate-200/70 shadow-sm">
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-2.5">
           <Logo />
 
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex items-center space-x-6 text-[18px] text-white">
+          <ul className="hidden lg:flex items-center space-x-1 text-[15px] font-medium text-slate-800">
             {menuItems.map((item, index) => (
               <DesktopMenuItem key={index} item={item} />
             ))}
@@ -39,7 +39,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <ul className="flex flex-col items-center space-y-4 mt-4 lg:hidden text-white">
+          <ul className="mt-2 flex flex-col items-center space-y-3 rounded-2xl bg-white/95 py-4 lg:hidden text-slate-800 border border-slate-200 shadow-lg">
             {menuItems.map((item, index) => (
               <li key={index}>
                 <MobileMenuItem item={item} />

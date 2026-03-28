@@ -4,6 +4,8 @@ import { memo, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { TbMath, TbBinary, TbBraces } from "react-icons/tb";
+import { PiSigma, PiFunction } from "react-icons/pi";
 
 const EVENT = {
   title: "Al-Khwarizmi",
@@ -151,6 +153,51 @@ const KhimioHero = () => {
             "radial-gradient(ellipse at center, rgba(201,168,76,0.05) 0%, transparent 60%)",
         }}
       />
+
+      {/* Subtle math/informatics glyphs */}
+      <div className="pointer-events-none absolute inset-0">
+        <motion.div
+          aria-hidden="true"
+          className="absolute left-10 top-24 text-[#C9A227]/30"
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 0.35, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <PiSigma className="h-10 w-10" />
+        </motion.div>
+        <motion.div
+          aria-hidden="true"
+          className="absolute right-14 top-28 text-[#1E3A8A]/25"
+          animate={{ y: [0, -8, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <TbBinary className="h-9 w-9" />
+        </motion.div>
+        <motion.div
+          aria-hidden="true"
+          className="absolute left-16 bottom-24 text-[#1E3A8A]/20"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <TbBraces className="h-10 w-10" />
+        </motion.div>
+        <motion.div
+          aria-hidden="true"
+          className="absolute right-20 bottom-28 text-[#C9A227]/25"
+          animate={{ rotate: [0, 6, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <PiFunction className="h-10 w-10" />
+        </motion.div>
+        <motion.div
+          aria-hidden="true"
+          className="absolute left-1/2 top-16 -translate-x-1/2 text-[#C9A227]/15"
+          animate={{ opacity: [0.15, 0.25, 0.15] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <TbMath className="h-12 w-12" />
+        </motion.div>
+      </div>
 
       {/* Corner decorative borders */}
       <div className="hidden lg:block absolute top-6 left-6 w-16 h-16 border-l border-t border-[#C9A84C]/10" />

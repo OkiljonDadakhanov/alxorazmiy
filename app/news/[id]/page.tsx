@@ -4,6 +4,7 @@ import Link from "next/link";
 import PageHeader from "@/components/ui/page-header";
 import { getAllNews, getNewsById } from "@/services/newsService";
 import { formatDate } from "@/utils/dateFormatter";
+import Reveal from "@/components/ui/reveal";
 
 interface NewsDetailPageProps {
   params: Promise<{
@@ -27,6 +28,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
     <>
       <PageHeader title={newsItem.title} />
       <section className="p-4 max-w-4xl mx-auto">
+        <Reveal>
         <Link
           href="/news"
           className="text-blue-600 hover:underline mb-6 inline-block"
@@ -81,6 +83,7 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
             </div>
           </div>
         )}
+        </Reveal>
       </section>
     </>
   );

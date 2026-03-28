@@ -11,6 +11,7 @@ import { Download } from "lucide-react";
 import PageHeader from "@/components/ui/page-header";
 import ProgramTable from "@/components/program-table";
 import { programsData } from "@/data/programs";
+import Reveal from "@/components/ui/reveal";
 
 export default function Programme() {
   const downloadFile = (path: string, filename: string) => {
@@ -25,7 +26,7 @@ export default function Programme() {
   return (
     <section>
       <PageHeader title="Programme" />
-      <div className="w-[70%] mx-auto mb-6">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
         <div className="flex justify-end mt-2 gap-3 flex-wrap">
           <Button
             onClick={() => downloadFile("/program-uz.pdf", "program-uz.pdf")}
@@ -48,7 +49,8 @@ export default function Programme() {
         </div>
       </div>
 
-      <div className="w-[70%] mx-auto mb-4 p-4 bg-blue-50 rounded-md">
+      <Reveal className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mb-6 p-5 sm:p-6 bg-white/80 backdrop-blur-sm border border-slate-200 rounded-2xl shadow-sm">
         <h2 className="text-xl font-semibold mb-2">
         AL-KHWARIZMI INTERNATIONAL OLYMPIAD IN MATHEMATICS AND INFORMATICS
         </h2>
@@ -76,7 +78,7 @@ export default function Programme() {
               <strong>Website:</strong>{" "}
               <a
                 href="https://www.khimio.uz/"
-                className="text-blue-600 hover:text-blue-800"
+                className="text-[#1E3A8A] hover:text-[#1E3A8A]/80 underline underline-offset-4"
               >
                 www.khimio.uz
               </a>
@@ -84,8 +86,10 @@ export default function Programme() {
           </div>
         </div>
       </div>
+      </Reveal>
 
-      <Accordion type="single" collapsible className="w-[70%] mx-auto">
+      <Reveal className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
+      <Accordion type="single" collapsible className="w-full">
         {programsData.map(({ title, date, programs }, index) => (
           <AccordionItem key={index} value={`item-${index + 1}`}>
             <AccordionTrigger>{`${title} (${date})`}</AccordionTrigger>
@@ -93,7 +97,7 @@ export default function Programme() {
               <ProgramTable programs={programs} />
 
               {index === 0 && (
-                <div className="mt-4 p-3 bg-gray-50 text-sm border-l-4 border-blue-400 rounded">
+                <div className="mt-4 p-4 bg-[#E0F2FE]/60 text-sm border border-[#1E3A8A]/15 rounded-2xl">
                   <p>
                     Guests will be welcomed by event organizers and volunteers
                     and transported to the camp. In collaboration with our
@@ -110,6 +114,7 @@ export default function Programme() {
           </AccordionItem>
         ))}
       </Accordion>
+      </Reveal>
     </section>
   );
 }

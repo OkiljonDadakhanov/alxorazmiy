@@ -31,6 +31,10 @@ import ruxsora from "@/public/images/team/ruxsora.webp";
 import charos from "@/public/images/team/charos.jpg";
 import ibrat from "@/public/images/team/ibrat.jpg";
 import AbbosMuhammedov from "@/public/images/team/Abbos_muhammedov.jpg";
+import Ashirov from "@/public/images/team/Ashirov.png";
+import Abdulkhaev from "@/public/images/team/Abdulkhaev.png";
+import Musurmonov from "@/public/images/team/Musurmonov.png";
+import Sobirova from "@/public/images/team/Sobirova.png";
 import Yakov from "@/public/images/team/scientific-maths/Yakov.jpg";
 import Anvarbek from "@/public/images/team/scientific-maths/anvarbek.jpg";
 import Madina from "@/public/images/team/scientific-maths/Madina.jpg";
@@ -204,6 +208,38 @@ const members: {
       name: "Davron Tuxtayev",
       location: "Deputy Director of the Science Olympiad Center, Member of the Organizing Committee",
       imageUrl: tukhtaev,
+      isLeader: false,
+    },
+    {
+      id: "14",
+      name: "S.A. Ashirov",
+      location:
+        "Head of the Department for Creative and Sports Schools, Agency for Specialized Educational Institutions, Member of the Organizing Committee",
+      imageUrl: Ashirov,
+      isLeader: false,
+    },
+    {
+      id: "15",
+      name: "A.N. Abdulkhaev",
+      location:
+        "Head of the Department of International Relations, Ministry of Preschool and School Education, Member of the Organizing Committee",
+      imageUrl: Abdulkhaev,
+      isLeader: false,
+    },
+    {
+      id: "16",
+      name: "M.N. Musurmonov",
+      location:
+        "Head of the Department for ICT Implementation and Digitalization, Ministry of Preschool and School Education, Member of the Organizing Committee",
+      imageUrl: Musurmonov,
+      isLeader: false,
+    },
+    {
+      id: "17",
+      name: "D.A. Sobirova",
+      location:
+        "Head of the Information Service, Ministry of Preschool and School Education, Member of the Organizing Committee",
+      imageUrl: Sobirova,
       isLeader: false,
     },
     {

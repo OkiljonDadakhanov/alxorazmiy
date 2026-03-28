@@ -18,15 +18,15 @@ const DesktopMenuItem = ({ item }: { item: MenuItem }) => {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-transparent text-slate-100 px-3 py-2 text-sm rounded-xl hover:text-[#00D1FF] hover:bg-white/5 transition-colors data-[state=open]:text-[#00D1FF] data-[state=open]:bg-white/10">
+            <NavigationMenuTrigger className="bg-transparent text-slate-800 px-3 py-2 text-sm rounded-xl hover:text-[#1E3A8A] hover:bg-slate-100 transition-colors data-[state=open]:text-[#1E3A8A] data-[state=open]:bg-slate-100">
               {item.label}
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="mt-2 w-64 rounded-2xl border border-white/10 bg-[#040816]/95 shadow-[0_18px_45px_rgba(0,0,0,0.7)] backdrop-blur-xl">
+            <NavigationMenuContent className="mt-2 w-64 rounded-2xl border border-slate-200 bg-white shadow-xl backdrop-blur-sm">
               {item.submenu.map((sub, index) => (
                 <NavigationMenuLink asChild key={index} className="w-full">
                   <Link
                     href={sub.href ?? "/"}
-                    className="block px-4 py-2.5 text-sm text-slate-200 hover:bg-white/5 hover:text-[#00D1FF] rounded-xl cursor-pointer w-full whitespace-nowrap transition-colors"
+                    className="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#1E3A8A] rounded-xl cursor-pointer w-full whitespace-nowrap transition-colors"
                   >
                     {sub.label}
                   </Link>
@@ -43,8 +43,8 @@ const DesktopMenuItem = ({ item }: { item: MenuItem }) => {
     <li
       className={
         currentRoute === item.href
-          ? "text-[#00D1FF]"
-          : "text-slate-200 hover:text-[#00D1FF]"
+          ? "text-[#1E3A8A]"
+          : "text-slate-700 hover:text-[#1E3A8A]"
       }
     >
       <Link href={item.href ?? "/"}>{item.label}</Link>

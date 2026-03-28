@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { FaDownload } from "react-icons/fa6";
 import Link from "next/link";
+import Reveal from "@/components/ui/reveal";
 
 export default function Problems() {
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function Problems() {
         </h1>
       </div>
 
+      <Reveal>
       <div data-aos="fade-up">
         <div className="mx-auto mt-6 sm:mt-8 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg space-y-4">
           {/* Previous years */}
@@ -54,6 +56,7 @@ export default function Problems() {
           />
         </div>
       </div>
+      </Reveal>
     </section>
   );
 }
