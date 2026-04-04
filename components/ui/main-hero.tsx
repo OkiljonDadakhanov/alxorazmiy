@@ -11,11 +11,11 @@ const EVENT = {
   title: "Al-Khwarizmi",
   subtitle: "International Mathematics & Informatics Olympiad",
   edition: "4th KhIMIOs",
-  dates: "25–31 May 2026",
+  dates: "1–7 June 2026",
   location: "Tashkent, Uzbekistan",
 };
 
-const TARGET = new Date("2026-05-25T00:00:00").getTime();
+const TARGET = new Date("2026-06-01T00:00:00").getTime();
 
 function useCountdown() {
   const [t, setT] = useState({ d: 0, h: 0, m: 0, s: 0 });

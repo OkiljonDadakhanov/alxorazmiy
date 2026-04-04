@@ -18,18 +18,26 @@ const ProgramTable: React.FC<ProgramTableProps> = ({ programs }) => {
       <TableHeader>
         <TableRow>
           <TableHead>Time</TableHead>
-          <TableHead>Contestants</TableHead>
-          <TableHead>Team Leaders</TableHead>
-          <TableHead>Judges</TableHead>
+          <TableHead>Judge</TableHead>
+          <TableHead>Team leader</TableHead>
+          <TableHead>Participant</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
-        {programs.map((program) => (
-          <TableRow key={program.time}>
-            <TableCell className="font-medium">{program.time}</TableCell>
-            <TableCell>{program.contestants}</TableCell>
-            <TableCell>{program.leaders}</TableCell>
-            <TableCell>{program.judges}</TableCell>
+        {programs.map((program, rowIndex) => (
+          <TableRow key={`${program.time}-${rowIndex}`}>
+            <TableCell className="font-medium align-top">
+              {program.time}
+            </TableCell>
+            <TableCell className="align-top text-sm sm:text-base">
+              {program.judges}
+            </TableCell>
+            <TableCell className="align-top text-sm sm:text-base">
+              {program.leaders}
+            </TableCell>
+            <TableCell className="align-top text-sm sm:text-base">
+              {program.contestants}
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>

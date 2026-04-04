@@ -3,7 +3,8 @@
 import React from "react";
 import PageHeader from "@/components/ui/page-header";
 import { Card, CardContent } from "@/components/ui/card";
-import { Globe, MapPin, Calendar, Phone, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Globe, MapPin, Calendar, Phone, Mail, Download } from "lucide-react";
 
 export default function PressRelease() {
   return (
@@ -11,6 +12,20 @@ export default function PressRelease() {
       <PageHeader title="Press Release" />
 
       <div className="mt-8 max-w-4xl mx-auto px-4 py-8">
+        <div className="flex flex-wrap justify-end gap-3 mb-6">
+          <Button variant="outline" size="sm" asChild className="gap-2">
+            <a href="/files/press-release-en.pdf" download>
+              <Download size={16} />
+              Download (English)
+            </a>
+          </Button>
+          <Button variant="outline" size="sm" asChild className="gap-2">
+            <a href="/files/press-release-uz.pdf" download>
+              <Download size={16} />
+              Download (Uzbek)
+            </a>
+          </Button>
+        </div>
         <Card className="border-0 shadow-lg">
           <CardContent className="p-8">
             <h1 className="text-3xl font-bold text-center mb-8 text-gray-900">
@@ -21,8 +36,8 @@ export default function PressRelease() {
             <div className="space-y-6 text-gray-700">
               <p className="text-lg leading-relaxed">
                 The Al-Khwarizmi International Olympiad in Mathematics and
-                Informatics will take place in Tashkent, Uzbekistan, from May 25
-                to 31, 2026. This prestigious event will gather talented high
+                Informatics will take place in Tashkent, Uzbekistan, from June 1
+                to 7, 2026. This prestigious event will gather talented high
                 school students from across the globe to showcase their skills
                 in two of the most fundamental fields of science: mathematics
                 and informatics.
@@ -55,14 +70,14 @@ export default function PressRelease() {
                   <div className="flex items-center space-x-2">
                     <Calendar className="w-5 h-5 text-blue-600" />
                     <span className="font-medium">Opening Ceremony:</span>
-                    <span>26 May 2026, 10:00</span>
+                    <span>2 June 2026, 10:00</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Calendar className="w-5 h-5 text-blue-600" />
                     <span className="font-medium">
                       Closing & Awards Ceremony:
                     </span>
-                    <span>30 May 2026, 15:00</span>
+                    <span>6 June 2026, 15:00</span>
                   </div>
                 </div>
               </div>

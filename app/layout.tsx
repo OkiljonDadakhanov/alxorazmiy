@@ -26,7 +26,7 @@ export const metadata = {
     title:
       "Al-Khwarizmi KhIMIOs - International Mathematics and Informatics Olympiad",
     description:
-      "Join the 4th Al-Khwarizmi KhIMIOs from May 25–31, 2026, in Uzbekistan and compete with talented students worldwide.",
+      "Join the 4th Al-Khwarizmi KhIMIOs from June 1–7, 2026, in Uzbekistan and compete with talented students worldwide.",
     url: "https://imio.uz",
     type: "website",
   },

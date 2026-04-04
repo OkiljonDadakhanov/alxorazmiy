@@ -29,7 +29,9 @@ export default function Programme() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
         <div className="flex justify-end mt-2 gap-3 flex-wrap">
           <Button
-            onClick={() => downloadFile("/program-uz.pdf", "program-uz.pdf")}
+            onClick={() =>
+              downloadFile("/files/program-uz.pdf", "program-uz.pdf")
+            }
             variant="outline"
             size="sm"
             className="flex items-center gap-2"
@@ -38,7 +40,9 @@ export default function Programme() {
             Download Uzbek Version
           </Button>
           <Button
-            onClick={() => downloadFile("/program-en.pdf", "program-en.pdf")}
+            onClick={() =>
+              downloadFile("/files/program-en.pdf", "program-en.pdf")
+            }
             variant="outline"
             size="sm"
             className="flex items-center gap-2"
@@ -55,7 +59,7 @@ export default function Programme() {
         AL-KHWARIZMI INTERNATIONAL OLYMPIAD IN MATHEMATICS AND INFORMATICS
         </h2>
         <p className="text-sm italic mb-2">
-          May 25–31, 2026, Tashkent Region, Uzbekistan
+          June 1–7, 2026, Tashkent Region, Uzbekistan
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div>

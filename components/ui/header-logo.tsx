@@ -2,13 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Logo = () => (
-  <Link href="/">
+  <Link
+    href="/"
+    className="relative flex h-14 w-[92px] shrink-0 items-center sm:h-16 sm:w-[112px] lg:h-[4.5rem] lg:w-[128px]"
+  >
     <Image
-      className="rounded p-1"
+      className="object-contain object-left"
       alt="Alxorazmiy logo"
-      src="/logo/logowhite.png"
-      width={70}
-      height={70}
+      src="/logo/vertikal.png"
+      fill
+      sizes="(max-width: 640px) 92px, (max-width: 1024px) 112px, 128px"
       priority
     />
   </Link>

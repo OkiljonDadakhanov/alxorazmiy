@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-[9999] bg-white/85 backdrop-blur-md border-b border-slate-200/70 shadow-sm">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-2.5">
+        <div className="flex justify-between items-center py-3 sm:py-3.5">
           <Logo />
 
           {/* Desktop Navigation */}

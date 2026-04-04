@@ -23,7 +23,7 @@ export default function About() {
                 peers who share a passion for mathematics and computing.
               </p>
               <p className="text-gray-300">
-                The 4th Al-Khwarizmi KhIMIOs will take place from May 25–31, 2026,
+                The 4th Al-Khwarizmi KhIMIOs will take place from June 1–7, 2026,
                 in Uzbekistan, bringing together talented students from multiple
                 countries to compete in the fields of Mathematics and
                 Informatics.

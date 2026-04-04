@@ -28,7 +28,7 @@ export default async function NewsPage() {
                 4th Al-Khwarizmi KhIMIOs 2026
               </h2>
               <p className="text-gray-300 max-w-lg">
-                Registration is now open for the 4th Al-Khwarizmi International Mathematics and Informatics Olympiad. May 25–31, 2026, Tashkent, Uzbekistan.
+                Registration is now open for the 4th Al-Khwarizmi International Mathematics and Informatics Olympiad. June 1–7, 2026, Tashkent, Uzbekistan.
               </p>
             </div>
             <Link
