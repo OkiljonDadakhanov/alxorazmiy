@@ -34,7 +34,7 @@ export default function Home() {
               </div>
               <div className="mt-5 flex flex-wrap gap-3 sm:pl-16">
                 <a
-                  href="/files/regulations-en.pdf"
+                  href="/regulations1.pdf"
                   download
                   className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm transition hover:border-[#1E3A8A]/30 hover:bg-slate-50"
                 >
@@ -42,7 +42,7 @@ export default function Home() {
                   Regulations (English)
                 </a>
                 <a
-                  href="/files/regulations-uz.pdf"
+                  href="/regulations2.pdf"
                   download
                   className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm transition hover:border-[#1E3A8A]/30 hover:bg-slate-50"
                 >
