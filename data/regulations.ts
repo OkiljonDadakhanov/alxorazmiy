@@ -74,7 +74,7 @@ export const regulations: RegulationChapter[] = [
       {
         number: 7,
         text:
-          "The International Olympiad is held for students under the age of 15 at the day of the contest, studying in general education schools. Team members register online to participate in the International Olympiad.",
+          "The International Olympiad is held for students under the age of 16 (born on or after December 25, 2011) studying in general education schools.",
       },
       {
         number: 8,
