@@ -11,7 +11,7 @@ const Logo = () => (
       alt="Alxorazmiy logo"
       src="/logo/vertikal.png"
       fill
-      sizes="(max-width: 640px) 92px, (max-width: 1024px) 112px, 128px"
+     sizes="(max-width: 640px) 180px, (max-width: 1034px) 220px, 260px"
       priority
     />
   </Link>
