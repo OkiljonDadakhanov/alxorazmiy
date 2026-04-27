@@ -17,7 +17,7 @@ interface ContactModalProps {
   onClose: () => void;
 }
 
-export function ContactDialog({ isOpen, onClose }: ContactModalProps) {
+function ContactDialog({ isOpen, onClose }: ContactModalProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>

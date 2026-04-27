@@ -1,0 +1,39 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": [
+    "app/**/{page,layout,template,loading,error,not-found,global-error,default,route,sitemap,robots,manifest,icon,apple-icon,opengraph-image,twitter-image}.{js,jsx,ts,tsx}",
+    "app/**/middleware.{js,ts}",
+    "middleware.{js,ts}",
+    "next.config.{js,ts,mjs,cjs}",
+    "postcss.config.{js,mjs,cjs}",
+    "tailwind.config.{js,ts,cjs,mjs}",
+    "eslint.config.{js,mjs,cjs}"
+  ],
+  "project": [
+    "app/**/*.{js,jsx,ts,tsx}",
+    "components/**/*.{js,jsx,ts,tsx}",
+    "constants/**/*.{js,jsx,ts,tsx}",
+    "data/**/*.{js,jsx,ts,tsx}",
+    "lib/**/*.{js,jsx,ts,tsx}",
+    "services/**/*.{js,jsx,ts,tsx}",
+    "types/**/*.{js,jsx,ts,tsx}",
+    "utils/**/*.{js,jsx,ts,tsx}"
+  ],
+  "ignore": [
+    ".next/**",
+    "node_modules/**",
+    "public/**",
+    "next-env.d.ts"
+  ],
+  "ignoreDependencies": [
+    "alxorazmiy",
+    "tailwindcss-animate",
+    "@types/jquery",
+    "@types/aos"
+  ],
+  "ignoreBinaries": [],
+  "next": true,
+  "eslint": true,
+  "postcss": true,
+  "tailwind": true
+}

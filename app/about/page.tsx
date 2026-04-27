@@ -159,7 +159,7 @@ export default function About() {
                   <li>3 problems per day, each worth 100 points</li>
                   <li>Each day&apos;s competition lasts 4 hours</li>
                   <li>Programming language: C++</li>
-                  <li>Total maximum score: 600 points across both days</li>
+                  <li>Total maximum score: 800 points across both days</li>
                 </ul>
               </div>
             </CardContent>

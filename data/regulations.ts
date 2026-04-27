@@ -88,18 +88,21 @@ export const regulations: RegulationChapter[] = [
       {
         number: 9,
         text:
-          "The International Olympiad in Informatics is held online over 2 days. Each day, participants receive 3 tasks.",
+          "The International Olympiad in Informatics is held online over 2 days. Each day, participants receive 4 tasks.",
         bullets: [
-          "Each fully solved task is automatically graded in the information system and awarded 100 points, with a total of 600 points possible.",
-          "Participants have 4 hours per day to complete the tasks.",
+          "Each fully solved task is automatically graded in the information system and awarded 100 points, with a total of 800 points possible.",
+          "Participants have 5 hours per day to complete the tasks.",
           "The results are determined solely based on the scores obtained, with no penalty points for incorrect attempts.",
-          "Participants must write program codes exclusively in the C++ programming language.",
+          "Participants must write program codes exclusively in the C++ and Python programming languages.",
         ],
       },
       {
         number: 10,
-        text:
-          "The composition of teams for the International Olympiad includes teams from foreign countries consisting of 4 participants in Mathematics, 4 participants in Informatics, and 2 team leaders.",
+        text: "The composition of teams for the International Olympiad includes:",
+        bullets: [
+          "Teams from foreign countries consist of 4 participants in Mathematics, 4 participants in Informatics, and 2 team leaders.",
+          "Additional participants and additional team leaders from a single country are permitted to participate in the International Olympiad.",
+        ],
       },
       {
         number: 11,
@@ -109,7 +112,7 @@ export const regulations: RegulationChapter[] = [
       {
         number: 12,
         text:
-          "The work of participants is defended by team leaders and evaluated by the jury.",
+          "The work of the participants is defended by the team leaders at the International Olympiad. Participants' work is evaluated by the Jury.",
       },
       {
         number: 13,
