@@ -326,7 +326,7 @@ const KhimioHero = () => {
           className="flex flex-wrap gap-3 justify-center"
         >
           <Link
-            href="https://khimio-registration.vercel.app/"
+            href="https://registration-khimio.olympcenter.uz/registration"
             target="_blank"
             className="group inline-flex items-center gap-2 px-7 py-3 rounded-lg font-semibold text-sm sm:text-base tracking-wide transition-all duration-300 bg-gradient-to-r from-[#B8952F] via-[#C9A84C] to-[#D4B85A] text-[#040C1B] hover:shadow-[0_0_32px_rgba(201,168,76,0.25)] active:scale-[0.98]"
           >
