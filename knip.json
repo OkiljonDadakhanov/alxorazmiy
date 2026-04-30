@@ -29,7 +29,8 @@
     "alxorazmiy",
     "tailwindcss-animate",
     "@types/jquery",
-    "@types/aos"
+    "@types/aos",
+    "baseline-browser-mapping"
   ],
   "ignoreBinaries": [],
   "next": true,
