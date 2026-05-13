@@ -29,26 +29,13 @@ export default function Programme() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
         <div className="flex justify-end mt-2 gap-3 flex-wrap">
           <Button
-            onClick={() =>
-              downloadFile("/files/program-uz.pdf", "program-uz.pdf")
-            }
+            onClick={() => downloadFile("/files/Dastur.xlsx", "Dastur.xlsx")}
             variant="outline"
             size="sm"
             className="flex items-center gap-2"
           >
             <Download size={16} />
-            Download Uzbek Version
-          </Button>
-          <Button
-            onClick={() =>
-              downloadFile("/files/program-en.pdf", "program-en.pdf")
-            }
-            variant="outline"
-            size="sm"
-            className="flex items-center gap-2"
-          >
-            <Download size={16} />
-            Download English Version
+            Download Programme (Excel)
           </Button>
         </div>
       </div>
@@ -56,24 +43,23 @@ export default function Programme() {
       <Reveal className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mb-6 p-5 sm:p-6 bg-white/80 backdrop-blur-sm border border-slate-200 rounded-2xl shadow-sm">
         <h2 className="text-xl font-semibold mb-2">
-        AL-KHWARIZMI INTERNATIONAL OLYMPIAD IN MATHEMATICS AND INFORMATICS
+        AL-KHWARIZMI INTERNATIONAL MATHEMATICS AND INFORMATICS OLYMPIAD PROGRAM
         </h2>
         <p className="text-sm italic mb-2">
-          June 1–7, 2026, Tashkent Region, Uzbekistan
+          June 1–7, 2026, Tashkent, Uzbekistan
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div>
             <p>
-              <strong>Venue:</strong> &quot;Renessans&quot; Health Camp under the Agency
-              for Specialized Educational Institutions
+              <strong>Venue:</strong> Muhammad al-Khwarizmi Specialized School
             </p>
             <p>
-              <strong>Participant Accommodation:</strong> &quot;Renessans&quot; Health Camp
+              <strong>Participant Accommodation:</strong> Muhammad al-Khwarizmi Specialized School
             </p>
           </div>
           <div>
             <p>
-              <strong>Jury & Team Leader Accommodation:</strong> &quot;Renessans&quot; Health Camp
+              <strong>Jury & Team Leader Accommodation:</strong> Rakat Comfort Hotel
             </p>
             <p>
               <strong>Organizer:</strong> Science Olympiad Center
@@ -103,14 +89,13 @@ export default function Programme() {
               {index === 0 && (
                 <div className="mt-4 p-4 bg-[#E0F2FE]/60 text-sm border border-[#1E3A8A]/15 rounded-2xl">
                   <p>
-                    Guests will be welcomed by event organizers and volunteers
-                    and transported to the camp. In collaboration with our
-                    partner telecommunications company, participants will be
-                    provided with SIM cards. During registration, ID badges,
-                    official uniforms, gift kits, and information brochures will
-                    be distributed. Based on the arrival schedule, camp
-                    volunteers will organize guided orientation tours around the
-                    Renessans Camp for all participants.
+                    Guests are welcomed by event organizers and volunteers, and
+                    everyone is taken to the School. SIM cards are provided in
+                    partnership with a telecommunications company. Badges,
+                    uniforms, gift sets, and information brochures are
+                    distributed. Depending on the arrival schedule, School
+                    volunteers organize introductory tours of the School for
+                    participants.
                   </p>
                 </div>
               )}
