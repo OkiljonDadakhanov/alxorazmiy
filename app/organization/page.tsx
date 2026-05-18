@@ -56,8 +56,8 @@ import Sormonkulov from "@/public/images/team/supervisory/Sormonkulov.jpg";
 import Djuraboev from "@/public/images/team/supervisory/Djuraboev.jpg";
 import YusufInformatics from "@/public/images/team/scientific-informatics/Yusuf.jpg";
 import AzamatInformatics from "@/public/images/team/scientific-informatics/Azamat.jpg";
-import ShohruhInformatics from "@/public/images/team/scientific-informatics/Shohruh.jpg";
-import JamshedInformatics from "@/public/images/team/scientific-informatics/Rahimov.png";
+import ShohruhInformatics from "@/public/images/team/scientific-informatics/ahmet.jpg";
+import JamshedInformatics from "@/public/images/team/scientific-informatics/shahrom.jpg";
 import KapitanovInformatics from "@/public/images/team/scientific-informatics/kapitanov.jpg";
 import AdizbekInformatics from "@/public/images/team/scientific-informatics/adizbek.jpg";
 import CaskurluInformatics from "@/public/images/team/scientific-informatics/Caskurlu.jpg";
@@ -442,8 +442,8 @@ const members: {
     },
     {
       id: "i2",
-      name: "Jamshed Rahimov",
-      location: "Leading teacher of the \"Yozdah Tarhi Yak\" Olympic Center, Tajikistan",
+      name: "Shahrom Boymadov",
+      location: "Leading teacher of the `Yozdah Tarhi Yak` Olympic Center, Tajikistan",
       imageUrl: JamshedInformatics,
     },
     {
@@ -530,8 +530,8 @@ const members: {
     },
     {
       id: "i16",
-      name: "Shohruh Rahmatillayev",
-      location: "Researcher of the Tashkent University of Information Technologies",
+      name: "Ahmet Kaan Avci",
+      location: "Researcher of  TOBB University of Economics and Technology",
       imageUrl: ShohruhInformatics,
     },
   ],

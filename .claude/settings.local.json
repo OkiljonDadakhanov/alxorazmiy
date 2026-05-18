@@ -7,7 +7,10 @@
       "Bash(pip install:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(node -e \"const fs=require\\('fs'\\); const x=require\\('xlsx'\\); const wb=x.readFile\\('public/files/Dastur.xlsx'\\); console.log\\('Sheets:', wb.SheetNames\\); wb.SheetNames.forEach\\(n=>{console.log\\('--- Sheet:', n\\); const ws=wb.Sheets[n]; const data=x.utils.sheet_to_json\\(ws,{header:1,defval:''}\\); console.log\\(JSON.stringify\\(data,null,2\\)\\);}\\);\")",
+      "Bash(python)",
+      "Bash(npx tsc *)"
     ]
   }
 }
