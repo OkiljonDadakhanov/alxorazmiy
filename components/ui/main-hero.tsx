@@ -320,31 +320,11 @@ const KhimioHero = () => {
           </div>
         </motion.div>
 
-        {/* CTA buttons */}
+        {/* CTA */}
         <motion.div
           variants={fadeUp}
           className="flex flex-wrap gap-3 justify-center"
         >
-          <Link
-            href="https://registration-khimio.olympcenter.uz/registration"
-            target="_blank"
-            className="group inline-flex items-center gap-2 px-7 py-3 rounded-lg font-semibold text-sm sm:text-base tracking-wide transition-all duration-300 bg-gradient-to-r from-[#B8952F] via-[#C9A84C] to-[#D4B85A] text-[#040C1B] hover:shadow-[0_0_32px_rgba(201,168,76,0.25)] active:scale-[0.98]"
-          >
-            Register Now
-            <svg
-              className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2.5}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-              />
-            </svg>
-          </Link>
           <Link
             href="/about"
             className="inline-flex items-center gap-2 px-7 py-3 rounded-lg font-medium text-sm sm:text-base text-[#C9A84C] border border-[#C9A84C]/20 hover:border-[#C9A84C]/40 hover:bg-[#C9A84C]/[0.05] transition-all duration-300 tracking-wide active:scale-[0.98]"

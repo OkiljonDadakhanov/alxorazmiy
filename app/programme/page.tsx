@@ -29,7 +29,9 @@ export default function Programme() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
         <div className="flex justify-end mt-2 gap-3 flex-wrap">
           <Button
-            onClick={() => downloadFile("/files/Dastur.xlsx", "Dastur.xlsx")}
+            onClick={() =>
+              downloadFile("/dastur-program.xlsx", "dastur-program.xlsx")
+            }
             variant="outline"
             size="sm"
             className="flex items-center gap-2"
@@ -51,15 +53,15 @@ export default function Programme() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div>
             <p>
-              <strong>Venue:</strong> Muhammad al-Khwarizmi Specialized School
+              <strong>Venue:</strong> Renaissance Health Resort (hereinafter – the resort)
             </p>
             <p>
-              <strong>Participant Accommodation:</strong> Muhammad al-Khwarizmi Specialized School
+              <strong>Participant Accommodation:</strong> the resort
             </p>
           </div>
           <div>
             <p>
-              <strong>Jury & Team Leader Accommodation:</strong> Rakat Comfort Hotel
+              <strong>Jury & Team Leader Accommodation:</strong> the resort
             </p>
             <p>
               <strong>Organizer:</strong> Science Olympiad Center
@@ -90,12 +92,10 @@ export default function Programme() {
                 <div className="mt-4 p-4 bg-[#E0F2FE]/60 text-sm border border-[#1E3A8A]/15 rounded-2xl">
                   <p>
                     Guests are welcomed by event organizers and volunteers, and
-                    everyone is taken to the School. SIM cards are provided in
-                    partnership with a telecommunications company. Badges,
-                    uniforms, gift sets, and information brochures are
-                    distributed. Depending on the arrival schedule, School
-                    volunteers organize introductory tours of the School for
-                    participants.
+                    everyone is taken to the resort. Badges, uniforms, gift
+                    sets, and information brochures are distributed. Depending
+                    on the arrival schedule, resort volunteers organize
+                    introductory tours for participants.
                   </p>
                 </div>
               )}
