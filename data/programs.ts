@@ -306,9 +306,9 @@ export const programsData: {
       },
       {
         time: "Throughout the day",
-        contestants: "Farewell",
-        leaders: "Farewell",
-        judges: "Farewell",
+        contestants: "Departure",
+        leaders: "Departure",
+        judges: "Departure",
       },
       {
         time: "13:00 – 14:30",
