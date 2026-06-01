@@ -16,9 +16,9 @@ export const programsData: {
     programs: [
       {
         time: "Throughout the day",
-        contestants: "Check-in at the resort",
-        leaders: "Check-in at the resort",
-        judges: "Check-in at the resort",
+        contestants: "Check-in",
+        leaders: "Check-in",
+        judges: "Check-in",
       },
       {
         time: "07:00 – 09:00",
@@ -28,8 +28,8 @@ export const programsData: {
       },
       {
         time: "09:00 – 12:00",
-        contestants: "",
-        leaders: "Registration (distribution of gifts)",
+        contestants: "Free time",
+        leaders: "",
         judges: "Working on olympiad problems",
       },
       {
@@ -41,7 +41,7 @@ export const programsData: {
       {
         time: "14:00 – 18:00",
         contestants: "",
-        leaders: "Free time",
+        leaders: "Interactive games with volunteers",
         judges: "Working on olympiad problems",
       },
       {
@@ -52,9 +52,9 @@ export const programsData: {
       },
       {
         time: "19:30 – 21:00",
-        contestants: "Various interactive games",
-        leaders: "",
-        judges: "Rest",
+        contestants: "",
+        leaders: "Registration (distribution of gifts)",
+        judges: "Free time",
       },
     ],
   },
@@ -70,38 +70,39 @@ export const programsData: {
       },
       {
         time: "09:00 – 12:00",
-        contestants: "",
-        leaders: "Various interactive games",
-        judges: "Working on olympiad problems",
+        contestants: "Interactive games with volunteers (sports day)",
+        leaders: "",
+        judges: "Discussion meeting",
       },
       {
-        time: "12:00 – 13:30",
+        time: "13:00 – 14:00",
         contestants: "Lunch",
         leaders: "Lunch",
         judges: "Lunch",
       },
       {
         time: "14:00 – 17:00",
-        contestants: "",
-        leaders: "Preparation for the Opening Ceremony",
-        judges: "Working on olympiad problems",
+        contestants: "Pre olympiad preparatory process",
+        leaders: "",
+        judges: "Discussion meeting",
       },
       {
         time: "18:00 – 19:30",
-        contestants: "Opening Ceremony",
-        leaders: "Opening Ceremony",
-        judges: "Opening Ceremony",
-      },
-      {
-        time: "19:30 – 20:30",
         contestants: "Dinner",
         leaders: "Dinner",
         judges: "Dinner",
       },
       {
-        time: "20:30 – 22:00",
-        contestants: "Free time (preparation for the first round of the olympiad)",
-        leaders: "Translation of first round olympiad questions",
+        time: "19:30 – 21:00",
+        contestants: "Opening Ceremony",
+        leaders: "Opening Ceremony",
+        judges: "Opening Ceremony",
+      },
+      {
+        time: "21:00 – 22:00",
+        contestants: "",
+        leaders:
+          "Preparation for the first round of the olympiad / Board games / Movie night; Translation of first round olympiad questions (online countries)",
         judges: "Meeting",
       },
     ],
@@ -119,8 +120,8 @@ export const programsData: {
       {
         time: "08:00 – 09:00",
         contestants: "Preparation for the first round",
-        leaders: "Translation process",
-        judges: "Working on tasks",
+        leaders: "Translation process (offline countries)",
+        judges: "Working on olympiad problems",
       },
       {
         time: "09:00 – 13:00",
@@ -129,16 +130,17 @@ export const programsData: {
         judges: "First Round of the Olympiad",
       },
       {
-        time: "13:00 – 14:30",
+        time: "13:00 – 15:00",
         contestants: "Lunch",
-        leaders: "Lunch (Besh qozon)",
+        leaders: "Lunch (Besh Kazan)",
         judges: "Lunch",
       },
       {
-        time: "14:30 – 19:00",
-        contestants: "Rest",
-        leaders: "Excursion (Chorsu Bazaar)",
-        judges: "Grading olympiad works",
+        time: "15:00 – 19:00",
+        contestants:
+          "Zakovat (mathematics and informatics); Appeal session (informatics)",
+        leaders: "Excursion (Chorsu bazar)",
+        judges: "Checking first round works",
       },
       {
         time: "19:00 – 20:30",
@@ -148,8 +150,9 @@ export const programsData: {
       },
       {
         time: "20:30 – 21:30",
-        contestants: "Free time (preparation for the second round of the olympiad)",
-        leaders: "Translation of second round olympiad questions",
+        contestants: "",
+        leaders:
+          "Preparation for the second round of the olympiad / Board games; Translation of second round olympiad questions (online countries)",
         judges: "Discussion of first round proceedings",
       },
     ],
@@ -167,27 +170,27 @@ export const programsData: {
       {
         time: "08:00 – 09:00",
         contestants: "Preparation for the second round",
-        leaders: "Translation process",
-        judges: "Working on tasks",
+        leaders: "Translation process (offline countries)",
+        judges: "Working on olympiad problems",
       },
       {
         time: "09:00 – 13:00",
         contestants: "Second Round of the Olympiad",
-        leaders: "Excursion (Amirsoy resort)",
+        leaders: "Excursion (Amirsay resort)",
         judges: "Second Round of the Olympiad",
       },
       {
-        time: "13:30 – 14:30",
+        time: "13:00 – 15:00",
         contestants: "Lunch",
         leaders: "Lunch",
         judges: "Lunch",
       },
       {
-        time: "15:00 – 18:00",
-        contestants: "",
-        leaders:
-          "Various interactive games (national games of participating countries)",
-        judges: "Grading second round works",
+        time: "15:00 – 19:00",
+        contestants:
+          "National sports games of participating countries (mathematics and informatics); Appeal session (informatics)",
+        leaders: "National games of participating countries",
+        judges: "Checking second round works",
       },
       {
         time: "18:30 – 19:30",
@@ -197,9 +200,9 @@ export const programsData: {
       },
       {
         time: "19:30 – 21:00",
-        contestants: "Various games with volunteers",
+        contestants: "Interactive games with volunteers / Board games",
         leaders: "",
-        judges: "Discussion of second round proceedings",
+        judges: "Discussion of first round proceedings",
       },
     ],
   },
@@ -217,19 +220,19 @@ export const programsData: {
         time: "09:00 – 13:00",
         contestants: "Excursion (Islamic Civilization Center)",
         leaders: "",
-        judges: "Appeals process",
+        judges: "Appeals process (mathematics/informatics)",
       },
       {
         time: "13:00 – 14:00",
-        contestants: "Lunch (Besh qozon)",
-        leaders: "",
+        contestants: "Lunch",
+        leaders: "Lunch (Besh Kazan)",
         judges: "Lunch",
       },
       {
         time: "14:00 – 18:00",
         contestants: "Excursion (Tashkent City)",
         leaders: "",
-        judges: "Appeals process",
+        judges: "Appeals process (mathematics/informatics)",
       },
       {
         time: "18:30 – 19:30",
@@ -239,8 +242,8 @@ export const programsData: {
       },
       {
         time: "20:00 – 22:00",
-        contestants: "",
-        leaders: "Preparation for the Awarding Ceremony",
+        contestants: "Board games / Movie night",
+        leaders: "",
         judges: "Finalizing results",
       },
     ],
@@ -258,21 +261,20 @@ export const programsData: {
       {
         time: "09:00 – 13:00",
         contestants: "",
-        leaders:
-          "Various interactive games (national games of participating countries)",
+        leaders: "Sports day (national games of participating countries)",
         judges: "Excursion (Islamic Civilization Center)",
       },
       {
-        time: "13:00 – 14:30",
-        contestants: "",
+        time: "13:00 – 14:00",
+        contestants: "Lunch",
         leaders: "Lunch",
-        judges: "Lunch (Besh qozon)",
+        judges: "Lunch (Besh Kazan)",
       },
       {
         time: "14:30 – 16:00",
-        contestants: "Free time (preparation for the closing ceremony)",
-        leaders: "Free time (preparation for the closing ceremony)",
-        judges: "Free time (preparation for the closing ceremony)",
+        contestants: "Free time / Board games",
+        leaders: "Free time / Board games",
+        judges: "Free time / Board games",
       },
       {
         time: "18:00 – 19:30",
@@ -288,9 +290,9 @@ export const programsData: {
       },
       {
         time: "21:00",
-        contestants: "Farewell for departing participants",
-        leaders: "Farewell for departing participants",
-        judges: "Farewell for departing participants",
+        contestants: "Departure",
+        leaders: "Departure",
+        judges: "Departure",
       },
     ],
   },

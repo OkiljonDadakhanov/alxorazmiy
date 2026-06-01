@@ -30,14 +30,14 @@ export default function Programme() {
         <div className="flex justify-end mt-2 gap-3 flex-wrap">
           <Button
             onClick={() =>
-              downloadFile("/dastur-program.xlsx", "dastur-program.xlsx")
+              downloadFile("/dasturs.pdf", "dasturs.pdf")
             }
             variant="outline"
             size="sm"
             className="flex items-center gap-2"
           >
             <Download size={16} />
-            Download Programme (Excel)
+            Download Programme (PDF)
           </Button>
         </div>
       </div>
@@ -53,15 +53,15 @@ export default function Programme() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div>
             <p>
-              <strong>Venue:</strong> Renaissance Health Resort (hereinafter – the resort)
+              <strong>Olympiad venue:</strong> Renaissance Camp (hereinafter referred to as &quot;Camp&quot;)
             </p>
             <p>
-              <strong>Participant Accommodation:</strong> the resort
+              <strong>Contestants&apos; accommodation:</strong> Camp
             </p>
           </div>
           <div>
             <p>
-              <strong>Jury & Team Leader Accommodation:</strong> the resort
+              <strong>Judges&apos; and team leaders&apos; accommodation:</strong> Camp
             </p>
             <p>
               <strong>Organizer:</strong> Science Olympiad Center
@@ -91,11 +91,11 @@ export default function Programme() {
               {index === 0 && (
                 <div className="mt-4 p-4 bg-[#E0F2FE]/60 text-sm border border-[#1E3A8A]/15 rounded-2xl">
                   <p>
-                    Guests are welcomed by event organizers and volunteers, and
-                    everyone is taken to the resort. Badges, uniforms, gift
-                    sets, and information brochures are distributed. Depending
-                    on the arrival schedule, resort volunteers organize
-                    introductory tours for participants.
+                    With the help of event organizers and volunteers, guests will
+                    be welcomed, taken to the school, and given a badge, uniform,
+                    gift set, and information brochure. Depending on the
+                    participants&apos; arrival schedule, a familiarization tour will
+                    be organized by camp volunteers.
                   </p>
                 </div>
               )}
