@@ -2,8 +2,8 @@ import { Result } from "@/types/results";
 
 export const results2026Files = {
   mathematics: {
-    href: "/results/matematics_Khimio 2026 result_final.xlsx",
-    filename: "matematics_Khimio 2026 result_final.xlsx",
+    href: "/results/matematics_Khimio 2026 result_final+.xlsx",
+    filename: "matematics_Khimio 2026 result_final+.xlsx",
     label: "Mathematics Final Results",
   },
   informatics: {
