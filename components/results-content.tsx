@@ -1,9 +1,46 @@
 import { results } from "@/data/results";
+import { results2026, results2026Files } from "@/data/results-2026";
 import ResultTable from "./results-table";
 import DownloadButton from "./download-button";
 
 const ResultsContent: React.FC = () => (
   <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6 mb-8">
+    <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-600 mb-4 sm:mb-6">
+      2026 Final Results
+    </h2>
+
+    <p className="text-base sm:text-lg text-center text-gray-600 mb-6 sm:mb-8">
+      The official final results of the 4th Al-Khwarizmi International
+      Mathematics and Informatics Olympiad. Download the complete result lists
+      below.
+    </p>
+
+    <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+      <DownloadButton
+        href={results2026Files.mathematics.href}
+        download={results2026Files.mathematics.filename}
+        label={results2026Files.mathematics.label}
+      />
+      <DownloadButton
+        href={results2026Files.informatics.href}
+        download={results2026Files.informatics.filename}
+        label={results2026Files.informatics.label}
+      />
+    </div>
+
+    <ResultTable
+      year={2026}
+      subject="Mathematics"
+      data={results2026.mathematics}
+    />
+    <ResultTable
+      year={2026}
+      subject="Informatics"
+      data={results2026.informatics}
+    />
+
+    <hr className="my-10 border-gray-200" />
+
     <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-600 mb-4 sm:mb-6">
       2024 &amp; 2025 Results
     </h2>
@@ -30,7 +67,8 @@ const ResultsContent: React.FC = () => (
     </div>
 
     <div className="text-center text-gray-700 italic mb-8">
-      Keep pushing your limits and preparing for the next challenge — your name could be here next year!
+      Keep pushing your limits and preparing for the next challenge — your name
+      could be here next year!
     </div>
 
     <ResultTable year={2025} data={results[2025]} />

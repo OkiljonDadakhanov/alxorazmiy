@@ -12,8 +12,12 @@ export interface ResultsData {
 export interface ResultTableProps {
   year: number;
   data: Result[];
+  subject?: string;
 }
 
 export interface DownloadButtonProps {
-  year: number;
+  year?: number;
+  href?: string;
+  label?: string;
+  download?: string;
 }

@@ -1,11 +1,13 @@
 import { ResultTableProps } from "@/types/results";
 
-const ResultTable: React.FC<ResultTableProps> = ({ year, data }) => {
+const ResultTable: React.FC<ResultTableProps> = ({ year, data, subject }) => {
+  const title = subject
+    ? `${year} ${subject} — Gold medalists`
+    : `${year} Gold medalists`;
+
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-bold text-blue-400 mb-4">
-        {year} Gold medalists
-      </h2>
+      <h2 className="text-2xl font-bold text-blue-400 mb-4">{title}</h2>
       <div className="overflow-x-auto -mx-4 sm:mx-0">
         <div className="inline-block min-w-full align-middle">
           <div className="overflow-hidden shadow-md rounded-lg">
