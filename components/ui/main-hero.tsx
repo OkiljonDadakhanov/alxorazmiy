@@ -1,6 +1,6 @@
 "use client";
 
-import { memo, useEffect, useState } from "react";
+import { memo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,29 +14,6 @@ const EVENT = {
   dates: "1–7 June 2026",
   location: "Tashkent, Uzbekistan",
 };
-
-const TARGET = new Date("2026-06-01T00:00:00").getTime();
-
-function useCountdown() {
-  const [t, setT] = useState({ d: 0, h: 0, m: 0, s: 0 });
-
-  useEffect(() => {
-    const tick = () => {
-      const diff = Math.max(0, TARGET - Date.now());
-      setT({
-        d: Math.floor(diff / 86400000),
-        h: Math.floor((diff / 3600000) % 24),
-        m: Math.floor((diff / 60000) % 60),
-        s: Math.floor((diff / 1000) % 60),
-      });
-    };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  return t;
-}
 
 const stagger = {
   hidden: {},
@@ -54,35 +31,7 @@ const fadeUp = {
   },
 };
 
-const CountdownUnit = memo(
-  ({ value, label }: { value: number; label: string }) => (
-    <div className="flex flex-col items-center">
-      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-lg border border-[#C9A84C]/15 bg-[#C9A84C]/[0.03] backdrop-blur-sm flex items-center justify-center transition-colors duration-300 hover:border-[#C9A84C]/30 hover:bg-[#C9A84C]/[0.06]">
-        <span
-          className="text-2xl sm:text-[28px] font-light tracking-tight text-[#F0EDE6]"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          {String(value).padStart(2, "0")}
-        </span>
-      </div>
-      <span className="mt-1.5 text-[9px] sm:text-[10px] uppercase tracking-[0.18em] text-[#5C6F88] font-medium">
-        {label}
-      </span>
-    </div>
-  )
-);
-CountdownUnit.displayName = "CountdownUnit";
-
-const Colon = memo(() => (
-  <div className="h-14 sm:h-16 flex items-center">
-    <span className="text-[#C9A84C]/20 text-base font-light select-none">:</span>
-  </div>
-));
-Colon.displayName = "Colon";
-
 const KhimioHero = () => {
-  const cd = useCountdown();
-
   return (
     <>
     <section
@@ -231,8 +180,8 @@ const KhimioHero = () => {
         {/* Edition badge */}
         <motion.div variants={fadeUp} className="mb-4">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C9A84C]/20 bg-[#C9A84C]/[0.05] text-xs sm:text-sm font-medium tracking-[0.12em] uppercase text-[#C9A84C]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] animate-pulse" />
-            {EVENT.edition} — Registration Open
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C]" />
+            {EVENT.edition} — Successfully Completed
           </span>
         </motion.div>
 
@@ -304,20 +253,21 @@ const KhimioHero = () => {
           className="w-12 h-px bg-gradient-to-r from-transparent via-[#C9A84C]/25 to-transparent my-5"
         />
 
-        {/* Countdown */}
-        <motion.div variants={fadeUp} className="mb-6">
-          <p className="text-[10px] uppercase tracking-[0.2em] text-[#5C6F88] font-medium mb-3">
-            Event begins in
+        {/* Post-event message */}
+        <motion.div variants={fadeUp} className="mb-6 max-w-lg">
+          <p
+            className="text-2xl sm:text-3xl font-medium text-[#F0EDE6] tracking-tight mb-3"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Thank you for joining us!
           </p>
-          <div className="flex items-start gap-2 sm:gap-2.5">
-            <CountdownUnit value={cd.d} label="Days" />
-            <Colon />
-            <CountdownUnit value={cd.h} label="Hours" />
-            <Colon />
-            <CountdownUnit value={cd.m} label="Min" />
-            <Colon />
-            <CountdownUnit value={cd.s} label="Sec" />
-          </div>
+          <p className="text-sm sm:text-base text-[#8B9DB8] leading-relaxed">
+            The 4th KhIMIOs has concluded. We are grateful to every participant,
+            team leader, and guest who made this edition unforgettable.
+          </p>
+          <p className="mt-3 text-base sm:text-lg font-medium text-[#C9A84C] tracking-wide">
+            See you next year!
+          </p>
         </motion.div>
 
         {/* CTA */}
@@ -325,6 +275,25 @@ const KhimioHero = () => {
           variants={fadeUp}
           className="flex flex-wrap gap-3 justify-center"
         >
+          <Link
+            href="/results"
+            className="group inline-flex items-center gap-2 px-7 py-3 rounded-lg font-semibold text-sm sm:text-base tracking-wide transition-all duration-300 bg-gradient-to-r from-[#B8952F] via-[#C9A84C] to-[#D4B85A] text-[#040C1B] hover:shadow-[0_0_32px_rgba(201,168,76,0.25)] active:scale-[0.98]"
+          >
+            View Results
+            <svg
+              className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2.5}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+              />
+            </svg>
+          </Link>
           <Link
             href="/about"
             className="inline-flex items-center gap-2 px-7 py-3 rounded-lg font-medium text-sm sm:text-base text-[#C9A84C] border border-[#C9A84C]/20 hover:border-[#C9A84C]/40 hover:bg-[#C9A84C]/[0.05] transition-all duration-300 tracking-wide active:scale-[0.98]"
@@ -361,23 +330,26 @@ const KhimioHero = () => {
           {/* Copy column */}
           <div className="flex flex-col justify-center">
             <span className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-[#C9A84C] mb-4">
-              Invitation
+              Highlights
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-[2rem] font-bold text-[#F0EDE6] tracking-tight leading-tight mb-6" style={{ fontFamily: "var(--font-display)" }}>
-              The Olympiad is coming again
+              A successful 4th edition
             </h2>
             <div className="space-y-5 text-[#8B9DB8] text-base sm:text-lg leading-relaxed">
               <p>
-                We are pleased to invite talented students from around the world to participate in the 4th Al-Khwarizmi International Olympiad in Mathematics and Informatics.
+                The 4th Al-Khwarizmi International Olympiad in Mathematics and
+                Informatics brought together talented students from around the
+                world in Tashkent for a week of competition, collaboration, and
+                cultural exchange.
               </p>
               <p>
-                This prestigious competition brings together young minds passionate about Mathematics and Computer Science, providing them with a unique opportunity to demonstrate their knowledge, creativity, and analytical thinking.
-              </p>
-              <p>
-                Come, challenge your knowledge, compete with the brightest minds, and become a winner!
+                We celebrate the dedication of every participant who challenged
+                themselves, the team leaders who supported them, and the jury
+                members who made the event possible.
               </p>
               <p className="text-[#B8C4D4] font-medium">
-                We look forward to welcoming participants from all over the world.
+                Thank you for being part of KhIMIOs 2026. We look forward to
+                welcoming you back — see you next year!
               </p>
             </div>
           </div>

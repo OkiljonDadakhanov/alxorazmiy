@@ -41,19 +41,15 @@ const WelcomeMessage: FC = () => {
           </div>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-center mb-6">
-            Welcome to Al-Khwarizmi International Mathematics and Informatics
-            Olympiad!
+            Thank You for Joining KhIMIOs 2026
           </h1>
 
           <p className="text-lg md:text-xl text-gray-700 text-center max-w-4xl leading-relaxed mb-12">
-            Al-Khwarizmi International Mathematics and Informatics Olympiad is a
-            unique opportunity where knowledge and intellectual power come
-            together! This competition offers you the opportunity to test your
-            skills, showcase innovative ideas, and explore the harmony of modern
-            technology and timeless traditions. We believe that every
-            participant will unlock their potential and leave a lasting mark,
-            just as Al-Khwarizmi did in the world of science and discovery. We
-            wish you the best of luck in your pursuit of knowledge!
+            The 4th Al-Khwarizmi International Mathematics and Informatics
+            Olympiad has successfully concluded. We are grateful to every
+            participant, team leader, and guest who contributed to this
+            celebration of knowledge, creativity, and international friendship.
+            See you next year!
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 text-center md:text-left">
@@ -87,9 +83,9 @@ const WelcomeMessage: FC = () => {
                 What to Expect
               </h2>
               <p className="text-gray-700 mb-4">
-                At the Al-Khwarizmi Olympiad, you can expect a dynamic and
-                inspiring environment where innovation meets intellectual
-                curiosity. Here's what awaits you:
+                KhIMIOs continues to be a dynamic and inspiring platform where
+                innovation meets intellectual curiosity. Here is what defines
+                the Olympiad:
               </p>
 
               <ul
@@ -108,8 +104,8 @@ const WelcomeMessage: FC = () => {
               </ul>
 
               <p className="text-gray-700 mt-4">
-                Prepare to be inspired, challenged, and empowered as you embark
-                on this extraordinary journey!
+                We look forward to welcoming the next generation of thinkers
+                when KhIMIOs returns. See you next year!
               </p>
             </section>
           </div>

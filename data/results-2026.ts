@@ -3,7 +3,7 @@ import { Result } from "@/types/results";
 export const results2026Files = {
   mathematics: {
     href: "/results/maths_final.xlsx",
-    filename: "maths_final.xlsx",
+    filename: "maths_final.xlsx ",
     label: "Mathematics Final Results",
   },
   informatics: {
